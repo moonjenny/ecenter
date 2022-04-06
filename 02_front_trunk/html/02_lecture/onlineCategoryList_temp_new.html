@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ebay edu</title>
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link type="text/css" rel="stylesheet" href="../../com/css/import.css" />
+<script type="text/javascript" src="../../com/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../com/js/design.js"></script>
+<script type="text/javascript" src="../../com/js/select.js"></script>
+</head>
+
+<body>
+	<div id="skip_nav">
+		<ul>
+			<li><a href="#gnb">메뉴 바로가기</a></li>
+			<li><a href="#contents">본문 바로가기</a></li>
+		</ul>
+	</div>
+	<hr />
+
+	<div id="wrap">
+		<!-- header s -->
+		<div id="header">
+			<div class="hearderCon">
+				<div class="hlogo"><a href="#"><img src="../../img/common/h_logo_ebay_edu.gif" alt="ebay edu" /></a></div>
+				<div class="miniBar">
+					<ul>
+						<!-- // 2014-04-10 s  -->
+						<li>Rosaaaaaaaa님</li>
+						<!-- <li><a href="#"><img src="../../img/common/tnb_s0.gif" width="43" height="9" alt="Logout" /></li> -->
+						<li><a href="#"><img src="../../img/common/tnb_s1.gif" width="34" height="9" alt="Login" /> </a></li>
+						<li><a href="#"><img src="../../img/common/tnb_s2.gif" width="42" height="9" alt="my page" /></a></li>
+						<li><a href="#"><img src="../../img/common/tnb_s4.gif" width="47" height="9" alt="site map" /></a></li>
+						<li><a href="#"><img src="../../img/common/tnb_s5.gif" width="49" height="9" alt="esm plus" /></a></li>
+						<li><a href="#"><img src="../../img/common/tnb_s6.gif" width="37" height="9" alt="오시는길" /></a></li><!-- 20130808 메인유틸리티 추가 -->
+						<!-- // 2014-04-10 e  -->
+					</ul>
+					<!-- miniBarSch s -->
+					<div id="miniBarSch" class="miniBarSch">
+						<a href="#"><img src="../../img/common/btn_search_01.gif" alt="검색" /></a>
+						<div class="schArea" style="display: none;">
+							<label for="topSrch" class="hide">강좌검색</label><input type="text" name="topSrch" id="topSrch" value="강좌검색" title="강좌검색" onblur="checkField(this)" onfocus="clearField(this)" /><input type="image" src="../../img/common/btn_search_01.gif" name="miniBarSch" id="gnb_search" alt="검색" />
+						</div>
+						<div class="dim"></div>
+					</div>
+					<!-- //miniBarSch e -->
+				</div>
+				<ul class="gnb">
+					<li><a href="#"><img src="../../img/common/gnb_m1.gif" width="115" height="32" alt="교육과정 안내" /></a></li>
+					<li><a href="#"><img src="../../img/common/gnb_m2.gif" width="121" height="32" alt="오픈마켓 소식" /></a></li>
+					<li><a href="#"><img src="../../img/common/gnb_m3.gif" width="102" height="32" alt="교육센터 소개" /></a></li>
+					<li><a href="#"><img src="../../img/common/gnb_m4.gif" width="164" height="32" alt="에듀 고객센터" /></a></li>
+				</ul>
+			</div>
+
+			<!-- 201308012 서브메뉴 추가 -->
+			<div class="depth on">
+				<ul>
+					<li class="sub_01">
+						<a href="#"><img src="../../img/common/sub_01_01_t.gif" alt="오프라인 강좌" /></a>
+						<a href="#"><img src="../../img/common/sub_01_03.gif" alt="온라인 강좌" /></a>
+					</li>
+					<li class="sub_02">
+						<a href="#"><img src="../../img/common/sub_02_01.gif" alt="업계소식" /></a>
+						<a href="#"><img src="../../img/common/sub_02_02.gif" alt="전문가 컬럼" /></a>
+						<a href="#"><img src="../../img/common/sub_02_03.gif" alt="파워셀러 성공담" /></a>
+						<a href="#"><img src="../../img/common/sub_02_04.gif" alt="성공 TIP" /></a>
+					</li>
+					<li class="sub_03">
+						<a href="#"><img src="../../img/common/sub_03_01.gif" alt="EBAY 교육사업 소개" /></a>
+						<a href="#"><img src="../../img/common/sub_03_02.gif" alt="교육과정" /></a>
+						<a href="#"><img src="../../img/common/sub_03_03.gif" alt="강사진" /></a>
+						<a href="#"><img src="../../img/common/sub_03_04.gif" alt="강의시설" /></a>
+					</li>
+					<li class="sub_04">
+						<a href="#"><img src="../../img/common/sub_04_01.gif" alt="공지사항" /></a>
+						<a href="#"><img src="../../img/common/sub_04_02.gif" alt="FAQ" /></a>
+						<a href="#"><img src="../../img/common/sub_04_03.gif" alt="1:1 전문가상담" /></a>
+					</li>
+				</ul>
+			</div>
+			<!--// 201308012 서브메뉴 추가 -->
+
+		</div>
+		<!-- //header e -->
+		<hr />
+		
+		<!-- contents s -->
+		<div id="contents">
+			<!-- location s -->
+			<div class="location">
+				<ul class="depth01">
+					<li class="home"><a href="#">홈</a></li>
+					<li class="arrow"><!-- 화살표가 있을 경우 class="arrow" -->
+						<a href="#">교육과정 안내</a>							
+						<ul class="subDepth">
+							<li class="on">교육과정 안내</li>
+							<li><a href="#">Market Now</a></li>
+							<li><a href="#">교육센터 소개</a></li>
+							<li><a href="#">고객센터</a></li>
+						</ul>						
+					</li> 
+					<li class="arrow last"> <!-- 마지막 li에 .last 클래스 추가해주세요 -->
+						<a href="#">오프라인 강좌</a>							
+						<ul class="subDepth">
+							<li class="on">오프라인 강좌</li>
+							<li><a href="#">온라인강좌</a></li>
+						</ul>						
+					</li> 
+				</ul>
+			</div>
+			<!-- //location e -->
+			
+			<h1 class="bigtit"><img src="../../img/title/tit_online2.gif" alt="동영상 교육" /></h1>
+
+			<div class="box line mt40">
+				<h3><img src="../../img/txt/txt_offline01_2.gif" alt="EBAY EDU는 판매회원님들을 위해 과정별/단계별 교육 프로그램을 제공하고 있습니다. " title="EBAY EDU에 처음 방문하셨나요? EBAY EDU는 판매회원님들을 위해 과정별/단계별 교육 프로그램을 제공하고 있습니다. " /></h3>
+				<div class="edu-program">
+					<a href="#" class="btn-detail-edu"><img src="../../img/btn/btn_detailEdu.gif" alt="교육과정 전체보기" /></a>
+					<div class="line">
+						<ul class="over">
+							<li class="t1 selected">&nbsp;</li>
+							<li class="t2">&nbsp;</li>
+							<li class="t3">&nbsp;</li>
+							<li class="t4">&nbsp;</li>
+							<li class="t5">&nbsp;</li>
+							<li class="t6">&nbsp;</li>
+							<li class="t7">&nbsp;</li>
+							<li class="t8">&nbsp;</li>
+							<li class="t9">&nbsp;</li>
+						</ul>
+						<img class="bg" src="../../img/btn/tab_eduPro_ban.gif" />
+					</div>
+				</div>
+			</div>
+
+			<div class="calenderTop mt40">
+				<div class="float_box mt10">
+					<div class="floatR">
+						<select style="width:130px">
+							<option selected="selected">과정별 전체</option>
+							<option>창업준비</option>
+							<option>상품촬영</option> 
+							<option>상품페이지제작</option> 
+							<option>상품등록</option> 
+							<option>판매관리</option> 
+							<option>상품사입</option> 
+							<option>광고&마케팅</option> 
+							<option>세무</option> 
+							<option>전문가 특강</option> 
+						</select>&nbsp;
+						<select style="width:130px">
+							<option selected="selected">기초/실전 전체</option>
+							<option>기초단계</option>
+							<option>실전단계</option> 
+						</select>
+					</div>
+				</div>
+			</div>
+
+			<!-- tableListA s -->
+			<div class="tableListA mt10">
+				<table summary="번호, 단계, 과정분류, 강좌명, 강의수/강의시간(Total), 강사을(를) 나타내는 목록형 보기 목록 입니다.">
+					<caption>동영상 교육 보기 목록</caption>
+					<colgroup>
+					<col width="50" />
+					<col width="90" />
+					<col width="110" />
+					<!-- <col width="80" />   20140422 -->
+					<col width="*" />
+					<col width="160" />
+					<col width="90" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">번호</th>
+							<th scope="col">과정</th>
+							<th scope="col">단계</th>
+							<!--<th scope="col">&nbsp;</th>   20140422  -->
+							<th scope="col">강좌명</th>
+							<th scope="col">강의수/강의시간(Total)</th>
+							<th scope="col">강사</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr> <!-- 1page 10행 출력 -->
+							<td>86</td>
+							<td><span class="point_blue">창업준비</span></td>
+							<td>판매기초1단계</td>
+							<!--<td><a href="#"><img src="../../img/ico/ico_mov.gif" alt="동영상 강의 아이콘"></a></td>  20140422 -->
+							<td class="alignL">
+								<p>
+									<a href="#">실전판매를 위한 상품등록 방법</a>
+									<span class="ico">
+										<img src="../../img/ico/ico_recom.gif" alt="추천">
+										<img src="../../img/ico/ico_popular.gif" alt="인기">
+									</span>
+								</p>
+								<p class="exp mg">기존판매자 대상의 상품등록을 이미 접해보신 분들을 위한 교육</p>
+							</td>
+							<td>총 3강/2시간 8분 32초</td>
+							<td>김연우 전임</td>
+						</tr>
+						<tr> <!-- 1page 10행 출력 -->
+							<td>85</td>
+							<td><span class="point_blue">창업준비</span></td>
+							<td>판매기초1단계</td>
+							<!--<td><a href="#"><img src="../../img/ico/ico_mov.gif" alt="동영상 강의 아이콘"></a></td>  20140422 -->
+							<td class="alignL">
+								<p>
+									<a href="#">실전판매를 위한 상품등록 방법</a>
+									<span class="ico">
+										<img src="../../img/ico/ico_popular.gif" alt="인기">
+									</span>
+								</p>
+								<p class="exp mg">기존판매자 대상의 상품등록을 이미 접해보신 분들을 위한 교육</p>
+							</td>
+							<td>총 3강/2시간 8분 32초</td>
+							<td>김연우 전임</td>
+						</tr>
+						<tr> <!-- 1page 10행 출력 -->
+							<td>84</td>
+							<td><span class="point_blue">창업준비</span></td>
+							<td>판매기초1단계</td>
+							<!--<td><a href="#"><img src="../../img/ico/ico_mov.gif" alt="동영상 강의 아이콘"></a></td>  20140422 -->
+							<td class="alignL">
+								<p>
+									<a href="#">실전판매를 위한 상품등록 방법</a>
+								</p>
+								<p class="exp mg">기존판매자 대상의 상품등록을 이미 접해보신 분들을 위한 교육</p>
+							</td>
+							<td>총 3강/2시간 8분 32초</td>
+							<td>김연우 전임</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- //tableListA e -->
+			
+			<!-- paginate s -->
+			<div class="paginate"> <!-- inline의 속성중 여백때분에 enter없이 한줄처리 해야함 -->
+				<a href="#" class="prev">이전페이지</a><strong><span>1</span></strong><a href="#"><span>2</span></a><a href="#"><span>3</span></a><a href="#"><span>4</span></a><a href="#"><span>5</span></a><a href="#"><span>6</span></a><a href="#"><span>7</span></a><a href="#"><span>8</span></a><a href="#"><span>9</span></a><a href="#"><span>10</span></a><a href="#" class="next">다음페이지</a>
+			</div>
+			<!-- //paginate e -->
+
+		</div>
+		<!-- //contents e -->
+		<hr />
+
+		<!-- footer s -->
+		<div id="footer">
+			footer
+		</div>
+		<!-- //footer e -->
+		
+	</div>
+</body>
+</html>

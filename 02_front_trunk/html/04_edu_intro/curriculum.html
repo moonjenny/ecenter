@@ -1,0 +1,463 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ebay edu</title>
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link type="text/css" rel="stylesheet" href="../../com/css/import.css" />
+<script type="text/javascript" src="../../com/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../com/js/design.js"></script>
+<script type="text/javascript" src="../../com/js/select.js"></script>
+</head>
+
+<body>
+	<div id="skip_nav">
+		<ul>
+			<li><a href="#gnb">메뉴 바로가기</a></li>
+			<li><a href="#contents">본문 바로가기</a></li>
+		</ul>
+	</div>
+	<hr />
+
+	<div id="wrap">
+		<!-- header s -->
+		<div id="header">
+			<div class="hearderCon">
+				<div class="hlogo"><a href="#"><img src="../../img/common/h_logo_ebay_edu.gif" alt="ebay edu" /></a></div>
+				<div class="miniBar">
+					<ul>
+						<!-- // 2014-04-10 s  -->
+						<li>Rosaaaaaaaa님</li>
+						<!-- <li><a href="#"><img src="../../img/common/tnb_s0.gif" width="43" height="9" alt="Logout" /></li> -->
+						<li><a href="#"><img src="../../img/common/tnb_s1.gif" width="34" height="9" alt="Login" /> </a></li>
+						<li><a href="#"><img src="../../img/common/tnb_s2.gif" width="42" height="9" alt="my page" /></a></li>
+						<li><a href="#"><img src="../../img/common/tnb_s4.gif" width="47" height="9" alt="site map" /></a></li>
+						<li><a href="#"><img src="../../img/common/tnb_s5.gif" width="49" height="9" alt="esm plus" /></a></li>
+						<li><a href="#"><img src="../../img/common/tnb_s6.gif" width="37" height="9" alt="오시는길" /></a></li><!-- 20130808 메인유틸리티 추가 -->
+						<!-- // 2014-04-10 e  -->
+					</ul>
+					<!-- miniBarSch s -->
+					<div id="miniBarSch" class="miniBarSch">
+						<a href="#"><img src="../../img/common/btn_search_01.gif" alt="검색" /></a>
+						<div class="schArea" style="display: none;">
+							<label for="topSrch" class="hide">강좌검색</label><input type="text" name="topSrch" id="topSrch" value="강좌검색" title="강좌검색" onblur="checkField(this)" onfocus="clearField(this)" /><input type="image" src="../../img/common/btn_search_01.gif" name="miniBarSch" id="gnb_search" alt="검색" />
+						</div>
+						<div class="dim"></div>
+					</div>
+					<!-- //miniBarSch e -->
+				</div>
+				<ul class="gnb">
+					<li><a href="#"><img src="../../img/common/gnb_m1.gif" width="115" height="32" alt="교육과정 안내" /></a></li>
+					<li><a href="#"><img src="../../img/common/gnb_m2.gif" width="121" height="32" alt="오픈마켓 소식" /></a></li>
+					<li><a href="#"><img src="../../img/common/gnb_m3.gif" width="102" height="32" alt="교육센터 소개" /></a></li>
+					<li><a href="#"><img src="../../img/common/gnb_m4.gif" width="164" height="32" alt="에듀 고객센터" /></a></li>
+				</ul>
+			</div>
+
+			<!-- 201308012 서브메뉴 추가 -->
+			<div class="depth on">
+				<ul>
+					<li class="sub_01">
+						<a href="#"><img src="../../img/common/sub_01_01_t.gif" alt="오프라인 강좌" /></a>
+						<a href="#"><img src="../../img/common/sub_01_03.gif" alt="온라인 강좌" /></a>
+					</li>
+					<li class="sub_02">
+						<a href="#"><img src="../../img/common/sub_02_01.gif" alt="업계소식" /></a>
+						<a href="#"><img src="../../img/common/sub_02_02.gif" alt="전문가 컬럼" /></a>
+						<a href="#"><img src="../../img/common/sub_02_03.gif" alt="파워셀러 성공담" /></a>
+						<a href="#"><img src="../../img/common/sub_02_04.gif" alt="성공 TIP" /></a>
+					</li>
+					<li class="sub_03">
+						<a href="#"><img src="../../img/common/sub_03_01.gif" alt="EBAY 교육사업 소개" /></a>
+						<a href="#"><img src="../../img/common/sub_03_02.gif" alt="교육과정" /></a>
+						<a href="#"><img src="../../img/common/sub_03_03.gif" alt="강사진" /></a>
+						<a href="#"><img src="../../img/common/sub_03_04.gif" alt="강의시설" /></a>
+					</li>
+					<li class="sub_04">
+						<a href="#"><img src="../../img/common/sub_04_01.gif" alt="공지사항" /></a>
+						<a href="#"><img src="../../img/common/sub_04_02.gif" alt="FAQ" /></a>
+						<a href="#"><img src="../../img/common/sub_04_03.gif" alt="1:1 전문가상담" /></a>
+					</li>
+				</ul>
+			</div>
+			<!--// 201308012 서브메뉴 추가 -->
+
+		</div>
+		<!-- //header e -->
+		<hr />
+		
+		<!-- contents s -->
+		<div id="contents">
+			<!-- location s -->
+			<div class="location">
+				<ul class="depth01">
+					<li class="home"><a href="#">홈</a></li>
+					<li class="arrow"><!-- 화살표가 있을 경우 class="arrow" -->
+						<a href="#">교육센터 소개</a>							
+						<ul class="subDepth">
+							<li><a href="#">교육과정 안내</a></li>
+							<li><a href="#">Market Now</a></li>
+							<li class="on">교육센터 소개</li>
+							<li><a href="#">고객센터</a></li>
+						</ul>						
+					</li> 
+					<li class="arrow last">
+						<a href="#">EBAY Edu 소개</a>							
+						<ul class="subDepth">
+							<li><a href="#">EBAY Edu 소개</a></li>
+							<li class="on">교육과정</li>
+							<li><a href="#">강사진</a></li>
+							<li><a href="#">강의시설</a></li>
+							<li><a href="#">제휴서비스</a></li>
+						</ul>						
+					</li> 
+				</ul>
+			</div>
+			<!-- //location e -->
+			
+			<h1 class="bigtit"><img src="../../img/title/tit_curriculum.gif" alt="CURRICULUM 교육과정" /></h1>
+			<div class="int_cont">
+				<!-- 20140328 수정 s -->
+				<div class="box line mt40">
+					<h3><img src="../../img/txt/txt_offline01.gif" alt="EBAY EDU에 처음 방문하셨나요? EBAY EDU는 판매회원님들을 위해 과정별/단계별 교육 프로그램을 제공하고 있습니다. " title="EBAY EDU에 처음 방문하셨나요? EBAY EDU는 판매회원님들을 위해 과정별/단계별 교육 프로그램을 제공하고 있습니다. " /></h3>
+					<!-- tabTypeI s -->
+					<ul class="tabTypeI mt40">
+						<li class="tab_eduPro step01"><a href="#" class="selected"><span>STEP 01 창업준비</span></a></li>
+						<li class="tab_eduPro step02"><a href="#" ><span>STEP 02 상품촬영</span></a></li>
+						<li class="tab_eduPro step03"><a href="#" ><span>STEP 03 사진페이지제작</span></a></li>
+						<li class="tab_eduPro step04"><a href="#" ><span>STEP 04 상품등록</span></a></li>
+						<li class="tab_eduPro step05"><a href="#" ><span>STEP 05 판매관리</span></a></li>
+						<li class="tab_eduPro step06"><a href="#" ><span>STEP 06 상품사입</span></a></li>
+						<li class="tab_eduPro step07"><a href="#" ><span>STEP 07 마케팅</span></a></li>
+						<li class="tab_eduPro step08"><a href="#" ><span>STEP 08 세무</span></a></li>
+						<li class="tab_eduPro step09"><a href="#" ><span>STEP 09 전문가특강</span></a></li>
+					</ul>
+					<div class="tabTitle step01"></div>
+					<!-- //tabTypeI e -->
+				</div>
+				<div class="box-table mt20">
+					<img src="../../img/edu_intro/curriculum_img02.jpg" alt="교육 프로그램 안내 테이블" />
+					<ul>
+						<li class="ui01">
+							<div class="txt">중소판매자 설명회</div>
+							<table class="over type1">
+								<td>G마켓/옥션 판매준비 및 절차에 대한 교육</td>
+							</table>
+							<a href="#">box</a>
+						</li>
+						<li class="ui02">
+							<div class="txt">G마켓/옥션 파워셀러와의 만남</div>
+							<table class="over type1">
+								<td>G마켓/옥션 파워셀러의 성공 노하우 및 판매Tip 등을 알 수 있는 교육</td>
+							</table>
+							<a href="#">box</a>
+						</li>
+						<li class="ui03">
+							<div class="txt">DSLR을 이용한 상품촬영 실습</div>
+							<table class="over type1">
+								<td>DSLR 카메라의 기본 사용법을 알아보고<br />
+판매상품에 따른 촬영 방법을 배울 수 있는 교육</td>
+							</table>
+							<a href="#">box</a>
+						</li>
+						<li class="ui04">
+							<div class="txt">스마트폰 상품촬영 및 후보정 방법</div>
+							<table class="over type1">
+								<td>스마트 폰 카메라의 사용법과 어플리케이션을 통한<br/>
+기본적인 사진 보정도 함께 배울 수 있는 교육</td>
+							</table>
+							<a href="#">box</a>
+						</li>
+						<li class="ui05">
+							<div class="txt" >왕초보 사장님들을 위한 포토샵 기초</div>
+							<table class="over type1">
+								<td>포토샵의 기초 사용법 파일 불러오기, 새로 만들기, 오리기, <br/>
+붙이기, 복사하기 등을 배울 수 있는 교육</td>
+							</table>
+							<a href="#">box</a>
+						</li>
+						<li class="ui06">
+							<div class="txt" style="top:4px;">포토샵을 이용한 상세페이지 제작</div>
+							<table class="over type1">
+								<td>상품페이지 제작에 필요한 포토샵의 기초 기능<br/> 
+레이어, 크기 변형, 클리핑 마스크 등을 배울 수 있는 교육</td>
+							</table>
+							<a href="#">box</a>
+						</li>
+						<li class="ui07">
+							<div class="txt" style="top:0;">왕초보 상품등록 실습</div>
+							<table class="over type1">
+								<td>SM PLUS의 간단 사용법과 상품등록 방법을 실습하는 교육</td>
+							</table>
+							<a href="#">box</a>
+						</li>
+						<li class="ui08">
+							<div class="txt" style="top:-3px;">왕초보 판매운영 관리</div>
+							<table class="over type1">
+								<td>ESM PLUS의 주문관리, 상품관리, 정산관리 등 <br/>
+세부적인 기능을 배울 수 있는 교육</td>
+							</table>
+							<a href="#">box</a>
+						</li>
+						<li class="ui09">
+							<div class="txt" style="top:-2px;">왕초보 세대별 아이템 도매시장 핵심 찾기</div>
+							<table class="over type1">
+								<td>도매시장 완전 분석과 의류 및 잡화에 대한 <br/>
+시장 분석, 시간대별 도소매의 구분을 알 수 있는 교육</td>
+							</table>
+							<a href="#">box</a>
+						</li>
+						<li class="ui10">
+							<div class="txt" style="top:-2px;">왕초보 창업자가 할 수 있는 중국 상품사입</div>
+							<table class="over type1">
+								<td>중국 도매시장을 통해 소량 수입, 수입 절차,<br/> 
+상품 분석 방법 등을 알 수 있는 교육</td>
+							</table>
+							<a href="#">box</a>
+						</li>
+						<li class="ui11">
+							<div class="txt" style="top:-2px;">키워드 광고와 카테고리 광고 적용 방법</div>
+							<table class="over type1">
+								<td>G마켓/옥션의 광고 시간, 광고 방법, 키워드 조회수에 따른 <br/>
+일 전환수 예측 방법을 알 수 있는 교육.</td>
+							</table>
+							<a href="#">box</a>
+						</li>
+						<li class="ui12" >
+							<div class="txt" style="top:-2px;">오픈마켓 판매자를 위한 부가가치세 실무</div>
+							<table class="over type1">
+								<td>매출세액 및 매입세액의 구성, 세금 계산서의 기능 등<br/> 
+부가가치세에 관한 모든 것을 알 수 있는 교육</td>
+							</table>
+							<a href="#">box</a>
+						</li>
+						<li class="ui13">
+							<div class="txt" style="top:-2px;">모바일의 숲에서 매출을 만나다</div>
+							<table class="over type1">
+								<td>모바일 미디어의 종류, 모바일 웹의 실사례 가이드,<br/> 
+QR 코드 생성, 활용 방안을 알 수 있는 교육</td>
+							</table>
+							<a href="#">box</a>
+						</li>
+						
+						<li class="uj01">
+							<div class="txt">상품이미지 제작과 누끼작업</div>
+							<table class="over type2">
+								<td>상품등록에 필요한 상품이미지 제작 방법 및 <br/>
+사진 배경을 제거하는 방법(누끼)을 배울 수 있는 교육</td>
+							</table>
+							<a href="#">box</a>
+						</li>
+						
+						<li class="uj02">
+							<div class="txt" style="top:3px;">상품 상세 탬플릿 활용 인트로 및 옵션 제작</div>
+							<table class="over type2">
+								<td>상품페이지 제작 가이드 템플릿을 활용한 <br/>
+상품페이지 제작 방법을 실습하는 교육</td>
+							</table>
+							<a href="#">box</a>
+						</li>
+						<li class="uj03">
+							<div class="txt" style="top:3px;">이미지호스팅과 옵션이미지 매칭</div>
+							<table class="over type2">
+								<td>EBAY 이미지호스팅을 이용하는 방법과<br/> 
+옵션이미지, 옵션이미지 매칭 방법을 실습하는 교육</td>
+							</table>
+							<a href="#">box</a>
+						</li>
+						<li class="uj04">
+							<div class="txt" style="top:2px;">상세페이지 제작 레시피</div>
+							<table class="over type2">
+								<td>상품페이지 제작을 위한 디자인 기획, 컨셉화, <br/>
+구매 전환율 높이는 방법 등을 배울 수 있는 디자인 교육</td>
+							</table>
+							<a href="#">box</a>
+						</li>
+						<li class="uj05">
+							<div class="txt" style="top:0px;">상세페이지 제작 요리 실습</div>
+							<table class="over type2">
+								<td>상세페이지 제작 레시피에서 배운 이론을 실습을 통해 <br/>
+상품페이지를 제작하는 포토샵 고급 교육</td>
+							</table>
+							<a href="#">box</a>
+						</li>
+						<li class="uj06">
+							<div class="txt" style="top:0px;">개별 공지 제작과 등록 방법</div>
+							<table class="over type2">
+								<td>상품페이지 최상단에 위치 할 수 있는 <br/>
+개별 공지, 일괄 공지 활용 방법에 대한 교육</td>
+							</table>
+							<a href="#">box</a>
+						</li>
+						<li class="uj07">
+							<div class="txt" style="top:0px;">미니샵 메인이미지 제작 실습</div>
+							<table class="over type2">
+								<td>개인몰처럼 활용 할 수 있는 지마켓 미니샵,<br/> 
+옥션 스토어를 디자인하는 교육</td>
+							</table>
+							<a href="#">box</a>
+						</li>
+						<li class="uj08" >
+							<div class="txt" style="top:0px;">실전판매를 위한 상품등록 방법</div>
+							<table class="over type2">
+								<td>상품등록에 필요한 키워드 설정, 카테고리 적용, 판매가 설정, <br/>
+옵션 설정 방법을 배울 수 있는 교육</td>
+							</table>
+							<a href="#">box</a>
+						</li>
+						<li class="uj09">
+							<div class="txt" style="top:-1px;">상품등록 가이드 실전 적용 방법</div>
+							<table class="over type2">
+								<td>상품 품질지수 평가 가이드를 통하여 진행되는 실전 상품등록 방법 교육</td>
+							</table>
+							<a href="#">box</a>
+						</li>
+						<li class="uj10">
+							<div class="txt" style="top:-2px;">검색정확도 지수와 희망검색어 적용 방법</div>
+							<table class="over type2">
+								<td>검색어 파생력에 대한 이해, 희망검색어 선정을 활용한 <br/>
+내 상품 상위 노출 방법을 알 수 있는 교육</td>
+							</table>
+							<a href="#">box</a>
+						</li>
+						<li class="uj11">
+							<div class="txt" style="top:-3px;">주문옵션 가이드 상세 설명</div>
+							<table class="over type2">
+								<td>주문옵션 가이드 상세 설명 교육이며, <br/>
+주문옵션과, 옵션이미지 매칭 방법을 알 수 있는 교육</td>
+							</table>
+							<a href="#">box</a>
+						</li>
+						<li class="uj12">
+							<div class="txt" style="top:-3px;">상위 노출을 위한 판매시스템의 이해</div>
+							<table class="over type2">
+								<td>ESM PLUS의 수수료, 서비스 점수에 대한 이해와 <br/>
+스토어 점수, 부가서비스 적용 방법을 배울 수 있는 교육</td>
+							</table>
+							<a href="#">box</a>
+						</li>
+						<li class="uj13">
+							<div class="txt" style="top:-2px;">미니샵, 스토어 활용 방법</div>
+							<table class="over type2">
+								<td>미니샵, 스토어 설정에 따른 노출 점수 변화, <br/>
+미니샵, 스토어 활용 극대화 방법 등을 알 수 있는 교육</td>
+							</table>
+							<a href="#">box</a>
+						</li>
+						<li class="uj14">
+							<div class="txt" style="top:-2px;">카테고리별 매출 분석과 성공 노하우</div>
+							<table class="over type2">
+								<td>로그 분석기 적용 방법과 로그 기록을 통한 <br/>
+CPM, CPC 광고와 수익율 분석을 알 수 있는 교육</td>
+							</table>
+							<a href="#">box</a>
+						</li>
+						<li class="uj15">
+							<div class="txt" style="top:-2px;">필수 지출 증빙을 활용한 절세 포인트</div>
+							<table class="over type2">
+								<td>세금의 관한 모든 것과 지출 증빙 또한 정의 등을 알 수 있는 교육</td>
+							</table>
+							<a href="#">box</a>
+						</li>
+						<li class="uj16">
+							<div class="txt" style="top:-2px;">간편장부로 소득세 쉽게 이해하기</div>
+							<table class="over type2">
+								<td>종합 소득세 종류 및 간편 장부를 통한 세액 계산 사례를 알 수 있는 교육</td>
+							</table>
+							<a href="#">box</a>
+						</li>
+						<li class="uj17">
+							<div class="txt" style="top:-2px;">상품 기획에 따른 상세페이지 컨셉 변화</div>
+							<table class="over type2">
+								<td>아이템 생명 주기에 따른 기획의 중요성, <br/>
+실제 판매 노하우를 통한 상품 기획을 배울 수 있는 교육</td>
+							</table>
+							<a href="#">box</a>
+						</li>
+						<li class="uj18">
+							<div class="txt" style="top:-2px;">구매전환율 향상을 위한 매출 전략</div>
+							<table class="over type2">
+								<td>온라인 마케팅, 모바일 광고의 전략과 성공 사례 및 소셜 미디어 매출에 <br/>
+꼭 필요한 온라인 전략을 알 수 있는 교육</td>
+							</table>
+							<a href="#">box</a>
+						</li>
+					</ul>
+				
+				</div>
+				<!-- 20140328 수정 e -->
+				<!-- 20140328 삭제
+				<ul class="curriculum_box">
+					<li>
+						<dl>
+							<dt><img src="../../img/title/tit_curriculum_01.gif" alt="창업기초" /></dt>
+							<dd class="cur_num"><img src="../../img/edu_intro/cur_num01.gif" alt="01" /></dd>
+							<dd>오픈마켓 창업은 아이템 선정에서부터 판매관리, 정산에 이르기까지 해당분야에 전문성을 요구합니다.<br />국내 최대 오픈마켓시장 이베이 코리아 판매자 교육센터에서 전문 판매자 교육을 통한 실전 노하우를 배우실 수 있습니다.</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt><img src="../../img/title/tit_curriculum_02.gif" alt="디자인/촬영" /></dt>
+							<dd class="cur_num"><img src="../../img/edu_intro/cur_num02.gif" alt="02" /></dd>
+							<dd>제품사진의 보정을 위한 단순한 툴 중심의 디자인 교육이 아닌 고객의 구매 결정요소를 높이기 위한 상품 상세 페이지 기획 및<br />제작에 대한 교육을 해당 분야 전문가를 통하여 디자인 실무 교육을 배우실 수 있습니다.</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt><img src="../../img/title/tit_curriculum_03.gif" alt="마케팅" /></dt>
+							<dd class="cur_num"><img src="../../img/edu_intro/cur_num03.gif" alt="03" /></dd>
+							<dd>오픈마켓 광고, 홍보를 통한 노출방법은 고객을 이해하는 시점에서 큰 효과를 볼 수 있습니다.<br />고객의 수요를 바라보고 최적화된 마케팅 포지셔닝을 통해 내 상품의 유입률을 극대화하는 방법을 배울 수 있습니다.</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt><img src="../../img/title/tit_curriculum_04.gif" alt="세무" /></dt>
+							<dd class="cur_num"><img src="../../img/edu_intro/cur_num04.gif" alt="04" /></dd>
+							<dd>상품을 판매하면서 함께 발생되는 각종 세금. 오픈마켓에 특성화된 세무강의는 분기별 처리해야하는 신고작성을 위한 <br />모든 내용을 담고 있습니다.</dd>
+							<!-- 20131014 삭제 
+							<dd>오픈마켓 광고, 홍보를 통한 노출방법은 고객을 이해하는 시점에서 큰 효과를 볼 수 있습니다.<br />고객의 수요를 바라보고 최적화된 마케팅 포지셔닝을 통해 내 상품의 유입률을 극대화하는 방법을 배울 수 있습니다.</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt><img src="../../img/title/tit_curriculum_05.gif" alt="전문가 특강" /></dt>
+							<dd class="cur_num"><img src="../../img/edu_intro/cur_num05.gif" alt="05" /></dd>
+							<dd>EBAYKOREA는 온라인 창업과 관련한 각 분야별 전문 강사진을 초빙한 SNS 마케팅, 블로그/카페 마케팅, 실전판매 활동을 통해 <br />습득한 판매 노하우를 전달하는 특별강좌를 매월 실시하고 있습니다. 판매자분들의 온라인 창업의 실패를 최소화하고 성공적인 <br />창업을 지원하기 위해 항상 노력하는 이베이 코리아가 될 것을 약속합니다. </dd>
+						</dl>
+					</li>
+				</ul> -->
+			</div>
+		</div>
+		<!-- //contents e -->
+		<hr />
+
+		<!-- footer s -->
+		<div id="footer">
+			<div class="footerCon">
+				<ul class="fNavi">
+					<li class="n1"><a href="#">eby edu 소개</a></li>
+					<li class="n2"><a href="#">이용약관</a></li>
+					<li class="n3"><a href="#">개인정보취급방침</a></li>
+					<li class="n4"><a href="http://adcenter.auction.co.kr/Default.aspx" target="_blank" title="새창">판매광고센터</a></li>
+					<li class="n5"><a href="http://www.about.co.kr" target="_blank" title="새창">어바웃</a></li>
+					<li class="n6"><a href="http://securitycenter.auction.co.kr/index.html" target="_blank" title="새창">안전거래 센터</a></li>
+				</ul>
+				<ul class="info">
+					<li class="tel">tel:1588-0184</li>
+					<li class="fax">Fax:02-589-8829</li>
+					<li class="mail">Mail.Infomatiln@corp.quction.co.kr</li>
+					<li class="add">주소:경기도 부천시 원미구 부일로 223(상동)투나빌딩 6층</li>
+					<li class="center">상담가능시간:오전 9시~오후6시 (토요일 및 공휴일 휴무)</li>
+				</ul>
+				<p class="copyright">COPYRIGHT(C) 1998-2012 ebay.Inc. ALL RIGHT RESERVED.</p>
+				<p class="flogo1"><a href="http://www.auction.co.kr/?frm=headertab&amp;redirect=1" target="_blank" title="새창"><img src="../../img/common/f_logo_auction.gif" width="57" height="23" alt="auction" /></a></p>
+				<p class="flogo2"><a href="http://www.gmarket.co.kr" target="_blank" title="새창"><img src="../../img/common/f_logo_gmarket.gif" width="71" height="23" alt="gmarket" /></a></p>
+			</div>
+		</div>
+		<!-- //footer e -->
+		
+	</div>
+</body>
+</html>

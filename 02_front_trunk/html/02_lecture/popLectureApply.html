@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ebay edu</title>
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link type="text/css" rel="stylesheet" href="../../com/css/import.css" />
+<script type="text/javascript" src="../../com/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../com/js/design.js"></script>
+<script type="text/javascript" src="../../com/js/select.js"></script>
+</head>
+
+<body>
+
+<!-- 팝업_강좌 수강신청 : 740x656 -->
+<div class="popup" style="width:740px">
+	<!-- pop_header s -->
+	<div class="pop_header">
+		<h1><img src="../../img/title/pop_title_lectureApply.gif" alt="강좌 수강신청" /></h1>
+		<a href="#" class="btnClose">닫기</a> 
+	</div>
+	<!-- //pop_header e -->
+	<!-- pop_content s -->
+	<div class="pop_content">
+		<h2 class="h_01">
+			수강신청을 위하여 아래 항목들을 입력해 주세요.<span class="exp font_normal floatR">* 표시는 필수 입력 항목입니다</span>
+		</h2>
+		<!-- popTableC s -->
+		<div class="popTableC">
+			<table summary="강좌 수강신청 입력 테이블입니다.">
+				<caption>강좌 수강신청 입력</caption>
+				<colgroup>
+				<col width="120" />
+				<col width="*" />
+				<col width="120" />
+				<col width="*" />
+				</colgroup>
+				<tr>
+					<th scope="row">회원 ID</th>
+					<td>kkosily</td>
+					<th scope="row"><label for="user_name">* 회원명</label></th>
+					<td><input type="text" name="user_name" id="user_name" title="회원명 입력" maxlength="4" /><span class="pl10 fontRed">회원명을 입력해 주세요.</span></td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="mobile">* 휴대폰</label></th>
+					<td colspan="3">
+						<select name="mobile" id="mobile" title="휴대폰 번호 첫자리 선택"  style="width:93px">
+							<option>010</option>
+							<option>011</option>
+							<option>016</option>
+							<option>017</option>
+							<option>018</option>
+							<option>019</option>
+						</select>
+						-
+						<input type="text" name="mobile" id="mobile2" title="휴대폰 번호 중간자리 입력" maxlength="4" style="width:73px" />
+						-
+						<input type="text" name="mobile" id="mobile3" title="휴대폰 번호 뒷자리 입력" maxlength="4" style="width:73px" />
+						<span class="pl10 fontRed">휴대폰 번호를 입력해 주세요.</span>
+					</td>
+					
+				</tr>
+				<tr>
+					<th scope="row"><label for="email">* 이메일</label></th>
+					<td colspan="4">
+						<input type="text" id="email" style="width:160px" title="이메일 아이디 입력" />
+						@
+						<input type="text" id="email2" style="width:140px" title="도메인 직접입력" />
+						<select id="email3" title="도메인 선택">
+							<option selected="selected">직접입력</option>
+							<option>naver.com</option>
+							<option>nate.com</option>
+							<option>hanmail.net</option>
+							<option>korea.com</option>
+							<option>gmail.com</option>
+							<option>hotmail.com</option>
+							<option>empal.com</option>
+							<option>lycos.co.kr</option>
+						</select>
+						<p class="mt05 fontRed">이메일을 입력해 주세요.</p>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">관심분야</th>
+					<td colspan="4">
+						<div class="relative">
+							<input type="checkbox" name="interest" id="foundation" />
+							<label for="foundation">창업준비</label>&nbsp;&nbsp;&nbsp;
+							<input type="checkbox" name="interest" id="product" />
+							<label for="product">상품촬영</label>&nbsp;&nbsp;&nbsp;
+							<input type="checkbox" name="interest" id="page" />
+							<label for="page">상품페이지 제작</label>&nbsp;&nbsp;&nbsp;&nbsp;
+							<input type="checkbox" name="interest" id="apply" />
+							<label for="apply">상품등록</label> <br />
+							<input type="checkbox" name="interest" id="sell" />
+							<label for="sell">판매관리</label>&nbsp;&nbsp;&nbsp;
+							<input type="checkbox" name="interest" id="product2" />
+							<label for="product2">상품사입</label>&nbsp;&nbsp;&nbsp;
+							<input type="checkbox" name="interest" id="marketing" />
+							<label for="marketing">마케팅</label>&nbsp;&nbsp;
+							<input type="checkbox" name="interest" id="tax" />
+							<label for="tax" class="mr02">세무</label>
+							<input type="checkbox" name="interest" id="expert" />
+							<label for="expert">전문가 특강</label>
+							<span class="exp floatR">* 복수선택 가능</span>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<!-- //popTableC e -->
+		<h2 class="h_01 mt30">정보 제공 동의</h2>
+		<div class="gray_box exp4">
+			<p>1. 개인정보 수집 항목  및 이용목적</p>
+			<ul class="dot mt05">
+				<li>성명, 이메일주소, 휴대폰번호 : 본인확인, 교육서비스 제공</li>
+				<li>이메일주소 , 휴대폰번호 : 수강신청 확인, 불만처리</li>
+			</ul>
+			<p class="mt20">2. 개인정보 보유 및 이용기간 </p>
+			<ul class="dot mt05">
+				<li>수집 이용목적 달성 (이용내역이 없을 시 3년 보관 후 삭제) 또는 회원탈퇴 시 까지 </li>
+			</ul>
+			<p class="mt20"><strong class="fc3">개인정보 수집 및 이용에 동의하십니까?</strong></p>
+			<p class="mt05">
+				<input type="radio" name="chk_agree" id="chk_agree" /><label for="chk_agree">동의합니다</label>
+				<input type="radio" name="chk_agree" id="chk_noagree" /><label for="chk_noagree">동의하지 않습니다</label>
+				<span class="fontRed">동의에 체크하셔야 강좌를 신청할 수 있습니다.</span>
+			</p>
+		</div>
+		<div class="btn_center">
+			<a href="#" class="btn_02 btn_black"><span>취소</span></a><a href="#" class="btn_02 btn_blue"><span>신청</span></a>
+		</div>
+	</div>
+	<!-- //pop_content e -->
+</div>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ebay edu</title>
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link type="text/css" rel="stylesheet" href="../../com/css/import.css" />
+<script type="text/javascript" src="../../com/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../com/js/design.js"></script>
+<script type="text/javascript" src="../../com/js/select.js"></script>
+</head>
+
+<body>
+	<div id="skip_nav">
+		<ul>
+			<li><a href="#gnb">메뉴 바로가기</a></li>
+			<li><a href="#contents">본문 바로가기</a></li>
+		</ul>
+	</div>
+	<hr />
+
+	<div id="wrap">
+		<!-- header s -->
+		<div id="header">
+			<div class="hearderCon">
+				<div class="hlogo"><a href="#"><img src="../../img/common/h_logo_ebay_edu.gif" alt="ebay edu" /></a></div>
+				<div class="miniBar">
+					<ul>
+						<!-- // 2014-04-10 s  -->
+						<li>Rosaaaaaaaa님</li>
+						<!-- <li><a href="#"><img src="../../img/common/tnb_s0.gif" width="43" height="9" alt="Logout" /></li> -->
+						<li><a href="#"><img src="../../img/common/tnb_s1.gif" width="34" height="9" alt="Login" /> </a></li>
+						<li><a href="#"><img src="../../img/common/tnb_s2.gif" width="42" height="9" alt="my page" /></a></li>
+						<li><a href="#"><img src="../../img/common/tnb_s4.gif" width="47" height="9" alt="site map" /></a></li>
+						<li><a href="#"><img src="../../img/common/tnb_s5.gif" width="49" height="9" alt="esm plus" /></a></li>
+						<li><a href="#"><img src="../../img/common/tnb_s6.gif" width="37" height="9" alt="오시는길" /></a></li><!-- 20130808 메인유틸리티 추가 -->
+						<!-- // 2014-04-10 e  -->
+					</ul>
+					<!-- miniBarSch s -->
+					<div id="miniBarSch" class="miniBarSch">
+						<a href="#"><img src="../../img/common/btn_search_01.gif" alt="검색" /></a>
+						<div class="schArea" style="display: none;">
+							<label for="topSrch" class="hide">강좌검색</label><input type="text" name="topSrch" id="topSrch" value="강좌검색" title="강좌검색" onblur="checkField(this)" onfocus="clearField(this)" /><input type="image" src="../../img/common/btn_search_01.gif" name="miniBarSch" id="gnb_search" alt="검색" />
+						</div>
+						<div class="dim"></div>
+					</div>
+					<!-- //miniBarSch e -->
+				</div>
+				<ul class="gnb">
+					<li><a href="#"><img src="../../img/common/gnb_m1.gif" width="115" height="32" alt="교육과정 안내" /></a></li>
+					<li><a href="#"><img src="../../img/common/gnb_m2.gif" width="121" height="32" alt="오픈마켓 소식" /></a></li>
+					<li><a href="#"><img src="../../img/common/gnb_m3.gif" width="102" height="32" alt="교육센터 소개" /></a></li>
+					<li><a href="#"><img src="../../img/common/gnb_m4.gif" width="164" height="32" alt="에듀 고객센터" /></a></li>
+				</ul>
+			</div>
+
+			<div class="depth on">
+				<ul>
+					<li class="sub_01">
+						<a href="#"><img src="../../img/common/sub_01_01_t.gif" alt="오프라인 강좌" /></a>
+						<a href="#"><img src="../../img/common/sub_01_03.gif" alt="온라인 강좌" /></a>
+					</li>
+					<li class="sub_02">
+						<a href="#"><img src="../../img/common/sub_02_01.gif" alt="업계소식" /></a>
+						<a href="#"><img src="../../img/common/sub_02_02.gif" alt="전문가 컬럼" /></a>
+						<a href="#"><img src="../../img/common/sub_02_03.gif" alt="파워셀러 성공담" /></a>
+						<a href="#"><img src="../../img/common/sub_02_04.gif" alt="성공 TIP" /></a>
+					</li>
+					<li class="sub_03">
+						<a href="#"><img src="../../img/common/sub_03_01.gif" alt="EBAY 교육사업 소개" /></a>
+						<a href="#"><img src="../../img/common/sub_03_02.gif" alt="교육과정" /></a>
+						<a href="#"><img src="../../img/common/sub_03_03.gif" alt="강사진" /></a>
+						<a href="#"><img src="../../img/common/sub_03_04.gif" alt="강의시설" /></a>
+					</li>
+					<li class="sub_04">
+						<a href="#"><img src="../../img/common/sub_04_01.gif" alt="공지사항" /></a>
+						<a href="#"><img src="../../img/common/sub_04_02.gif" alt="FAQ" /></a>
+						<a href="#"><img src="../../img/common/sub_04_03.gif" alt="1:1 전문가상담" /></a>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+		<!-- //header e -->
+		<hr />
+		
+		<!-- contents s -->
+		<div id="contents">
+			<!-- location s -->
+			<div class="location">
+				<ul class="depth01">
+					<li class="home"><a href="#">홈</a></li>
+					<li class="arrow"><!-- 화살표가 있을 경우 class="arrow" -->
+						<a href="#">교육센터 소개</a>
+						<ul class="subDepth">
+							<li><a href="#">교육과정 안내</a></li>
+							<li><a href="#">Market Now</a></li>
+							<li class="on">교육센터 소개</li>
+							<li><a href="#">고객센터</a></li>
+						</ul>						
+					</li> 
+					<li class="arrow last">
+						<a href="#">EBAY EDU 소개</a> <!-- 20130812 텍스트수정 -->
+						<ul class="subDepth">
+							<li class="on">EBAY Edu 소개</li>
+							<li><a href="#">교육과정</a></li>
+							<li><a href="#">강사진</a></li>
+							<li><a href="#">강의시설</a></li>
+							<li><a href="#">제휴서비스</a></li>
+						</ul>						
+					</li> 
+				</ul>
+			</div>
+			<!-- //location e -->
+			
+			<h1 class="bigtit"><img src="../../img/title/tit_introduce.gif" alt="INTRODUCTION EBAY EDU 소개" /></h1>
+
+			<h2 class="mt40"><img src="../../img/edu_intro/tit_h2_ebayedu01.gif" alt="1. EBAY EDU는?" /></h2>
+			<div class="int_cont mt20">
+				<p><img src="../../img/edu_intro/txt_introduce01.gif" alt="EBAY EDU는 대한민국 대표 오픈마켓인 G마켓과 옥션을 운영하고 있는 EBAY KOREA에서 국내 최정상급의 전자상거래 분야 전문 강사진을 모시고 최고 수준의 교육서비스를 제공하기 위해 만든 BRAND입니다. 온라인 창업을 희망하는 예비창업자, 판매중인 판매회원들에게 전자상거래 시장에 대한 다양한 전문지식을 제공함으로써 성공적인 온라인 창업을 적극 지원하고자 합니다." title="EBAY EDU는 대한민국 대표 오픈마켓인 G마켓과 옥션을 운영하고 있는 EBAY KOREA에서 국내 최정상급의 전자상거래 분야 전문 강사진을 모시고 최고 수준의 교육서비스를 제공하기 위해 만든 BRAND입니다. 온라인 창업을 희망하는 예비창업자, 판매중인 판매회원들에게 전자상거래 시장에 대한 다양한 전문지식을 제공함으로써 성공적인 온라인 창업을 적극 지원하고자 합니다." /></p>
+			</div>
+
+			<h2 class="mt40"><img src="../../img/edu_intro/tit_h2_ebayedu02.gif" alt="2. EBAY EDU 교육목표" /></h2>
+			<div class="int_cont mt20">
+				<p class="mt20"><img src="../../img/edu_intro/txt_introduce02.gif" alt="" /></p>
+				<dl class="hide">
+					<dt>체계적인 교육과정</dt>
+					<dd>예비창업자, 판매중인 판매회원 분들을 위해 신규창업교육과정, 기존창업교육과정으로 분류하여 체계적인 교육을 실시하고 있습니다.</dd>
+					<dt>온라인 교육 프로그램</dt>
+					<dt>지방에 거주하는 판매회원 분들을 위해 양질의 온라인 교육프로그램을 제공하고 있습니다.</dt>
+					<dt>실무중심 마케팅교육</dt>
+					<dd>실무중심의 마케팅 교육과정을 끊임없이 기획/개발하여 교육을 실시하고 있습니다.</dd>
+					<dd>전자상거래시장 현황분석</dd>
+					<dd>전자상거래 시장 현황 분석을 통한 판매회원 분들에게 전문적인 교육과정을 제공하기 위해 노력하겠습니다.</dd>
+				</dl>
+			</div>
+
+			<h2 class="mt40"><img src="../../img/edu_intro/tit_h2_ebayedu03.gif" alt="3. EBAY EDU 다양한 판매채널" /></h2>
+			<div class="int_cont mt20">
+				<p class="mt20"><img src="../../img/edu_intro/txt_introduce03.gif" alt="" /></p>
+				<table class="hide">
+					<tr>
+						<th>Gmarket</th>
+						<td>NO.1 Ecommerce Brand In Korea! </td>
+						<td>2000년 3월 구스닥으로 시작하여 현재 대한민국 최고의 오픈마켓으로써, E-Commerce의 성장을 주도하고 있습니다. 일일 평균 500만명이 방문하는 G마켓은 업계 최초 거래액 4조7596억원을 돌파하며 대한민국 NO.1 오픈마켓 입니다.</td>
+					</tr>
+					<tr>
+						<th>AUCTION</th>
+						<td>The First Online Marketplace In Korea!</td>
+						<td>대한민국 최초이자, 최고의 오픈마켓으로 성장해 온 옥션은 대한민국 최대의 상품 카테고리를 보유하고 있습니다.2013년 현재 약 2천4백만명의 회원들로 구성, 하루 최대 30만개의 구매후기가 오가는 대한민국 대표 오픈마켓 입니다.</td>
+					</tr>
+					<tr>
+						<th>Gmarket 글로벌샵</th>
+						<td>새로운 매출 성장 동력, G마켓 영문샵, G마켓 중문샵 서비스!</td>
+						<td>전세계 70개국에 거주하는 외국인 고객 대상으로 판매를 하실 수 있습니다. 2006년 시작된 G마켓 해외배송은 매년 약 20%의 견실한 성장을 하고 있으며, 한류열풍의 영향으로 해외구매가 지속적으로 성장하고 있습니다.</td>
+					</tr>
+					<tr>
+						<th>G9</th>
+						<td>기존 소셜 커머스와 차별화된, G마켓 패밀리 사이트 G9!</td>
+						<td>G9는 최신유행의 워너비 아이템을 만날 수 있는 특별한 쇼핑몰입니다. 특히 성장기 브랜드 제품을 이미지 손상없이 효과적으로 시장에 알리며, 제품의 성공 가능성을 빠르게 가늠할 수 있는 특별한 사이트입니다.</td>
+					</tr>
+					<tr>
+						<th>GEP</th>
+						<td>쉽고 빠른 ebay 해외판매의 첫 시작!</td>
+						<td>이베이 해외판매 GEP이란? G마켓에 판매하고 있는 상품을 세계 최대 오픈마켓 ebay에 등록 및 판매 지원하는 서비스입니다. 어려운 영문 번역, 외국인 고객 CS, 해외배송 관리를 지원하는 서비스로 ESM+를 통해, 비용 부담없이 이베이 판매를 하실 수 있습니다.</td>
+					</tr>
+				</table>
+			</div>
+
+			<h2 class="mt40"><img src="../../img/edu_intro/tit_h2_ebayedu04.gif" alt="4. EBAY EDU 오시는길" /></h2>
+			<div class="mt20">
+				<img src="../../img/edu_intro/map01.gif" alt="오시는길">
+				<dl class="hide">
+					<dt>지하철</dt>
+					<dd>2호선: 강남역 2번출구로 나온 뒤 직진 150M</dd>
+					<dd>신분당선: 강남역 3번/4번 출구 나온 뒤 30M</dd>
+					<dt>버스</dt>
+					<dd>정류장 이름(정류장 번호): 강남역(22-010,22-009)</dd>
+					<dd>파란버스: 140, 402, 407, 408, 230, 440, 441, 462, 470, 471</dd>
+					<dd>광역버스: 9408, 9409, 9711</dd>
+					<p>지하철 2호선 강남역 2번출구 직진 150m,  YBM어학원과 올리브영 바로 다음에 위치한  화인타워 9층 입니다. 신분당선 강남역을 이용하시는 경우, 3번 또는 4번 출구로 나오셔서  출구 반대 방향으로 돌아서 오시면 됩니다.</p>
+				</dl>
+			</div>
+		</div>
+		<!-- //contents e -->
+		<hr />
+
+		<!-- footer s -->
+		<div id="footer">
+			footer
+		</div>
+		<!-- //footer e -->
+		
+	</div>
+</body>
+</html>

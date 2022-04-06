@@ -1,0 +1,497 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ebay edu</title>
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link type="text/css" rel="stylesheet" href="../../com/css/import.css" />
+<script type="text/javascript" src="../../com/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../com/js/design.js"></script>
+<script type="text/javascript" src="../../com/js/select.js"></script>
+</head>
+
+<body>
+	<div id="skip_nav">
+		<ul>
+			<li><a href="#gnb">메뉴 바로가기</a></li>
+			<li><a href="#contents">본문 바로가기</a></li>
+		</ul>
+	</div>
+	<hr />
+
+	<div id="wrap">
+		<!-- header s -->
+		<div id="header">
+			<div class="hearderCon">
+				<div class="hlogo"><a href="#"><img src="../../img/common/h_logo_ebay_edu.gif" alt="ebay edu" /></a></div><!-- 20130809 로고이미지사이즈변경 -->
+				<div class="miniBar">
+					<ul>
+						<!-- // 2014-04-10 s  -->
+						<li>Rosaaaaaaaa님</li>
+						<!-- <li><a href="#"><img src="../../img/common/tnb_s0.gif" width="43" height="9" alt="Logout" /></li> -->
+						<li><a href="#"><img src="../../img/common/tnb_s1.gif" width="34" height="9" alt="Login" /> </a></li>
+						<li><a href="#"><img src="../../img/common/tnb_s2.gif" width="42" height="9" alt="my page" /></a></li>
+						<li><a href="#"><img src="../../img/common/tnb_s4.gif" width="47" height="9" alt="site map" /></a></li>
+						<li><a href="#"><img src="../../img/common/tnb_s5.gif" width="49" height="9" alt="esm plus" /></a></li>
+						<li><a href="#"><img src="../../img/common/tnb_s6.gif" width="37" height="9" alt="오시는길" /></a></li><!-- 20130808 메인유틸리티 추가 -->
+						<!-- // 2014-04-10 e  -->
+					</ul>
+					<!-- miniBarSch s -->
+					<div id="miniBarSch" class="miniBarSch">
+						<a href="#"><img src="../../img/common/btn_search_01.gif" alt="검색" /></a>
+						<div class="schArea" style="display: none;">
+							<label for="topSrch" class="hide">강좌검색</label><input type="text" name="topSrch" id="topSrch" value="강좌검색" title="강좌검색" onblur="checkField(this)" onfocus="clearField(this)" /><input type="image" src="../../img/common/btn_search_01.gif" name="miniBarSch" id="gnb_search" alt="검색" />
+						</div>
+						<div class="dim"></div>
+					</div>
+					<!-- //miniBarSch e -->
+				</div>
+				<ul class="gnb">
+					<li><a href="#"><img src="../../img/common/gnb_m1.gif" width="115" height="32" alt="교육과정 안내" /></a></li>
+					<li><a href="#"><img src="../../img/common/gnb_m2.gif" width="121" height="32" alt="오픈마켓 소식" /></a></li>
+					<li><a href="#"><img src="../../img/common/gnb_m3.gif" width="102" height="32" alt="교육센터 소개" /></a></li>
+					<li><a href="#"><img src="../../img/common/gnb_m4.gif" width="164" height="32" alt="에듀 고객센터" /></a></li>
+				</ul>
+			</div>
+
+			<!-- 201308012 서브메뉴 추가 -->
+			<div class="depth on">
+				<ul>
+					<li class="sub_01">
+						<a href="#"><img src="../../img/common/sub_01_01_t.gif" alt="오프라인 강좌" /></a>
+						<a href="#"><img src="../../img/common/sub_01_03.gif" alt="온라인 강좌" /></a>
+					</li>
+					<li class="sub_02">
+						<a href="#"><img src="../../img/common/sub_02_01.gif" alt="업계소식" /></a>
+						<a href="#"><img src="../../img/common/sub_02_02.gif" alt="전문가 컬럼" /></a>
+						<a href="#"><img src="../../img/common/sub_02_03.gif" alt="파워셀러 성공담" /></a>
+						<a href="#"><img src="../../img/common/sub_02_04.gif" alt="성공 TIP" /></a>
+					</li>
+					<li class="sub_03">
+						<a href="#"><img src="../../img/common/sub_03_01.gif" alt="EBAY 교육사업 소개" /></a>
+						<a href="#"><img src="../../img/common/sub_03_02.gif" alt="교육과정" /></a>
+						<a href="#"><img src="../../img/common/sub_03_03.gif" alt="강사진" /></a>
+						<a href="#"><img src="../../img/common/sub_03_04.gif" alt="강의시설" /></a>
+					</li>
+					<li class="sub_04">
+						<a href="#"><img src="../../img/common/sub_04_01.gif" alt="공지사항" /></a>
+						<a href="#"><img src="../../img/common/sub_04_02.gif" alt="FAQ" /></a>
+						<a href="#"><img src="../../img/common/sub_04_03.gif" alt="1:1 전문가상담" /></a>
+					</li>
+				</ul>
+			</div>
+			<!--// 201308012 서브메뉴 추가 -->
+
+		</div>
+		<!-- //header e -->
+		<hr />
+		
+		<!-- contents s -->
+		<div id="contents">
+			<!-- location s -->
+			<div class="location">
+				<ul class="depth01">
+					<li class="home"><a href="#">홈</a></li>
+					<li class="arrow"><!-- 화살표가 있을 경우 class="arrow" -->
+						<a href="#">교육과정 안내</a>							
+						<ul class="subDepth">
+							<li class="on">교육과정 안내</li>
+							<li><a href="#">Market Now</a></li>
+							<li><a href="#">교육센터 소개</a></li>
+							<li><a href="#">고객센터</a></li>
+						</ul>						
+					</li> 
+					<li class="arrow last">
+						<a href="#">오프라인강좌</a>							
+						<ul class="subDepth">
+							<li class="on">오프라인 강좌</li>
+							<li><a href="#">온라인강좌</a></li>
+						</ul>						
+					</li> 
+				</ul>
+			</div>
+			<!-- //location e -->
+			
+			<h1 class="bigtit"><img src="../../img/title/tit_offline.gif" alt="Off-line 오프라인 강좌" /></h1>
+			<!-- detail_box s -->
+			<div class="detail_box">
+				<!-- 왼쪽 이미지 s -->
+				<div class="sec_l"><img src="../../img/temp/temp_420x420.jpg" alt="" /><!-- 이미지 사이즈 : 420x420 --></div>
+				<!-- //왼쪽 이미지 e -->
+				<!-- 오른쪽 상세 s -->
+				<div class="sec_r">
+					<h2 class="h_detail">[마케팅 심화] 파워셀러들의 <br />매출 끌어올리는 7가지 판매비법</h2>
+					<div class="star_box">
+						<!-- 별점 s -->
+						<!-- [D] 100% : 5점 / 80% : 4점 / 60% : 3점 / 40% : 2점 / 20% : 1점 -->
+						<span class="star_rating"><span style="width:80%"></span></span>
+						<span class="star_num"><strong>4</strong>점</span>
+						<!-- 별점 e -->
+						<a href="#" class="btn_white btn_dwn"><span>자료 다운로드</span></a>
+					</div>
+					<table summary="교육일시, 교육장소, 교육강사 정보입니다." class="tbl_detail mt15"><!-- 201307 결제와 관련된 항목/페이지 삭제 -->
+						<caption>강좌 상세</caption>
+						<colgroup>
+							<col width="75" />
+							<col width="*" />
+						</colgroup>
+						<tr>
+							<th scope="row">교육일시</th>
+							<td>2013.04.09 14:00~17:00 (3시간)</td>
+						</tr>
+						<tr>
+							<th scope="row">교육장소</th>
+							<td>판매자 교육센터 <a href="#" class="btn_gray ml"><span>교육장소 보기</span></a></td>
+						</tr>
+						<tr>
+							<th scope="row">교육강사</th>
+							<td>박광록 강사 <a href="#" class="btn_gray ml"><span>강사소개 보기</span></a></td>
+						</tr>
+						<!-- 201307 결제와 관련된 항목/페이지 삭제 
+						<tr>
+							<th scope="row">교육비</th>
+							<td>10,000원</td>
+						</tr> -->
+					</table>
+					<div class="number_person">
+						<strong class="num_apply">33</strong><span class="slash"><strong class="capacity"> 40</strong>명</span>
+					</div>
+					<div class="btn_sns">
+						<a href="#"><img src="../../img/ico/ico_twitter.gif" alt="트위터" /></a><a href="#"><img src="../../img/ico/ico_facebook.gif" alt="페이스북" /></a><a href="#"><img src="../../img/ico/ico_metoday.gif" alt="미투데이" /></a>
+					</div>
+				</div>
+				<!-- //오른쪽 상세 e -->
+			</div>
+			<!-- //detail_box e -->
+
+			<div class="clear">
+				<a href="#"><img src="../../img/btn/btn_lecture_apply.gif" alt="강좌신청" /></a><a href="#"><img src="../../img/btn/btn_lecture_reg.gif" alt="관심강좌 등록" /></a>
+			</div>
+			
+			<!-- tabTypeC s -->
+			<ul class="tabTypeC mt40">
+				<li class="selected"><a href="#lecture_info01"><img src="../../img/tab/tab_detail_a1_on.gif" alt="교육정보" /></a></li>	
+				<li><a href="#lecture_info02"><img src="../../img/tab/tab_detail_a2.gif" alt="강사 및 교육장소" /></a></li>	
+				<li><a href="#lecture_info03"><img src="../../img/tab/tab_detail_a3.gif" alt="평점 및 수강후기" /> (<strong>26</strong>)</a></li>	
+				<li class="btn_tab"><a href="#" class="btn_lec_apply"><span>강좌신청</span></a><a href="#" class="btn_lec_reg"><span>관심강좌 등록</span></a></li>
+			</ul>
+			<!-- //tabTypeC e -->
+			
+			<!-- 교육정보 s -->
+			<div id="lecture_info01" class="lecture_info">
+				<h3 class="sec_l"><img src="../../img/title/tit_lecinfo_01.gif" alt="교육정보" /></h3>
+				<div class="sec_r">
+					<h4 class="mt0">교육정의</h4>
+					<p>매출을 올리는 방법은 분명 따로 있습니다. G마켓, 옥션의 예비판매자, 기존판매자를 위한 성공전략과 판매전략을 전수하고, <br />참가자 개인 별 판매현황 점검을 통한 적극적 판매촉진 전략 수립을 이끌어 냅니다.</p>
+					<h4>교육내용</h4>
+					<div class="tableListD">
+						<table summary="step01, step02, step03 교육 내용입니다.">
+							<caption>교육 내용</caption>
+							<colgroup>
+							<col width="100" />
+							<col width="*" />
+							</colgroup>
+							<tr>
+								<th scope="row"><img src="../../img/title/tit_step.gif" alt="STEP 01" /></th>
+								<td>
+									<p><strong>지피지기면 백전백승, 자기점검코칭</strong></p>
+									<p>판매현황(상품구성, 가격정책, 사입공급) 점검</p>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row"><img src="../../img/title/tit_step2.gif" alt="STEP 02" /></th>
+								<td>
+									<p><strong>파워셀러들의 대박상품 완전 분석</strong></p>
+									<p>판매 트렌드를 반영하는 대박상품 조건들<br />파워셀러들의 판매촉진 7가지 판매 기법</p>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row"><img src="../../img/title/tit_step3.gif" alt="STEP 03" /></th>
+								<td>
+									<p><strong>파워셀러 성공 시나리오 작성 </strong></p>
+									<p>천리길도 한 걸음부터, 판매 성공 시나리오 작성</p>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<h4>교육신청</h4>
+					<ul class="dot">
+						<li>교육 신청은 하나의 ID(구매자 ID/판매자 ID)로 1인 신청만 가능합니다.</li>
+						<li>주차권 지원은 불가하니, 대중교통을 이용 바랍니다. (화인빌딩 주차장 이용 시 30분 당 2,500원)</li>
+						<li>기타 교육관련 문의는 아래 연락처로 문의 주시기 바랍니다.<br />TEL: 02-2051-7022~3/이메일: EDU@CORP.GMARKET.CO.KR</li>
+					</ul>
+					<h4>교육헤택</h4>
+					<ul class="dot">
+						<li>G마켓 포커스쿠폰 5매 (사용유효기간: 발급일로부터 2주)</li>
+						<li>옥션 프리미엄쿠폰 8매 (사용유효기간: 발급일로부터 4주)</li>
+						<li>옥션 금주의 주목상품 100% 쿠폰 5매 (옥션 교육에만 해당 발급)</li>
+						<li>옥션 광고성 이머니 3만원 상당 (옥션 교육에만 해당 발급)</li>
+					</ul>
+				</div>
+			</div>
+			<!-- //교육정보 e -->
+
+			<!-- 강사 및 교육장소 s -->
+			<div id="lecture_info02" class="lecture_info">
+				<!-- 강사소개 s -->
+				<div class="box_img_txt">
+					<h3 class="sec_l"><img src="../../img/title/../../img/title/tit_lecinfo_02.gif" alt="강사소개" /></h3>
+					<div class="sec_r">
+						<div class="img_l">
+							<img src="../../img/temp/temp_profile_200x200.jpg" alt="강사 사진" /> <!-- 이미지 사이즈 : 200x200 -->
+							<ul class="btn_tr">
+								<li><a href="#" class="btn_04 btn_blue"><span>관심강사로<br />등록</span></a></li>
+								<li><a href="#" class="btn_04 btn_gray2"><span>강사의<br />모든 강좌<br />보기</span></a></li>
+							</ul>
+						</div>
+						<div class="txt_r">
+							<h4 class="mt0">박광록 강사</h4>
+							<ul>
+								<li>현)한국이셀러컨설팅 대표자/ 컨설턴트</li>
+								<li>현)대경대학교 패션쇼핑몰과 겸임교수</li>
+								<li>현)서울시 창업스쿨 온라인 e코칭 위원</li>
+								<li>현)카페24교육센터 TCP창업컨설턴트</li>
+								<li>현)파워셀러그룹, 인터넷창업연구소장</li>
+								<li>전)남성의류 인터넷쇼핑몰 엠씨닷컴 대표</li>
+								<li>전)오픈마켓(G마켓, 옥션)여성의류 파워셀러</li>
+								<li>매일경제신문사 ‘소셜미디어마케팅’ 저자</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- //강사소개 e -->
+				<!-- 교육장소 s -->
+				<div class="box_img_txt mt50">
+					<h3 class="sec_l"><img src="../../img/title/tit_lecinfo_03.gif" alt="교육장소" /></h3>
+					<!-- 201307 교육장소 이미지수정 -->
+					<div class="sec_r">
+						<img src="../../img/edu/map_680.gif" alt="교육장소 지도" /><!-- 이미지 : max-width:680px -->
+					</div>
+					<!--// 201307 교육장소 이미지수정 -->
+					<!-- 201307 삭제 -->
+					<!--div class="sec_r">
+						<div class="img_l">
+							<img src="../../img/edu/map.gif" alt="교육장소 지도" />
+						</div>
+						<div class="txt_r">
+							<p>지하철 2호선 강남역 2번출구 직진 150m, YBM어학원과 <br />올리브영 바로 다음에 위치한 화인타워 9층 입니다.<br />(건물 1층에 나무 간판으로 된 TNGT 의류 매장이 있습니다.)<br />신분당선을 이용하시는 경우 3번 또는 4번 출구로 나오셔서<br />출구 반대 방향으로 돌아서 오시면 됩니다.</p>
+							<h4 class="h4_map">지하철</h4>
+							<ul>	
+								<li>2호선 강남역 2번출구로 나온 뒤 직진 150m</li>
+								<li>신분당선 강남역 3번/4번 출구 나온 뒤 30m</li>
+							</ul>
+							<h4 class="h4_map">버스</h4>
+							<ul>
+								<li>정류장 이름(정류장 번호) : 강남역(22-010, 22-009)</li>
+								<li>파란버스 : 140, 402, 407, 408, 230, 440, 441, 462, 470, 471</li>
+								<li>광역버스 : 9408, 9409, 9711</li>
+							</ul>
+						</div>
+					</div-->
+				</div>
+				<!-- //교육장소 e -->
+			</div>
+			<!-- //강사 및 교육장소 e -->
+
+			<!-- 평점주기 s -->
+			<dl id="lecture_info03" class="star_reg">
+				<dt><label for="star_rate_01"><img src="../../img/title/txt_grade.gif" alt="평점주기" /></label></dt>
+				<dd>
+					<ul>
+						<li>
+							<input type="radio" name="star_rate" id="star_rate_01" title="1점" />
+							<!-- [D] 100% : 5점 / 80% : 4점 / 60% : 3점 / 40% : 2점 / 20% : 1점 -->
+							<span class="star_rating2"><span style="width:20%"></span></span>
+						</li>
+						<li>
+							<input type="radio" name="star_rate" id="star_rate_02" title="2점" />
+							<span class="star_rating2"><span style="width:40%"></span></span>
+						</li>
+						<li>
+							<input type="radio" name="star_rate" id="star_rate_03" title="3점" />
+							<span class="star_rating2"><span style="width:60%"></span></span>
+						</li>
+						<li>
+							<input type="radio" name="star_rate" id="star_rate_04" title="4점" />
+							<span class="star_rating2"><span style="width:80%"></span></span>
+						</li>
+						<li>
+							<input type="radio" name="star_rate" id="star_rate_05" title="5점" />
+							<span class="star_rating2"><span style="width:100%"></span></span>
+						</li>
+					</ul>
+					<a href="#" class="btn_01 btn_blue"><span>평점등록</span></a>
+				</dd>
+			</dl>
+			<!-- //평점주기 e -->
+
+			<!-- 수강후기 등록 s -->
+			<div class="review_reg mt10">
+				<div>
+					<textarea cols="30" rows="10"></textarea>
+				</div>
+				<a href="#" class="btn_01 btn_black"><span>수강후기 등록</span></a>
+			</div>
+			<!-- //수강후기 등록 e -->
+
+			<!-- 수강후기 s -->
+			<h3 class="h_01 mt40">수강후기 <span class="exp3">실제 강좌를 수강하신 판매자 회원들이 작성한 수강후기입니다.</span></h3>
+			<div class="tableListC">
+				<table summary="실제 강좌를 수강하신 판매자 회원들이 작성한 수강후기입니다.">
+					<caption>수강후기</caption>
+					<colgroup>
+					<col width="120" />
+					<col width="*" />
+					<col width="90" />
+					</colgroup>
+					<tr><!-- 1page 4행 출력 --> <!-- 첫번째 줄 td 클래스 : border0 -->
+						<td class="border0">
+							<p class="name">kaz****</p>
+							<p class="date">2013-04-21</p>
+						</td>
+						<td class="alignL border0">
+							<p>매우 유익한 교육이라 생각되며 판매자라면 마케팅 교육이 필수적이라 생각합니다. 교육 없이 판매자가 된다면 조그만 실수로 벌어진 일이 커질 수 있다는 점을 깨닫게 될 것입니다. 성공적인 서비스가 론칭되고 이것이 창업으로 이루어질 수 있도록  도와줍니다. 판매자로 등록을 한다면 교육을 꼭 받으세요.</p>
+						</td>
+						<td class="border0">
+							<a href="#" class="decBtn">신고하기</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p class="name"><span class="point_blue">ebay EDU</span></p>
+							<p class="date">2013-04-21</p>
+						</td>
+						<td class="alignL">
+							<p>회원님, 강좌가 도움이 되었다니 정말 다행이예요. 앞으로 더 다양한 강좌 커리큘럼으로 찾아뵐께요.<br />감사합니다. </p>
+						</td>
+						<td>
+							<a href="#" class="decBtn">신고하기</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p class="name">kaz******</p>
+							<p class="date">2013-04-21</p>
+						</td>
+						<td class="alignL">
+							<p>매우 유익한 교육이라 생각되며 판매자라면 마케팅 교육이 필수적이라 생각합니다. 교육 없이 판매자가 된다면 조그만 실수로 벌어진 일이 커질 수 있다는 점을 깨닫게 될 것입니다.</p>
+						</td>
+						<td>
+							<a href="#" class="decBtn">신고하기</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p class="name"><span class="point_blue">ebay EDU</span></p>
+							<p class="date">2013-04-21</p>
+						</td>
+						<td class="alignL">
+							<p>회원님, 다음에는 스텝2 강좌를 들어보세요. 그럼 좀 더 명확하게 창업기초에 대한 개념이 생기실꺼에요. <br />오늘 하루도 파이팅입니다!</p>
+						</td>
+						<td>
+							<a href="#" class="decBtn">신고하기</a>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<!-- paginate s -->
+			<div class="paginate"> <!-- inline의 속성중 여백때분에 enter없이 한줄처리 해야함 -->
+				<a href="#" class="prev">이전페이지</a><strong><span>1</span></strong><a href="#"><span>2</span></a><a href="#"><span>3</span></a><a href="#"><span>4</span></a><a href="#"><span>5</span></a><a href="#"><span>6</span></a><a href="#"><span>7</span></a><a href="#"><span>8</span></a><a href="#"><span>9</span></a><a href="#"><span>10</span></a><a href="#" class="next">다음페이지</a>
+			</div>
+			<!-- //paginate e -->
+			<!-- //수강후기 e -->
+
+			<!-- 강좌 FAQ s -->
+			<h3 class="h_01 mt40">강좌 FAQ</h3>
+				<dl class="faq">
+					<dt class="toggle_tit border0"> <!-- 첫번째 줄 dt 클래스 : border0 -->
+						<span class="num">3</span>
+						<span class="question">마감된 교육에 별도의 추가 신청이 가능한가요?</span>
+					</dt>
+					<dd class="toggle_con">답변입니다.다.다.33333333333333<br />답변입니다.</dd>
+					<dt class="toggle_tit">
+						<span class="num">2</span>
+						<span class="question">특강 신청은 한 명만 했지만 여러명 참석해도 될까요?</span>
+					</dt>
+					<dd class="toggle_con">한 아이디당 한 분만 참석이 가능합니다.</dd>
+					<dt class="toggle_tit">
+						<span class="num">1</span>
+						<span class="question">교육 신청 여부 확인은 어디서 하나요?</span>
+					</dt>
+					<dd class="toggle_con">답변입니다111111111111111111111111<br />답변답변</dd>
+				</dl>
+				<div class="btn_center">
+					<a href="#" class="btn_02 btn_black"><span>목록</span></a>
+				</div>
+			</div>
+			<!-- //강좌 FAQ e -->
+		</div>
+		<!-- //contents e -->
+		<hr />
+
+		<!-- footer s -->
+		<div id="footer">
+			<div class="footCon">
+				<div class="menu">
+					<ul>
+						<li class="first"><a href="#"><img src="../../img/common/foot_menu_tit01.gif" alt="EBAY EDU 소개" /></a></li>
+						<li><a href="#"><img src="../../img/common/foot_menu_tit02.gif" alt="이용약관" /></a></li>
+						<li><a href="#"><img src="../../img/common/foot_menu_tit03.gif" alt="개인정보취급방침" /></a></li>
+						<li><a href="#"><img src="../../img/common/foot_menu_tit04.gif" alt="판매 광고센터" /></a></li>
+						<li><a href="#"><img src="../../img/common/foot_menu_tit05.gif" alt="어바웃" /></a></li>
+						<li><a href="#"><img src="../../img/common/foot_menu_tit06.gif" alt="안전거래 센터" /></a></li>
+						<li><a href="http://cafe.naver.com/ebaykoreasellercafe"><img src="../../img/common/foot_menu_tit07.gif" alt="판매자 공식카페 Together" /></a></li><!--20131031 메뉴추가-->
+					</ul>
+				</div>
+				<div class="infomation">
+					<ul class="first">
+						<li><img src="../../img/common/foot_txt_left01.gif" alt="고객센터 상담가능시간:오전9시~오후6시(토요일 및 공휴일 휴무) 경기도 부천시 원미구 부일로 223(상동) 투나빌딩 6층" /></li>
+						<li class="pb05">
+							<img src="../../img/common/foot_txt_left02.gif" alt="옥션 Tel.1588-0184 / Fax.02-589-8829 / Mail. INformation@corp.auction.co.kr" usemap="#link01" />
+							<map name="link01" id="link01">
+								<area shape="rect" coords="126,0,182,14" href="http://member.auction.co.kr/help/home.aspx" target="_blank" alt="옥션 전화전 Click" />
+								<area shape="rect" coords="40,20,250,30" href="mailTo:Information@corp.auction.co.kr" alt="옥션 메일보내기" />
+							</map>
+						</li>
+						<li>
+							<img src="../../img/common/foot_txt_left03.gif" alt="G마켓 Tel.1544-5701 / Fax. 02-589-8842 / Mail. gmarket@corp.gmarket.co.kr" usemap="#link02" />
+							<map name="link02" id="link02">
+								<area shape="rect" coords="136,0,190,14" href="http://member.auction.co.kr/help/home.aspx" target="_blank" alt="G마켓 전화전 Click" />
+								<area shape="rect" coords="48,20,244,30" href="mailTo:gmarket@corp.gmarket.co.kr" alt="G마켓 메일보내기" />
+							</map>
+						</li>
+					</ul>
+					<ul>
+						<li><img src="../../img/common/foot_txt_center01.gif" alt="(주)이베이코리아 서울시 강남구 테헤란로 152(역삼동 강남파이낸스센터) 대표이사: 변광윤" /></li>
+						<li>
+							<img src="../../img/common/foot_txt_center02.gif" alt="사업자등록번호: 220-81-83676 /  통심판매업신고 강남10630호 / Fax. 02-589-8842" usemap="#link03" />
+							<map name="link03" id="link03">
+								<area shape="rect" coords="152,0,220,14" href="http://www.ftc.go.kr/info/bizinfo/communicationList.jsp" target="_blank" alt="사업자정보확인" />
+							</map>
+						</li>
+					</ul>
+					<ul>
+						<li><img src="../../img/common/foot_txt_right01.gif" alt="EBAY EDU 판매자 교육센터 서울시 강남구 역삼동 826-24 화인타워 9층" /></li>
+						<li>
+							<img src="../../img/common/foot_txt_right02.gif" alt="Tel. 02-2051-7022/7023 / Mail. info@ebayedu.com" usemap="#link04" />
+							<map name="link04" id="link04">
+								<area shape="rect" coords="0,14,140,24" href="mailTo:info@ebayedu.com" alt="EBAY EDU 메일보내기" />
+							</map>
+						</li>
+					</ul>
+				</div>
+				<div class="copy">
+					<img src="../../img/common/foot_copy.gif" alt="(주)이베이코리아의 사전 서면 동의 없이 EBAY EDU 사이트의 일체의 정보, 콘텐츠 및 UI 등을 상업적 목적으로 전재, 전송, 스크래핑 등 무단사용할 수 없습니다.Copyright(c) eBay Korea Co., Ltd All right reserved. " />
+					<div class="f_logo">
+						<a href="http://www.gmarket.co.kr" target="_blank"><img src="../../img/common/foot_logo_gmarket.gif" alt="Gmarket" /></a>
+						<a href="http://www.auction.co.kr/?frm=headertab&amp;redirect=1" target="_blank"><img src="../../img/common/foot_logo_auction.gif" alt="auction" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //footer e -->
+		
+</body>
+</html>

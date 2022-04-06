@@ -1,0 +1,361 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ebay edu</title>
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link type="text/css" rel="stylesheet" href="../../com/css/import.css" />
+<script type="text/javascript" src="../../com/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../com/js/design.js"></script>
+<script type="text/javascript" src="../../com/js/select.js"></script>
+</head>
+
+<body>
+	<div id="skip_nav">
+		<ul>
+			<li><a href="#gnb">메뉴 바로가기</a></li>
+			<li><a href="#contents">본문 바로가기</a></li>
+		</ul>
+	</div>
+	<hr />
+
+	<div id="wrap">
+		<!-- header s -->
+		<div id="header">
+			<div class="hearderCon">
+				<div class="hlogo"><a href="#"><img src="../../img/common/h_logo_ebay_edu.gif" alt="ebay edu" /></a></div><!-- 20130809 로고이미지사이즈변경 -->
+				<div class="miniBar">
+					<ul>
+						<!-- // 2014-04-10 s  -->
+						<li>Rosaaaaaaaa님</li>
+						<!-- <li><a href="#"><img src="../../img/common/tnb_s0.gif" width="43" height="9" alt="Logout" /></li> -->
+						<li><a href="#"><img src="../../img/common/tnb_s1.gif" width="34" height="9" alt="Login" /> </a></li>
+						<li><a href="#"><img src="../../img/common/tnb_s2.gif" width="42" height="9" alt="my page" /></a></li>
+						<li><a href="#"><img src="../../img/common/tnb_s4.gif" width="47" height="9" alt="site map" /></a></li>
+						<li><a href="#"><img src="../../img/common/tnb_s5.gif" width="49" height="9" alt="esm plus" /></a></li>
+						<li><a href="#"><img src="../../img/common/tnb_s6.gif" width="37" height="9" alt="오시는길" /></a></li><!-- 20130808 메인유틸리티 추가 -->
+						<!-- // 2014-04-10 e  -->
+					</ul>
+					<!-- miniBarSch s -->
+					<div id="miniBarSch" class="miniBarSch">
+						<a href="#"><img src="../../img/common/btn_search_01.gif" alt="검색" /></a>
+						<div class="schArea" style="display: none;">
+							<label for="topSrch" class="hide">강좌검색</label><input type="text" name="topSrch" id="topSrch" value="강좌검색" title="강좌검색" onblur="checkField(this)" onfocus="clearField(this)" /><input type="image" src="../../img/common/btn_search_01.gif" name="miniBarSch" id="gnb_search" alt="검색" />
+						</div>
+						<div class="dim"></div>
+					</div>
+					<!-- //miniBarSch e -->
+				</div>
+				<ul class="gnb">
+					<li><a href="#"><img src="../../img/common/gnb_m1.gif" width="115" height="32" alt="교육과정 안내" /></a></li>
+					<li><a href="#"><img src="../../img/common/gnb_m2.gif" width="121" height="32" alt="오픈마켓 소식" /></a></li>
+					<li><a href="#"><img src="../../img/common/gnb_m3.gif" width="102" height="32" alt="교육센터 소개" /></a></li>
+					<li><a href="#"><img src="../../img/common/gnb_m4.gif" width="164" height="32" alt="에듀 고객센터" /></a></li>
+				</ul>
+			</div>
+
+			<!-- 201308012 서브메뉴 추가 -->
+			<div class="depth on">
+				<ul>
+					<li class="sub_01">
+						<a href="#"><img src="../../img/common/sub_01_01_t.gif" alt="오프라인 강좌" /></a>
+						<a href="#"><img src="../../img/common/sub_01_03.gif" alt="온라인 강좌" /></a>
+					</li>
+					<li class="sub_02">
+						<a href="#"><img src="../../img/common/sub_02_01.gif" alt="업계소식" /></a>
+						<a href="#"><img src="../../img/common/sub_02_02.gif" alt="전문가 컬럼" /></a>
+						<a href="#"><img src="../../img/common/sub_02_03.gif" alt="파워셀러 성공담" /></a>
+						<a href="#"><img src="../../img/common/sub_02_04.gif" alt="판매활용 TIP" /></a><!-- 20131218 텍스트수정 -->
+					</li>
+					<li class="sub_03">
+						<a href="#"><img src="../../img/common/sub_03_01.gif" alt="EBAY 교육사업 소개" /></a>
+						<a href="#"><img src="../../img/common/sub_03_02.gif" alt="교육과정" /></a>
+						<a href="#"><img src="../../img/common/sub_03_03.gif" alt="강사진" /></a>
+						<a href="#"><img src="../../img/common/sub_03_04.gif" alt="강의시설" /></a>
+					</li>
+					<li class="sub_04">
+						<a href="#"><img src="../../img/common/sub_04_01.gif" alt="공지사항" /></a>
+						<a href="#"><img src="../../img/common/sub_04_02.gif" alt="FAQ" /></a>
+						<a href="#"><img src="../../img/common/sub_04_03.gif" alt="1:1 전문가상담" /></a>
+					</li>
+				</ul>
+			</div>
+			<!--// 201308012 서브메뉴 추가 -->
+
+		</div>
+		<!-- //header e -->
+		<hr />
+		
+		<!-- contents s -->
+		<div id="contents">
+			<!-- location s -->
+			<div class="location">
+				<ul class="depth01">
+					<li class="home"><a href="#">홈</a></li>
+					<li class="arrow"><!-- 화살표가 있을 경우 class="arrow" -->
+						<a href="#">Market Now</a>							
+						<ul class="subDepth">
+							<li><a href="#">교육과정 안내</a></li>
+							<li class="on">Market Now</li>
+							<li><a href="#">교육센터 소개</a></li>
+							<li><a href="#">고객센터</a></li>
+						</ul>						
+					</li> 
+					<li class="arrow last">
+						<a href="#">판매활용 TIP</a><!-- 20131218 텍스트수정 -->
+						<ul class="subDepth">
+							<li><a href="#">업계소식</a></li>
+							<li><a href="#">전문가컬럼</a></li>
+							<li><a href="#">파워셀러 성공담</a></li>
+							<li class="on">판매활용 TIP</li><!-- 20131218 텍스트수정 -->
+						</ul>
+					</li> 
+				</ul>
+			</div>
+			<!-- //location e -->
+			
+			
+			<h1 class="bigtit sub"><img src="../../img/title/tit_success_tip.gif" alt="SUCCESS STORY 파워셀러 성공담" /></h1>
+			<div class="sub-tit"><img src="../../img/title/tit_success_tip_sub.gif" alt="성공에도 가이드가 있다! 유용한 판매 TIP을 활용하면 여러분들도 파워셀러가 될 수 있습니다" /></div>
+			
+
+			<!-- tableListH s 20140225 -->
+			<div class="tableListH mt40">
+				<table summary="교육센터 1:1 항목 세분화">
+					<caption>교육센터 1:1 항목 세분화</caption>
+					<colgroup>
+					<col width="192">
+					<col width="192">
+					<col width="192">
+					<col width="192">
+					<col width="192">
+					</colgroup>
+					<tr> 
+						<th scope="row" rowspan="2">
+							<a href="#">전체 <strong class="point_blue">(21)</strong></a>
+						</th>
+						<td>
+							<a href="#">창업준비 <strong class="point_blue">(59)</strong></a>
+						</td>
+						<td>
+							<a href="#">사진촬영 <strong class="point_blue">(59)</strong></a>
+						</td>
+						<td>
+							<a href="#">상품페이지 제작 <strong class="point_blue">(59)</strong></a>
+						</td>
+						<td>
+							<a href="#">상품등록 <strong class="point_blue">(59)</strong></a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#">판매관리 <strong class="point_blue">(59)</strong></a>
+						</td>
+						<td>
+							<a href="#">상품사입 <strong class="point_blue">(59)</strong></a>
+						</td>
+						<td>
+							<a href="#">광고&마케팅 <strong class="point_blue">(59)</strong></a>
+						</td>
+						<td>
+							<a href="#">세무 <strong class="point_blue">(59)</strong></a>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<!--// tableListH e 20140225 -->
+
+			<!-- float_box s -->
+			<div class="float_box mt30">
+				<select class="floatR" style="width:128px" title="정렬방법 선택">
+					<option selected="selected">등록일순</option>
+					<option>조회순</option>
+					<option>추천순</option><!-- 20140225 항목추가 -->
+				</select>
+			</div>
+			<!-- //float_box e -->
+
+			<!-- tableListC s -->
+			<div class="tableListC border1 mt10">
+				<table class="type2" summary="번호, 제목, 등록일, 조회수를 나타내는 판매활용 TIP 목록입니다."><!-- 20131218 텍스트수정 -->
+					<caption>판매활용 TIP 목록</caption><!-- 20131218 텍스트수정 -->
+					<colgroup>
+					<col width="70" />
+					<col width="120" /><!-- 20140225 항목추가 -->
+					<col width="*" />
+					<col width="100" />
+					<col width="90" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">번호</th>
+							<th scope="col">항목</th><!-- 20140225 항목추가 -->
+							<th scope="col">제목</th>
+							<th scope="col">등록일</th>
+							<th scope="col">조회수</th>
+						</tr>
+					</thead>
+					<tbody> <!-- 10행 출력 -->
+						<!-- 20140225 목록 최상단 최대 4행 출력 -->
+						<tr>
+							<td><img class="tbl_ico pl05" src="../../img/ico/ico_info.gif" alt="안내"></td>
+							<td class="alignL" colspan="2">
+								<a href="#">안내사항 제목이 노출됩니다. (게시판에 대한 용도 및 이용 방법, 유의사항 안내 목적)</a>
+							</td>
+							<td>2014-01-07</td>
+							<td>20</td>
+						</tr>
+						<tr>
+							<td><img class="tbl_ico pl05" src="../../img/ico/ico_notice.gif" alt="공지"></td>
+							<td class="alignL" colspan="2">
+								<a href="#">공지사항 제목이 노출됩니다 공지사항 제목이 노출됩니다 공지사항 제목이 노출됩니다.</a>
+							</td>
+							<td>2014-01-07</td>
+							<td>20</td>
+						</tr>
+						<tr>
+							<td><img class="tbl_ico pl05" src="../../img/ico/ico_best.gif" alt="베스트"></td>
+							<td>항목노출</td>
+							<td class="alignL">
+								<a href="#">베스트 제목이 노출됩니다.</a>
+							</td>
+							<td>2014-01-07</td>
+							<td>20</td>
+						</tr>
+						<tr>
+							<td><img class="tbl_ico pl05" src="../../img/ico/ico_best.gif" alt="베스트"></td>
+							<td>항목노출</td>
+							<td class="alignL">
+								<a href="#">베스트 제목이 노출됩니다.</a>
+							</td>
+							<td>2014-01-07</td>
+							<td>20</td>
+						</tr>
+						<!--// 20140225 목록 최상단 최대 4행 출력 -->
+						<tr>
+							<td>273</td>
+							<td>창업준비</td><!-- 20140225 항목추가 -->
+							<td class="alignL"><a href="#">옥션 등 온라인몰, 등골교복 등장에 1만원대 교복 인기 옥션 등 온라인몰, 등골교복 등장에 등등..</a></td>
+							<td>2013.04.20</td>
+							<td>785</td>
+						</tr>
+						<tr>
+							<td>272</td>
+							<td>상품촬영</td><!-- 20140225 항목추가 -->
+							<td class="alignL"><a href="#">이베이코리아, 온라인 수출 대학강좌 오픈</a></td>
+							<td>2013.04.20</td>
+							<td>785</td>
+						</tr>
+						<tr>
+							<td>271</td>
+							<td>상품페이지 제작</td><!-- 20140225 항목추가 -->
+							<td class="alignL"><a href="#">뮈니 유모차 1000원 경매 등 ‘베이비페어’ 행사</a></td>
+							<td>2013.04.20</td>
+							<td>785</td>
+						</tr>
+						<tr>
+							<td>270</td>
+							<td>상품등록</td><!-- 20140225 항목추가 -->
+							<td class="alignL"><a href="#">뮈니 유모차 1000원 경매 등 ‘베이비페어’ 행사</a></td>
+							<td>2013.04.20</td>
+							<td>785</td>
+						</tr>
+						<tr>
+							<td>269</td>
+							<td>판매관리</td><!-- 20140225 항목추가 -->
+							<td class="alignL"><a href="#">뮈니 유모차 1000원 경매 등 ‘베이비페어’ 행사</a></td>
+							<td>2013.04.20</td>
+							<td>785</td>
+						</tr>
+						<tr>
+							<td>268</td>
+							<td>상품사입</td><!-- 20140225 항목추가 -->
+							<td class="alignL"><a href="#">뮈니 유모차 1000원 경매 등 ‘베이비페어’ 행사</a></td>
+							<td>2013.04.20</td>
+							<td>785</td>
+						</tr>
+						<tr>
+							<td>267</td>
+							<td>마케팅</td><!-- 20140225 항목추가 -->
+							<td class="alignL"><a href="#">뮈니 유모차 1000원 경매 등 ‘베이비페어’ 행사</a></td>
+							<td>2013.04.20</td>
+							<td>785</td>
+						</tr>
+						<tr>
+							<td>266</td>
+							<td>세무</td><!-- 20140225 항목추가 -->
+							<td class="alignL"><a href="#">뮈니 유모차 1000원 경매 등 ‘베이비페어’ 행사</a></td>
+							<td>2013.04.20</td>
+							<td>785</td>
+						</tr>
+						<tr>
+							<td>265</td>
+							<td>광고&마케팅</td><!-- 20140225 항목추가 -->
+							<td class="alignL"><a href="#">뮈니 유모차 1000원 경매 등 ‘베이비페어’ 행사</a></td>
+							<td>2013.04.20</td>
+							<td>785</td>
+						</tr>
+						<tr>
+							<td>264</td>
+							<td>전문가특강</td><!-- 20140225 항목추가 -->
+							<td class="alignL"><a href="#">뮈니 유모차 1000원 경매 등 ‘베이비페어’ 행사</a></td>
+							<td>2013.04.20</td>
+							<td>785</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- //tableListC e -->
+			<!-- paginate s -->
+			<div class="paginate"> <!-- inline의 속성중 여백때분에 enter없이 한줄처리 해야함 -->
+				<a href="#" class="prev">이전페이지</a><strong><span>1</span></strong><a href="#"><span>2</span></a><a href="#"><span>3</span></a><a href="#"><span>4</span></a><a href="#"><span>5</span></a><a href="#"><span>6</span></a><a href="#"><span>7</span></a><a href="#"><span>8</span></a><a href="#"><span>9</span></a><a href="#"><span>10</span></a><a href="#" class="next">다음페이지</a>
+			</div>
+			<!-- //paginate e -->
+
+			<!-- tblSearch s -->
+			<div class="tblSearch">
+				<fieldset>
+					<legend>검색 범위 선택</legend>
+					<select title="검색 조건 선택" style="width:155px">
+						<option selected="selected">전체</option>
+						<option>제목</option>
+						<option>내용</option>
+					</select>
+					<label for="srchTxt" class="hide">검색어 입력</label><input type="text" name="srchTxt" id="srchTxt" title="검색어를 입력하세요." style="width:390px" />&nbsp;<a class="btn_05 btn_black"><span>검색</span></a>
+				</fieldset>
+			</div>
+			<!-- //tblSearch e -->
+		</div>
+		<!-- //contents e -->
+		<hr />
+
+		<!-- footer s -->
+		<div id="footer">
+			<div class="footerCon">
+				<ul class="fNavi">
+					<li class="n1"><a href="#">eby edu 소개</a></li>
+					<li class="n2"><a href="#">이용약관</a></li>
+					<li class="n3"><a href="#">개인정보취급방침</a></li>
+					<li class="n4"><a href="http://adcenter.auction.co.kr/Default.aspx" target="_blank" title="새창">판매광고센터</a></li>
+					<li class="n5"><a href="http://www.about.co.kr" target="_blank" title="새창">어바웃</a></li>
+					<li class="n6"><a href="http://securitycenter.auction.co.kr/index.html" target="_blank" title="새창">안전거래 센터</a></li>
+				</ul>
+				<ul class="info">
+					<li class="tel">tel:1588-0184</li>
+					<li class="fax">Fax:02-589-8829</li>
+					<li class="mail">Mail.Infomatiln@corp.quction.co.kr</li>
+					<li class="add">주소:경기도 부천시 원미구 부일로 223(상동)투나빌딩 6층</li>
+					<li class="center">상담가능시간:오전 9시~오후6시 (토요일 및 공휴일 휴무)</li>
+				</ul>
+				<p class="copyright">COPYRIGHT(C) 1998-2012 ebay.Inc. ALL RIGHT RESERVED.</p>
+				<p class="flogo1"><a href="http://www.auction.co.kr/?frm=headertab&amp;redirect=1" target="_blank" title="새창"><img src="../../img/common/f_logo_auction.gif" width="57" height="23" alt="auction" /></a></p>
+				<p class="flogo2"><a href="http://www.gmarket.co.kr" target="_blank" title="새창"><img src="../../img/common/f_logo_gmarket.gif" width="71" height="23" alt="gmarket" /></a></p>
+			</div>
+		</div>
+		<!-- //footer e -->
+		
+	</div>
+</body>
+</html>

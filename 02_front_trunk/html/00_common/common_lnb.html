@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ebay edu</title>
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link type="text/css" rel="stylesheet" href="../../com/css/import.css" />
+<script type="text/javascript" src="../../com/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../com/js/design.js"></script>
+<script type="text/javascript" src="../../com/js/select.js"></script>
+</head>
+
+<body>
+	<div id="skip_nav">
+		<ul>
+			<li><a href="#gnb">메뉴 바로가기</a></li>
+			<li><a href="#contents">본문 바로가기</a></li>
+		</ul>
+	</div>
+	<hr />
+
+	<div id="wrap">
+		<!-- header s -->
+		<div id="header">
+			<div class="hearderCon">
+				<div class="hlogo"><a href="#"><img src="../../img/common/h_logo_ebay_edu.gif" alt="ebay edu" /></a></div><!-- 20130809 로고이미지사이즈변경 -->
+				<div class="miniBar">
+					<ul>
+						<!-- // 2014-04-10 s  -->
+						<!-- <li><a href="#"><img src="../../img/common/tnb_s0.gif" width="43" height="9" alt="Logout" /></li> -->
+						<li><a href="#"><img src="../../img/common/tnb_s1.gif" width="34" height="9" alt="Login" /> </a></li>
+						<li><a href="#"><img src="../../img/common/tnb_s2.gif" width="42" height="9" alt="my page" /></a></li>
+						<li><a href="#"><img src="../../img/common/tnb_s4.gif" width="47" height="9" alt="site map" /></a></li>
+						<li><a href="#"><img src="../../img/common/tnb_s5.gif" width="49" height="9" alt="esm plus" /></a></li>
+						<li class="type2"><a href="#"><img src="../../img/common/tnb_s7.gif" width="47" height="16" alt="교육장소" /></a></li>
+						<!-- // 2014-04-10 e  -->
+					</ul>
+					<!-- miniBarSch s -->
+					<div id="miniBarSch" class="miniBarSch">
+						<div class="schArea">
+							<input type="text" name="topSrch" id="topSrch" value="강좌명 또는 강사명을 입력하세요." title="강좌명 또는 강사명을 입력하세요." onblur="checkField(this)" onfocus="clearField(this)" />
+							<a href="#" class="btn-search"><img src="../../img/common/btn_search_02.gif" alt="검색" /></a>
+						</div>
+						<!--
+						<div class="schArea" style="display: none;">
+							<label for="topSrch" class="hide">강좌검색</label><input type="text" name="topSrch" id="topSrch" value="강좌검색" title="강좌검색" onblur="checkField(this)" onfocus="clearField(this)" /><input type="image" src="../../img/common/btn_search_01.gif" name="miniBarSch" id="gnb_search" alt="검색" />
+						</div>
+						<div class="dim"></div>-->
+					</div>
+					<!-- //miniBarSch e -->
+				</div>
+				<ul class="gnb">
+					<li><a href="#"><img src="../../img/common/gnb_m1.gif" width="81" height="30" alt="이달의 교육" /></a></li>
+					<li><a href="#"><img src="../../img/common/gnb_m2.gif" width="79" height="30" alt="동영상 교육" /></a></li>
+					<li>
+						<a href="#"><img src="../../img/common/gnb_m3.gif" width="83" height="30" alt="판매 길라잡이" /></a>
+						<div class="sub-gnb" style="display:none;">
+							<img src="../../img/common/gnb_m3_on.gif" class="tit-img" />
+							<ul>
+								<li><a href="#">파워셀러 성공담</a></li>
+								<li><a href="#">판매활용 TIP</a></li>
+								<li><a href="#">업계 소식</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="../../img/common/gnb_m4.gif" width="58" height="30" alt="교육 안내" /></a>
+						<div class="sub-gnb" style="display:none;">
+							<img src="../../img/common/gnb_m4_on.gif" class="tit-img" />
+							<ul>
+								<li><a href="#">Ebay EDU 소개</a></li>
+								<li><a href="#">전체교육과정</a></li>
+								<li><a href="#">강사진</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="../../img/common/gnb_m5.gif" width="57" height="30" alt="교육 문화" /></a>
+						<div class="sub-gnb" style="display:none;">
+							<img src="../../img/common/gnb_m5_on.gif" class="tit-img" />
+							<ul>
+								<li><a href="#">공지사항</a></li>
+								<li><a href="#">FAQ</a></li>
+								<li><a href="#">단체교육 문의</a></li> <!-- 20140919 메뉴추가 -->
+								<li><a href="#">교육센터 1:1 문의</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- //header e -->
+		<hr />
+
+		<!-- contents s -->
+		<div id="contents">
+			<!-- location s -->
+			<div class="location">
+				<ul class="depth01"><!-- 20140206 depth01 변경 -->
+					<li class="home"><a href="#">홈</a></li>
+					<li class="arrow"><!-- 화살표가 있을 경우 class="arrow" -->
+						<a href="#">교육과정 안내</a>
+						<ul class="subDepth">
+							<li class="on">교육과정 안내</li>
+							<li><a href="#">Market Now</a></li>
+							<li><a href="#">교육센터 소개</a></li>
+							<li><a href="#">고객센터</a></li>
+						</ul>
+					</li> 
+					<li class="arrow last"> <!-- 마지막 li에 .last 클래스 추가해주세요 -->
+						<a href="#">오프라인 강좌/분야별</a>
+						<ul class="subDepth">
+							<li class="on">오프라인 강좌/분야별</li>
+							<li><a href="#">오프라인 강좌/일정별</a></li>
+							<li><a href="#">온라인강좌</a></li>
+						</ul>
+					</li> 
+				</ul>
+
+				<!-- 20131119 LNB 삭제 S -->
+				<!-- p id="allView" class="allViewOn"><a href="#"><span>전체보기</span></a></p>
+				<div id="allViewSub" class="allViewSub" style="display:block">
+					<ul>
+						<li class="line">
+							<div class="subTit"><img src="../../img/title/location_tit1.gif" width="95" height="17" alt="교육과정 안내" /></div>
+							<ul>
+								<li><a href="#">오프라인강좌/일정별</a></li>
+								<li><a href="#">오프라인강좌/분야별</a></li>
+								<li><a href="#">온라인 강좌</a></li>
+							</ul>
+						</li>
+						<li class="line">
+							<div class="subTit"><img src="../../img/title/location_tit2.gif" width="127" height="17" alt="MARKET NOW" /></div>
+							<ul>
+								<li><a href="#">업계소식</a></li>
+								<li><a href="#">전문가컬럼</a></li>
+								<li><a href="#">파워셀러 성공담</a></li>
+								<li><a href="#">성공 TIP</a></li>
+							</ul>
+						</li>
+						<li class="line">
+							<div class="subTit"><img src="../../img/title/location_tit3.gif" width="95" height="17" alt="교육센터 소개" /></div>
+							<ul>
+								<li><a href="#">EBAY EDU 소개</a></li>
+								<li><a href="#">교육과정</a></li>
+								<li><a href="#">강사진</a></li>
+								<li><a href="#">강의시설</a></li>
+								<li><a href="#">제휴서비스</a></li> 
+							</ul>
+						</li>
+						<li class="line">
+							<div class="subTit"><img src="../../img/title/location_tit4.gif" width="60" height="17" alt="교육센터" /></div>
+							<ul>
+								<li><a href="#">공지사항</a></li>
+								<li><a href="#">FAQ</a></li>
+								<li><a href="#">교육센터 1:1 문의</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div -->
+				<!-- 20131119 LNB 삭제 E -->
+			</div>
+			<!-- //location e -->
+
+		</div>
+		<!-- //contents e -->
+		<hr />
+
+	</div>
+</body>
+</html>

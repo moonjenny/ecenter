@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ebay edu</title>
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link type="text/css" rel="stylesheet" href="../../com/css/import.css" />
+<script type="text/javascript" src="../../com/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../com/js/design.js"></script>
+<script type="text/javascript" src="../../com/js/select.js"></script>
+</head>
+
+<body>
+
+<!-- 팝업_강사의 모든 강좌 보기 : 740x? -->
+<div class="popup" style="width:740px">
+	<!-- pop_header s -->
+	<div class="pop_header">
+		<h1><img src="../../img/title/pop_tit_teacher_lec.gif" alt="강사의 모든 강좌 보기" /></h1>
+		<a href="#" class="btnClose">닫기</a> 
+	</div>
+	<!-- //pop_header e -->
+	<!-- pop_content s -->
+	<div class="pop_content">
+		<!-- box_img_txt s -->
+		<div class="box_img_txt">
+			<div class="img_l3">
+				<img src="../../img/temp/temp_profile_150x150.jpg" alt="강사 사진" /> <!-- 이미지 사이즈 : 200x200 -->
+			</div>
+			<div class="txt_r3">
+				<h2 class="h_01">정소현 강사</h2>
+				<pre><strong>[주요경력]</strong>
+충북 충주 MBC, 청주 KBS 근무 
+대구대학교 LINC사업단 글로벌 마켓 관련 프로젝트 수행 
+기업 및 대학 대상 이베이창업관련 전문강사
+
+<strong>[전문 교육분야]</strong>
+여성글로벌 마켓창업교육, 비즈니스 설명회, 초보셀러 가이드, 기업인큐베이팅
+</pre>
+				<!-- 20131121 에디터 삽입으로 삭제
+				<ul class="mt15">
+					<li>현)한국이셀러컨설팅 대표자/ 컨설턴트</li>
+					<li>현)대경대학교 패션쇼핑몰과 겸임교수</li>
+					<li>현)서울시 창업스쿨 온라인 e코칭 위원</li>
+					<li>현)카페24교육센터 TCP창업컨설턴트</li>
+					<li>현)파워셀러그룹, 인터넷창업연구소장</li>
+					<li>전)남성의류 인터넷쇼핑몰 엠씨닷컴 대표</li>
+					<li>전)오픈마켓(G마켓, 옥션)여성의류 파워셀러</li>
+					<li>매일경제신문사 ‘소셜미디어마케팅’ 저자</li>
+				</ul> -->
+			</div>
+		</div>
+		<!-- //box_img_txt e -->
+		<!-- tabTypeB s -->
+		<div class="tabTypeB mt20">
+			<ul class="tabList">
+				<li><a href="#" class="selected"><img src="../../img/btn/tab_offline.png" alt="오프라인 강좌" /></a></li>	
+				<li><a href="#"><img src="../../img/btn/tab_online.png" alt="온라인 강좌" /></a></li>		
+			</ul>
+		</div>
+		<!-- //tabTypeB e -->
+		<!-- popTableB s -->
+		<div class="popTableB mt10" style="height:270px">
+			<table summary="번호, 강좌명, 교육 일시, 신청자/정원을 나타내는 강좌 목록입니다."><!-- 201307 결제와 관련된 항목/페이지 삭제 -->
+				<caption>강좌 목록</caption>
+				<colgroup>
+				<col width="50" />
+				<col width="70" />
+				<col width="70" />
+				<col width="*" />
+				<col width="90" />
+				<col width="100" />
+				<!-- 201307 결제와 관련된 항목/페이지 삭제 
+				<col width="70" /> -->
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">번호</th>
+						<th scope="col">과정</th>
+						<th scope="col">단계</th>
+						<th scope="col">강좌명</th>
+						<th scope="col">교육 일시</th>
+						<th scope="col">신청자/정원</th>
+						<!-- 201307 결제와 관련된 항목/페이지 삭제 
+						<th scope="col">교육비</th> -->
+					</tr>
+				</thead>
+				<tbody>
+					<!-- 개설된 강좌가 없을 경우
+					<tr>
+						<td colspan="6" class="result_none">개설된 강좌가 없습니다.</td>
+					</tr> -->
+					<tr> <!-- 5행 출력 -->
+						<td>1</td>
+						<td>창업준비</td>
+						<td>기초단계</td>
+						<td class="alignL">
+							<p><a href="#">파워셀러와의 만남</a></p>
+						</td>
+						<td>2013-04-01<br />14:00~15:00</td>
+						<td>34/50</td>
+						<!-- 201307 결제와 관련된 항목/페이지 삭제 
+						<td>100,000</td> -->
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>창업준비</td>
+						<td>기초단계</td>
+						<td class="alignL">
+							<p><a href="#">파워셀러와의 만남</a></p>
+						</td>
+						<td>2013-04-01<br />14:00~15:00</td>
+						<td>34/50</td>
+						<!-- 201307 결제와 관련된 항목/페이지 삭제 
+						<td>100,000</td> -->
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>창업준비</td>
+						<td>기초단계</td>
+						<td class="alignL">
+							<p><a href="#">파워셀러와의 만남</a></p>
+						</td>
+						<td>2013-04-01<br />14:00~15:00</td>
+						<td>34/50</td>
+						<!-- 201307 결제와 관련된 항목/페이지 삭제 
+						<td>100,000</td> -->
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>창업준비</td>
+						<td>기초단계</td>
+						<td class="alignL">
+							<p><a href="#">파워셀러와의 만남</a></p>
+						</td>
+						<td>2013-04-01<br />14:00~15:00</td>
+						<td>34/50</td>
+						<!-- 201307 결제와 관련된 항목/페이지 삭제 
+						<td>100,000</td> -->
+					</tr>
+					<tr>
+						<td>5</td>
+						<td>창업준비</td>
+						<td>기초단계</td>
+						<td class="alignL">
+							<p><a href="#">파워셀러와의 만남</a></p>
+						</td>
+						<td>2013-04-01<br />14:00~15:00</td>
+						<td>34/50</td>
+						<!-- 201307 결제와 관련된 항목/페이지 삭제 
+						<td>100,000</td> -->
+					</tr>
+					<tr>
+						<td>6</td>
+						<td>창업준비</td>
+						<td>기초단계</td>
+						<td class="alignL">
+							<p><a href="#">파워셀러와의 만남</a></p>
+						</td>
+						<td>2013-04-01<br />14:00~15:00</td>
+						<td>34/50</td>
+						<!-- 201307 결제와 관련된 항목/페이지 삭제 
+						<td>100,000</td> -->
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!-- //popTableB e -->
+		<!-- paginate s -->
+		<div class="paginate"> <!-- inline의 속성중 여백때분에 enter없이 한줄처리 해야함 -->
+			<a href="#" class="prev">이전페이지</a><strong><span>1</span></strong><a href="#"><span>2</span></a><a href="#"><span>3</span></a><a href="#"><span>4</span></a><a href="#"><span>5</span></a><a href="#"><span>6</span></a><a href="#"><span>7</span></a><a href="#"><span>8</span></a><a href="#"><span>9</span></a><a href="#"><span>10</span></a><a href="#" class="next">다음페이지</a>
+		</div>
+		<!-- //paginate e -->
+	</div>
+	<!-- //pop_content e -->
+</div>
+</body>
+</html>
