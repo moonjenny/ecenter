@@ -1,0 +1,748 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<title>eBayCenter html guide</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link type="text/css" rel="stylesheet" href="com/guide.css" />
+<link type="text/css" rel="stylesheet" href="com/css/ui-lightness/jquery-ui-1.10.4.custom.min.css" />
+<script type="text/javascript" src="com/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="com/jquery-ui-1.10.4.custom.min.js"></script>
+<script type="text/javascript" src="com/guide.js"></script>
+<script language="javascript">
+$(function() {
+    $('#search_date').change('change', function() {
+        $('tr').removeClass("choose");
+        
+        $('span.txt_ok').each(function() {
+            if($(this).html() >= $('#search_date').val()) {
+                $(this).parent().parent().addClass("choose");                        
+            }
+        });
+    });
+    
+     $( "#search_date" ).datepicker({ 
+         inline: true, 
+         dateFormat: "yy-mm-dd",    /* 날짜 포맷 */ 
+         prevText: 'prev', 
+         nextText: 'next', 
+         showButtonPanel: true,    /* 버튼 패널 사용 */ 
+         changeMonth: true,        /* 월 선택박스 사용 */ 
+         changeYear: true,        /* 년 선택박스 사용 */ 
+         showOtherMonths: true,    /* 이전/다음 달 일수 보이기 */ 
+         selectOtherMonths: true,    /* 이전/다음 달 일 선택하기 */ 
+         showOn: "both", 
+         buttonImage: "img/calendar03.gif", 
+         buttonImageOnly: true, 
+         minDate: '-30y', 
+         closeText: '닫기', 
+         currentText: '오늘', 
+         showMonthAfterYear: true,        /* 년과 달의 위치 바꾸기 */ 
+         /* 한글화 */ 
+         monthNames : ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'], 
+         monthNamesShort : ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'], 
+         dayNames : ['일', '월', '화', '수', '목', '금', '토'],
+         dayNamesShort : ['일', '월', '화', '수', '목', '금', '토'],
+         dayNamesMin : ['일', '월', '화', '수', '목', '금', '토'],
+         showAnim: 'slideDown', 
+         /* 날짜 유효성 체크 */ 
+         onClose: function( selectedDate ) { 
+         } 
+     });     
+});
+
+
+
+
+</script>
+<style>
+.choose {background:#85daea;}
+</style>
+</head>
+<body>
+<div id="wrap"> 
+	<!-- header s -->
+	<div id="header">
+		<h1><img src="img/logo.gif" alt="eBayCenter" /></h1>
+		<ul class="gnb">
+			<li><a href="list.html" class="on">Front List(고도화)</a></li>
+			<!-- <li><a href="guide01.html" >Guide</a></li> -->
+			<!-- <li><a href="download.html">Guide Download</a></li>-->
+		</ul>
+	</div>
+	<!--// header e --> 
+
+	<!-- container s -->
+	<div id="container">
+		<h2 class="h2_tit">기본정의</h2>
+		<div class="conbox">
+			<ul>
+				<li>최소해상도 1024기준이 100% 풀브라우징으로 적용됨 : [width:100%; min-width:960px;] 기준임</li>
+				<li>기준브라우저는 IE8. 크로스브라우징의 범위 : IE6~IE7(화면유지) ~ IE9, 구글크롬, 파이어폭스, 사파리</li>
+				<li>Html Validator 통과를 원칙으로 함</li>
+				<li>기본 주석 및 개발 전달 주석 필히 기재</li>
+				<li>[주의]공동작업임으로 서버에서 파일이 덮여쓰여지지 않도록 주의할것. 반드시 로컬에 백업할것</li>
+			</ul>
+		</div>
+		<h2 class="h2_tit">프론트 리스트<span class="process">진행현황안내 : <span class="txt_ok">빨강-완료일/검수일</span>, <span class="txt_ing">파랑-진행중</span>, <span class="txt_mod">검정-수정일</span></span>
+		    <input type="text" name="search_date" id="search_date" style="width:80px" />    
+		</h2>
+		<div id="g_content">
+			<table id="focus" class="mlist">
+				<colgroup>
+				<col width="5%" />
+				<col width="13%" />
+				<col width="13%" />
+				<col width="13%" />
+				<col width="13%" />
+				<col width="13%" />
+				<col width="5%" />
+				<col width="*" />
+				<col width="7%" />
+				</colgroup>
+				<thead>
+					<tr>
+						<th class="first">NUM</th>
+						<th>1Depth</th>
+						<th>2Depth</th>
+						<th>3Depth</th>
+						<th>4Depth</th>
+						<th>5Depth</th>
+						<th>구분</th>
+						<th>DATE</th>
+						<th>LINK</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr onmousedown="toggleed(this)">
+					  <th>&nbsp;</th>
+					  <th rowspan="9" class="itemtit01">공통</th>
+					  <td class="itemtit02">로그인</td>
+					  <td class="itemtit03">&nbsp;</td>
+					  <td class="itemtit04">&nbsp;</td>
+					  <td class="itemtit05">&nbsp;</td>
+					  <td>&nbsp;</td>
+					  <td><span class="txt_ok">2014-02-20</span></td>
+					  <td class="alC"><a href="../html/00_common/login.html" target="_blank" class="btn_go">페이지 열기</a></td>
+				  </tr>
+					<tr onmousedown="toggleed(this)">
+					  <th>&nbsp;</th>
+					  <td class="itemtit02">LNB</td>
+					  <td class="itemtit03">&nbsp;</td>
+					  <td class="itemtit04">&nbsp;</td>
+					  <td class="itemtit05">&nbsp;</td>
+					  <td>&nbsp;</td>
+					  <td><span class="txt_ok">2014-02-06</span></td>
+					 <td class="alC"><a href="../html/00_common/common_lnb.html" target="_blank" class="btn_go">페이지 열기</a></td>
+				    </tr>
+					<tr onmousedown="toggleed(this)">
+					  <th>&nbsp;</th>
+					  <td rowspan="3" class="itemtit02">Footer</td>
+					  <td class="itemtit03">이용약관</td>
+					  <td class="itemtit04">&nbsp;</td>
+					  <td class="itemtit05">&nbsp;</td>
+					  <td>&nbsp;</td>
+					  <td><span class="txt_ok">2014-02-06</span></td>
+					 <td class="alC"><a href="../html/00_common/common_customer_terms.html" target="_blank" class="btn_go">페이지 열기</a></td>
+				    </tr>
+					<tr onmousedown="toggleed(this)">
+					  <th>&nbsp;</th>
+					  <td class="itemtit03">개인정보취급방침</td>
+					  <td class="itemtit04">&nbsp;</td>
+					  <td class="itemtit05">&nbsp;</td>
+					  <td>&nbsp;</td>
+					  <td><span class="txt_ok">2014-04-15</span></td>
+					 <td class="alC"><a href="../html/00_common/common_customer_privacy.html" target="_blank" class="btn_go">페이지 열기</a></td>
+				    </tr>
+				    <tr onmousedown="toggleed(this)">
+					  <th>&nbsp;</th>
+					  <td class="itemtit03">개인정보취급방침 08/26</td>
+					  <td class="itemtit04">&nbsp;</td>
+					  <td class="itemtit05">&nbsp;</td>
+					  <td>&nbsp;</td>
+					  <td><span class="txt_ok">2013-08-23, </span><span>2013-08-26, </span><span class="txt_mod">2014-02-06</span></td>
+					 <td class="alC"><a href="../html/00_common/common_customer_privacy_01.html" target="_blank" class="btn_go">페이지 열기</a></td>
+				    </tr>
+					<tr onmousedown="toggleed(this)">
+					  <th>&nbsp;</th>
+					  <td class="itemtit02">시스템오류</td>
+					  <td class="itemtit03">&nbsp;</td>
+					  <td class="itemtit04">&nbsp;</td>
+					  <td class="itemtit05">&nbsp;</td>
+					  <td>&nbsp;</td>
+					  <td><span class="txt_ok">2014-02-10</span></td>
+					 <td class="alC"><a href="../html/00_common/common_error.html" target="_blank" class="btn_go">페이지 열기</a></td>
+				    </tr>
+					<tr onmousedown="toggleed(this)">
+					  <th>&nbsp;</th>
+					  <td class="itemtit02">검색결과</td>
+					  <td class="itemtit03">&nbsp;</td>
+					  <td class="itemtit04">&nbsp;</td>
+					  <td class="itemtit05">&nbsp;</td>
+					  <td>&nbsp;</td>
+					  <td><span class="txt_ok">2014-03-20</span></td>
+					 <td class="alC"><a href="../html/00_common/common_searchList.html" target="_blank" class="btn_go">페이지 열기</a></td>
+				    </tr>
+					<tr onmousedown="toggleed(this)">
+					  <th>&nbsp;</th>
+					  <td class="itemtit02">오시는 길(P)</td>
+					  <td class="itemtit03">&nbsp;</td>
+					  <td class="itemtit04">&nbsp;</td>
+					  <td class="itemtit05">&nbsp;</td>
+					  <td>&nbsp;</td>
+					  <td><span class="txt_ok">2014-03-26</span></td>
+					 <td class="alC"><a href="../html/00_common/common_popMap.html" target="_blank" class="btn_go">페이지 열기</a></td>
+				    </tr>
+				    </tr>
+					<tr onmousedown="toggleed(this)">
+					  <th>&nbsp;</th>
+					  <td class="itemtit02">사이트맵</td>
+					  <td class="itemtit03">&nbsp;</td>
+					  <td class="itemtit04">&nbsp;</td>
+					  <td class="itemtit05">&nbsp;</td>
+					  <td>&nbsp;</td>
+					  <td><span class="txt_ok">2014-04-10</span></td>
+					 <td class="alC"><a href="../html/00_common/common_sitemap.html" target="_blank" class="btn_go">페이지 열기</a></td>
+				    </tr>
+				    <tr>
+						<td colspan="11" class="borB"> </td>
+					</tr>
+					<tr onmousedown="toggleed(this)">
+					  <th>&nbsp;</th>
+					  <th rowspan="18" class="itemtit01">교육과정안내</th>
+					  <td rowspan="8" class="itemtit02">오프라인 교육강좌</td>
+					  <td class="itemtit03">메인</td>
+					  <td class="itemtit04">&nbsp;</td>
+					  <td class="itemtit05">&nbsp;</td>
+					  <td>&nbsp;</td>
+					  <td><span class="txt_ok">2014-03-24</span>, <span class="txt_mod">2014-03-28</span></td>
+					  <td class="alC"><a href="../html/02_lecture/offlineCategoryList.html" target="_blank" class="btn_go">페이지 열기</a></td>
+				  	</tr>
+					<tr onmousedown="toggleed(this)">
+					  <th>&nbsp;</th>
+					  <td class="itemtit03">달력형 보기</td>
+					  <td class="itemtit04">&nbsp;</td>
+					  <td class="itemtit05">&nbsp;</td>
+					  <td>&nbsp;</td>
+					  <td><span class="txt_ok">2014-03-24</span>, <span class="txt_mod">2014-03-28</span></td>
+					  <td class="alC"><a href="../html/02_lecture/offlineCategoryList_calender.html" target="_blank" class="btn_go">페이지 열기</a></td>
+				  	</tr>
+				  	<tr onmousedown="toggleed(this)">
+					  <th>&nbsp;</th>
+					  <td class="itemtit03">달력형 보기_new</td>
+					  <td class="itemtit04">&nbsp;</td>
+					  <td class="itemtit05">&nbsp;</td>
+					  <td>&nbsp;</td>
+					  <td><span class="txt_ok">2014-06-11</span></td>
+					  <td class="alC"><a href="../html/02_lecture/offlineCategoryList_calender_new.html" target="_blank" class="btn_go">페이지 열기</a></td>
+				  	</tr>
+				  	<tr onmousedown="toggleed(this)">
+					  <th>&nbsp;</th>
+					  <td class="itemtit03">목록형 보기</td>
+					  <td class="itemtit04">&nbsp;</td>
+					  <td class="itemtit05">&nbsp;</td>
+					  <td>&nbsp;</td>
+					  <td><span class="txt_ok">2014-03-24</span>, <span class="txt_mod">2014-03-28</span></td>
+					  <td class="alC"><a href="../html/02_lecture/offlineCategoryList_step.html" target="_blank" class="btn_go">페이지 열기</a></td>
+				  	</tr>
+				  	<tr onmousedown="toggleed(this)">
+					  <th>&nbsp;</th>
+					  <td class="itemtit03">목록형 보기_new</td>
+					  <td class="itemtit04">&nbsp;</td>
+					  <td class="itemtit05">&nbsp;</td>
+					  <td>&nbsp;</td>
+					  <td><span class="txt_ok">2014-06-11</span></td>
+					  <td class="alC"><a href="../html/02_lecture/offlineCategoryList_step_new.html" target="_blank" class="btn_go">페이지 열기</a></td>
+				  	</tr>
+					<tr onmousedown="toggleed(this)">
+					  <th>&nbsp;</th>
+					  <td rowspan="2" class="itemtit03">상세_</td>
+					  <td class="itemtit04">&nbsp;</td>
+					  <td class="itemtit05">&nbsp;</td>
+					  <td>&nbsp;</td>
+					  <td><span class="txt_ok">2014-03-27</span></td>
+					  <td class="alC"><a href="../html/02_lecture/offlinescheduleView.html" target="_blank" class="btn_go">페이지 열기</a></td>
+				  	</tr>
+				  	
+					<tr onmousedown="toggleed(this)">
+					  <th>&nbsp;</th>
+					  <td class="itemtit04">강좌 수강신청(P)</td>
+					  <td class="itemtit05">&nbsp;</td>
+					  <td>&nbsp;</td>
+					  <td><span class="txt_ok">2014-03-20</span></td>
+					  <td class="alC"><a href="../html/02_lecture/popLectureApply.html" target="_blank" class="btn_go">페이지 열기</a></td>
+				  	</tr>
+				  	<tr onmousedown="toggleed(this)">
+					  <th>&nbsp;</th>
+					  <td class="itemtit03">상세_new</td>
+					  <td class="itemtit04">&nbsp;</td>
+					  <td class="itemtit05">&nbsp;</td>
+					  <td>&nbsp;</td>
+					  <td><span class="txt_ok">2014-06-11</span></td>
+					  <td class="alC"><a href="../html/02_lecture/offlinescheduleView_new.html" target="_blank" class="btn_go">페이지 열기</a></td>
+				  	</tr>
+					<tr onmousedown="toggleed(this)">
+					  <th>&nbsp;</th>
+					  <td rowspan="6" class="itemtit02">온라인 교육강좌</td>
+					  <td class="itemtit03">목록(동영상)</td>
+					  <td class="itemtit04">&nbsp;</td>
+					  <td class="itemtit05">&nbsp;</td>
+					  <td>&nbsp;</td>
+					  <td><span class="txt_ok">2014-03-28</span></td>
+					  <td class="alC"><a href="../html/02_lecture/onlineCategoryList.html" target="_blank" class="btn_go">페이지 열기</a></td>
+				  	</tr>
+				  	<tr onmousedown="toggleed(this)">
+					  <th>&nbsp;</th>
+					  <td class="itemtit03">목록(동영상)_new</td>
+					  <td class="itemtit04">&nbsp;</td>
+					  <td class="itemtit05">&nbsp;</td>
+					  <td>&nbsp;</td>
+					  <td><span class="txt_ok">2014-03-27</span></td>
+					  <td class="alC"><a href="../html/02_lecture/onlineCategoryList_temp_new.html" target="_blank" class="btn_go">페이지 열기</a></td>
+				  	</tr>
+					<tr onmousedown="toggleed(this)">
+					  <th>&nbsp;</th>
+					  <td class="itemtit03">목록</td>
+					  <td class="itemtit04">&nbsp;</td>
+					  <td class="itemtit05">&nbsp;</td>
+					  <td>&nbsp;</td>
+					  <td><span class="txt_ok">2014-03-27</span></td>
+					  <td class="alC"><a href="../html/02_lecture/onlineLectureList.html" target="_blank" class="btn_go">페이지 열기</a></td>
+				  	</tr>
+				  	<tr onmousedown="toggleed(this)">
+					  <th>&nbsp;</th>
+					  <td class="itemtit03">상세</td>
+					  <td class="itemtit04">&nbsp;</td>
+					  <td class="itemtit05">&nbsp;</td>
+					  <td>&nbsp;</td>
+					  <td><span class="txt_ok">2014-03-27</span></td>
+					  <td class="alC"><a href="../html/02_lecture/onlineLectureView.html" target="_blank" class="btn_go">페이지 열기</a></td>
+				  	</tr>
+				  	<tr onmousedown="toggleed(this)">
+					  <th>&nbsp;</th>
+					  <td class="itemtit03">상세_new</td>
+					  <td class="itemtit04">&nbsp;</td>
+					  <td class="itemtit05">&nbsp;</td>
+					  <td>&nbsp;</td>
+					  <td><span class="txt_ok">2014-06-11</span></td>
+					  <td class="alC"><a href="../html/02_lecture/onlineLectureView_new.html" target="_blank" class="btn_go">페이지 열기</a></td>
+				  	</tr>
+				  	<tr onmousedown="toggleed(this)">
+					  <th>&nbsp;</th>
+					  <td class="itemtit03">POP_동영상 교육_new</td>
+					  <td class="itemtit04">&nbsp;</td>
+					  <td class="itemtit05">&nbsp;</td>
+					  <td>&nbsp;</td>
+					  <td><span class="txt_ok">2014-06-11</span></td>
+					  <td class="alC"><a href="../html/02_lecture/popOnline_new.html" target="_blank" class="btn_go">페이지 열기</a></td>
+				  	</tr>
+					<tr onmousedown="toggleed(this)">
+					  <th>&nbsp;</th>
+					  <td rowspan="4" class="itemtit02">(강좌 공통)</td>
+					  <td rowspan="4" class="itemtit03">강좌신청완료</td>
+					  <td class="itemtit04">신청실패 강좌</td>
+					  <td class="itemtit05">&nbsp;</td>
+					  <td>&nbsp;</td>
+					  <td><span class="txt_ok">2014-03-20</span></td>
+					  <td class="alC"><a href="../html/02_lecture/registrationCompleted_fail.html" target="_blank" class="btn_go">페이지 열기</a></td>
+				  	</tr>
+					<tr onmousedown="toggleed(this)">
+					  <th>&nbsp;</th>
+					  <td class="itemtit04">신청완료 강좌</td>
+					  <td class="itemtit05">&nbsp;</td>
+					  <td>&nbsp;</td>
+					  <td><span class="txt_ok">2014-03-20</span></td>
+					  <td class="alC"><a href="../html/02_lecture/registrationCompleted_ok.html" target="_blank" class="btn_go">페이지 열기</a></td>
+				  	</tr>
+				  	<tr onmousedown="toggleed(this)">
+					  <th>&nbsp;</th>
+					  <td class="itemtit04">off</td>
+					  <td class="itemtit05">&nbsp;</td>
+					  <td>&nbsp;</td>
+					  <td><span class="txt_ok">2014-03-20</span></td>
+					  <td class="alC"><a href="../html/02_lecture/registrationCompleted_off.html" target="_blank" class="btn_go">페이지 열기</a></td>
+				  	</tr>
+				  	<tr onmousedown="toggleed(this)">
+					  <th>&nbsp;</th>
+					  <td class="itemtit04">on</td>
+					  <td class="itemtit05">&nbsp;</td>
+					  <td>&nbsp;</td>
+					  <td><span class="txt_ok">2014-03-20</span></td>
+					  <td class="alC"><a href="../html/02_lecture/registrationCompleted_on.html" target="_blank" class="btn_go">페이지 열기</a></td>
+				  	</tr>
+					<tr>
+						<td colspan="9" class="borB"> </td>
+					</tr>
+					<tr onmousedown="toggleed(this)">
+					  <th>&nbsp;</th>
+					  <th rowspan="8" class="itemtit01">Market NOW</th>
+					  <td rowspan="2" class="itemtit02">판매활용 TIP</td>
+					  <td class="itemtit03">목록</td>
+					  <td class="itemtit04">&nbsp;</td>
+					  <td class="itemtit05">&nbsp;</td>
+					  <td>&nbsp;</td>
+					  <td><span class="txt_ok">2014-02-26</span></td>
+					  <td class="alC"><a href="../html/03_market_now/successTipList.html" target="_blank" class="btn_go">페이지 열기</a></td>
+				  </tr>
+					<tr onmousedown="toggleed(this)">
+						<th>&nbsp;</th>
+						<td class="itemtit03">상세</td>
+						<td class="itemtit04">&nbsp;</td>
+						<td class="itemtit05">&nbsp;</td>
+						<td>&nbsp;</td>
+						<td><span class="txt_ok">2014-02-25</span></td>
+					  <td class="alC"><a href="../html/03_market_now/successTipView.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+					<tr onmousedown="toggleed(this)">
+						<th>&nbsp;</th>
+						<td rowspan="2" class="itemtit02">업계소식</td>
+						<td class="itemtit03">목록</td>
+						<td class="itemtit04">&nbsp;</td>
+						<td class="itemtit05">&nbsp;</td>
+						<td>&nbsp;</td>
+						<td><span class="txt_ok">2014-02-13</span></td>
+						<td class="alC"><a href="../html/03_market_now/marketInfoList.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+					<tr onmousedown="toggleed(this)">
+						<th>&nbsp;</th>
+						<td class="itemtit03">상세</td>
+						<td class="itemtit04">&nbsp;</td>
+						<td class="itemtit05">&nbsp;</td>
+						<td>&nbsp;</td>
+						<td><span class="txt_ok">2014-02-13</span></td>
+					  <td class="alC"><a href="../html/03_market_now/marketInfoView.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+					<tr onmousedown="toggleed(this)">
+						<th>&nbsp;</th>
+						<td rowspan="2" class="itemtit02">전문가 칼럼</td>
+						<td class="itemtit03">목록</td>
+						<td class="itemtit04">&nbsp;</td>
+						<td class="itemtit05">&nbsp;</td>
+						<td>&nbsp;</td>
+						<td><span class="txt_ok">2014-02-13</span></td>
+					  <td class="alC"><a href="../html/03_market_now/specialistColumnList.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+					<tr onmousedown="toggleed(this)">
+						<th>&nbsp;</th>
+						<td class="itemtit03">상세</td>
+						<td class="itemtit04">&nbsp;</td>
+						<td class="itemtit05">&nbsp;</td>
+						<td>&nbsp;</td>
+						<td><span class="txt_ok">2014-02-13</span></td>
+					  <td class="alC"><a href="../html/03_market_now/specialistColumnView.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+					<tr onmousedown="toggleed(this)">
+						<th>&nbsp;</th>
+						<td rowspan="2" class="itemtit02">파워셀러 성공담</td>
+						<td class="itemtit03">목록</td>
+						<td class="itemtit04">&nbsp;</td>
+						<td class="itemtit05">&nbsp;</td>
+						<td>&nbsp;</td>
+						<td><span class="txt_ok">2014-02-13</span></td>
+					  <td class="alC"><a href="../html/03_market_now/successSotryList.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+					<tr onmousedown="toggleed(this)">
+						<th>&nbsp;</th>
+						<td class="itemtit03">상세</td>
+						<td class="itemtit04">&nbsp;</td>
+						<td class="itemtit05">&nbsp;</td>
+						<td>&nbsp;</td>
+						<td><span class="txt_ok">2014-02-13</span></td>
+					  <td class="alC"><a href="../html/03_market_now/successSotryView.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+					<tr>
+						<td colspan="9" class="borB"> </td>
+					</tr>
+					<tr onmousedown="toggleed(this)">
+						<th>&nbsp;</th>
+						<th rowspan="3" class="itemtit01">교육센터소개</th>
+						<td class="itemtit02">EBAY EDU 소개</td>
+						<td class="itemtit03">&nbsp;</td>
+						<td class="itemtit04">&nbsp;</td>
+						<td class="itemtit05">&nbsp;</td>
+						<td>&nbsp;</td>
+						<td><span class="txt_ok">2014-03-27</span></td>
+						<td class="alC"><a href="../html/04_edu_intro/introduce.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+					<tr onmousedown="toggleed(this)">
+						<th>&nbsp;</th>
+						<td class="itemtit02">교육과정</td>
+						<td class="itemtit03">&nbsp;</td>
+						<td class="itemtit04">&nbsp;</td>
+						<td class="itemtit05">&nbsp;</td>
+						<td>&nbsp;</td>
+						<td><span class="txt_ok">2014-03-28</span></td>
+						<td class="alC"><a href="../html/04_edu_intro/curriculum.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+					<tr onmousedown="toggleed(this)">
+						<th>&nbsp;</th>
+						<td class="itemtit02">강의시설</td>
+						<td class="itemtit03">&nbsp;</td>
+						<td class="itemtit04">&nbsp;</td>
+						<td class="itemtit05">&nbsp;</td>
+						<td>&nbsp;</td>
+						<td><span class="txt_ok">2014-03-26</span></td>
+						<td class="alC"><a href="../html/04_edu_intro/teachingFacilities.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+					<tr>
+						<td colspan="9" class="borB"> </td>
+					</tr>
+					
+				  <tr onmousedown="toggleed(this)">
+					  <th>&nbsp;</th>
+					  <th rowspan="12" class="itemtit01">고객센터</th>
+					  <td rowspan="8" class="itemtit02">교육센터 1:1 문의</td>
+					  <td class="itemtit03">목록</td>
+					  <td class="itemtit04">&nbsp;</td>
+					  <td class="itemtit05">&nbsp;</td>
+					  <td>&nbsp;</td>
+					 <td><span class="txt_ok">2014-02-13</span></td>
+			        <td class="alC"><a href="../html/05_customer/counselList.html" target="_blank" class="btn_go">페이지 열기</a></td>
+				  </tr>
+					<tr onmousedown="toggleed(this)">
+					  <th>&nbsp;</th>
+					  <td rowspan="5" class="itemtit03">상세</td>
+						<td class="itemtit04">미답변</td>
+						<td class="itemtit05">&nbsp;</td>
+						<td>&nbsp;</td>
+						<td><span class="txt_ok">2014-02-13</span></td>
+					  <td class="alC"><a href="../html/05_customer/counselIngView.html" target="_blank" class="btn_go">페이지 열기</a></td>
+				  </tr>
+					<tr onmousedown="toggleed(this)">
+						<th>&nbsp;</th>
+					  <td rowspan="4" class="itemtit04">답변</td>
+					  <td class="itemtit05">댓글없음</td>
+					  <td>&nbsp;</td>
+					  <td><span class="txt_ok">2014-01-29</span></td>
+					  <td class="alC"><a href="../html/05_customer/counselCompleteView_reply_no.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+					<tr onmousedown="toggleed(this)">
+						<th>&nbsp;</th>
+					  <td class="itemtit05">댓글있음</td>
+					  <td>&nbsp;</td>
+					  <td><span class="txt_ok">2014-01-29</span></td>
+					  <td class="alC"><a href="../html/05_customer/counselCompleteView_reply.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+					<tr onmousedown="toggleed(this)">
+						<th>&nbsp;</th>
+					  <td class="itemtit05">댓글수정</td>
+					  <td>&nbsp;</td>
+					  <td><span class="txt_ok">2014-01-29</span></td>
+					  <td class="alC"><a href="../html/05_customer/counselCompleteView_reply_modify.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+					<tr onmousedown="toggleed(this)">
+						<th>&nbsp;</th>
+					  <td class="itemtit05">댓글의댓글</td>
+					  <td>&nbsp;</td>
+					  <td><span class="txt_ok">2014-01-29</span></td>
+					  <td class="alC"><a href="../html/05_customer/counselCompleteView_reply_reply.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+					<tr onmousedown="toggleed(this)">
+					  <th>&nbsp;</th>
+					  <td class="itemtit03">쓰기</td>
+					  <td class="itemtit04">&nbsp;</td>
+					  <td class="itemtit05">&nbsp;</td>
+					  <td>&nbsp;</td>
+					  <td><span class="txt_ok">2014-02-13</span></td>
+					  <td class="alC"><a href="../html/05_customer/counselWrite.html" target="_blank" class="btn_go">페이지 열기</a></td>
+				  </tr>
+				  <tr onmousedown="toggleed(this)">
+					  <th>&nbsp;</th>
+					  <td class="itemtit03">FAQ</td>
+						<td class="itemtit04">&nbsp;</td>
+						<td class="itemtit05">&nbsp;</td>
+						<td>&nbsp;</td>
+						<td><span class="txt_ok">2014-02-13</span></td>
+					  <td class="alC"><a href="../html/05_customer/faqSearch.html" target="_blank" class="btn_go">페이지 열기</a></td>
+				  </tr>
+					<tr onmousedown="toggleed(this)">
+					  <th>&nbsp;</th>
+					  <td rowspan="4" class="itemtit02">공지사항</td>
+					  <td rowspan="2" class="itemtit03">ebay EDU</td>
+					  <td class="itemtit04">목록</td>
+					  <td class="itemtit05">&nbsp;</td>
+					  <td>&nbsp;</td>
+					  <td><span class="txt_ok">2014-02-25</span>, <span class="txt_mod">2014-03-27</span></td>
+					  <td class="alC"><a href="../html/05_customer/noticeList_ebayEdu.html" target="_blank" class="btn_go">페이지 열기</a></td>
+				  	</tr>
+				  	<tr onmousedown="toggleed(this)">
+					  <th>&nbsp;</th>
+					  <td class="itemtit04">상세</td>
+					  <td class="itemtit05">&nbsp;</td>
+					  <td>&nbsp;</td>
+					  <td><span class="txt_ok">2014-02-25</span>, <span class="txt_mod">2014-03-27</span></td>
+				    <td class="alC"><a href="../html/05_customer/noticeView_ebayEdu.html" target="_blank" class="btn_go">페이지 열기</a></td>
+				  </tr>
+				  	<tr onmousedown="toggleed(this)">
+					  <th>&nbsp;</th>
+					  <td rowspan="2" class="itemtit03">ESMPLUS</td>
+					  <td class="itemtit04">목록</td>
+					  <td class="itemtit05">&nbsp;</td>
+					  <td>&nbsp;</td>
+					  <td><span class="txt_ok">2014-02-25</span>, <span class="txt_mod">2014-03-27</span></td>
+				    <td class="alC"><a href="../html/05_customer/noticeList_EsmPlus.html" target="_blank" class="btn_go">페이지 열기</a></td>
+				  </tr>
+				  	<tr onmousedown="toggleed(this)">
+					  <th>&nbsp;</th>
+					  <td class="itemtit04">상세</td>
+					  <td class="itemtit05">&nbsp;</td>
+					  <td>&nbsp;</td>
+					  <td><span class="txt_ok">2014-02-25</span>, <span class="txt_mod">2014-03-27</span></td>
+				    <td class="alC"><a href="../html/05_customer/noticeView_EsmPlus.html" target="_blank" class="btn_go">페이지 열기</a></td>
+				  </tr>
+					<tr>
+						<td colspan="9" class="borB"> </td>
+					</tr>
+					<tr onmousedown="toggleed(this)">
+						<th>&nbsp;</th>
+						<th rowspan="8" class="itemtit01">마이페이지</th>
+						<td rowspan="3" class="itemtit02">오프라인 강좌</td>
+						<td class="itemtit03">수강 예정 강좌</td>
+						<td class="itemtit04">목록</td>
+						<td class="itemtit05">&nbsp;</td>
+						<td>&nbsp;</td>
+						<td><span class="txt_ok">2014-01-03</span>, <span class="txt_mod">2014-03-20</span></td>
+					  <td class="alC"><a href="../html/06_mypage/myOfflineScheduleList.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+					<tr onmousedown="toggleed(this)">
+						<th>&nbsp;</th>
+						<td class="itemtit03">수강 완료 강좌</td>
+						<td class="itemtit04">목록</td>
+						<td class="itemtit05">&nbsp;</td>
+						<td>&nbsp;</td>
+						<td><span class="txt_ok">2014-03-20</span></td>
+					  <td class="alC"><a href="../html/06_mypage/myOfflineCompleteList.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+					<tr onmousedown="toggleed(this)">
+						<th>&nbsp;</th>
+						<td class="itemtit03">수강 취소 강좌</td>
+						<td class="itemtit04">목록</td>
+						<td class="itemtit05">&nbsp;</td>
+						<td>&nbsp;</td>
+						<td><span class="txt_ok">2014-03-20</span></td>
+					  <td class="alC"><a href="../html/06_mypage/myOfflineCancelList.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+					<tr onmousedown="toggleed(this)">
+						<th>&nbsp;</th>
+						<td class="itemtit02">온라인 강좌</td>
+						<td class="itemtit03">즐겨찾기 강좌</td>
+						<td class="itemtit04">목록</td>
+						<td class="itemtit05">&nbsp;</td>
+						<td>&nbsp;</td>
+						<td><span class="txt_ok">2014-03-20</span></td>
+					  <td class="alC"><a href="../html/06_mypage/myOnlineIngList.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+					<tr onmousedown="toggleed(this)">
+						<th>&nbsp;</th>
+						<td rowspan="1" class="itemtit02">관심 강좌</td>
+						<td class="itemtit03">&nbsp;</td>
+						<td class="itemtit04">목록</td>
+						<td class="itemtit05">&nbsp;</td>
+						<td>&nbsp;</td>
+						<td><span class="txt_ok">2014-03-20</span></td>
+					  <td class="alC"><a href="../html/06_mypage/interestLectureList.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+					<tr onmousedown="toggleed(this)">
+						<th>&nbsp;</th>
+						<td rowspan="1" class="itemtit02">추천 강좌</td>
+						<td class="itemtit03">&nbsp;</td>
+						<td class="itemtit04">목록</td>
+						<td class="itemtit05">&nbsp;</td>
+						<td>&nbsp;</td>
+						<td><span class="txt_ok">2014-03-20</span></td>
+					  <td class="alC"><a href="../html/06_mypage/recommendLectureList.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+					<tr onmousedown="toggleed(this)">
+						<th>&nbsp;</th>
+						<td rowspan="1" class="itemtit02">메인</td>
+						<td class="itemtit03">&nbsp;</td>
+						<td class="itemtit04">&nbsp;</td>
+						<td class="itemtit05">&nbsp;</td>
+						<td>&nbsp;</td>
+						<td><span class="txt_ok">2014-04-08</span></td>
+					  <td class="alC"><a href="../html/06_mypage/mypageMain.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+					<tr onmousedown="toggleed(this)">
+						<th>&nbsp;</th>
+						<td rowspan="1" class="itemtit02">메인 (등록된 강사X)</td>
+						<td class="itemtit03">&nbsp;</td>
+						<td class="itemtit04">&nbsp;</td>
+						<td class="itemtit05">&nbsp;</td>
+						<td>&nbsp;</td>
+						<td><span class="txt_ok">2014-04-08</span></td>
+					  <td class="alC"><a href="../html/06_mypage/mypageMain_default.html" target="_blank" class="btn_go">페이지 열기</a></td>
+					</tr>
+					<tr>
+						<td colspan="9" class="borB"> </td>
+					</tr>
+				</tbody>
+			</table>
+<script type="text/javascript">$(document).ready(function() {$('#focus').tableHover();});</script> 
+			<script type="text/javascript">
+				var st1 = new SortableTable(document.getElementById("focus"), ["Number" ,"String","String", "String", "String", "String"]);
+				$(function(){
+					var tds = $("#focus tbody  th:first-child");
+					for(var i=0; i < tds.length; i++) {
+						$(tds[i]).html(i+1);
+					}
+				});
+				$('#focus thead th').click(function(){
+					//alert("a");
+					var tds = $("#focus tbody  th:first-child");
+					for(var i=0; i < tds.length; i++) {
+						//alert(tds[i].firstChild.nodeValue);
+						$(tds[i]).html(i+1);
+					}
+				});
+			</script>
+			<script type="text/javascript">
+				<!--
+				function toggleed(trEle){
+					//alert(trEle.parentElement.rows)
+					var rows = trEle.parentElement.rows;
+
+					for(i = 0; i < rows.length; i++){
+						if(rows[i] == trEle){
+							trEle.style.backgroundColor = "#ffebeb"
+						}else{
+							rows[i].style.backgroundColor = ""
+						}
+					}
+				}
+				//-->
+			</script> 
+			<script type="text/javascript">
+				
+				// popup
+				 function openPopup(url, winName, pwidth, pheight, scrollYN, resizeYN) {
+				 var win = null;
+
+				 var winL = (screen.width-pwidth)/2;
+				 var winT = (screen.height-pheight)/2;
+				 var spec = 'toolbar=no,'; 
+				 spec += 'status=no,'; 
+				 spec += 'location=yes,'; 
+				 spec += 'height='+pheight+','; 
+				 spec += 'width='+pwidth+','; 
+				 spec += 'top='+winT+','; 
+				 spec += 'left='+winL+','; 
+				 spec += 'scrollbars='+(scrollYN == undefined ? "no" : scrollYN)+','; 
+				 spec += 'resizable='+(resizeYN == undefined ? "no" : resizeYN);
+				 win = window.open(url, winName, spec);
+				 if(parseInt(navigator.appVersion) >= 4) {
+				  win.window.focus();
+				 }
+			 }
+			</script>
+		</div>
+	</div>
+	<!--// container e -->
+	<div id="footer">
+		Copyright ⓒ UZEN PlanA Multimedia Group. All Right Reserved
+	</div>
+	<p class="btn_top"><a href="#top"><img src="img/btn_gotop.gif" alt="TOP" /></a></p>
+</div>
+</body>
+</html>
