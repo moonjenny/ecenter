@@ -1,0 +1,300 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ebay edu backoffice</title>
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link type="text/css" rel="stylesheet" href="../../com/css/admin.css" />
+<script type="text/javascript" src="../../com/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../com/js/design.js"></script>
+<script type="text/javascript" src="../../com/js/select.js"></script>
+</head>
+
+<body>
+<div id="skip_nav">
+	<ul>
+		<li><a href="#gnbArea">메뉴 바로가기</a></li>
+		<li><a href="#content">본문 바로가기</a></li>
+	</ul>
+</div>
+<hr />
+
+<!-- header s -->
+<div id="header"> 
+	<!-- section_top s -->
+	<div class="section_top">
+		<h1><span class="hide">ebay edu</span></h1>
+		<div class="btn_r">
+			<a href="#"><img src="../../img/btn_logout.gif" alt="LOGOUT" /></a>
+			<!-- 로그인   
+			<a href="#"><img src="../../img/btn_login.gif" alt="LOGIN" /></a>
+			-->
+		</div>
+		<!-- //section_top e -->
+	</div>
+	<!-- gnb s -->
+	<div id="gnbArea" class="gnb">
+		<ul class="depth01">
+			<li style="width:135px"><strong>관리자 관리</strong>
+				<div class="sub_menu">
+					<ul class="depth02 depth02_01">
+						<li><a href="#">관리자</a></li> <!-- 활성화 시 li의 클래스 : hover -->
+					</ul>
+				</div>
+			</li>
+			<li style="width:122px"><strong>메인 관리</strong>
+				<div class="sub_menu">
+					<ul class="depth02 depth02_02">
+						<li><a href="#">프로모션</a></li>
+						<li><a href="#">배너</a></li>
+						<li><a href="#">팝업</a></li>
+					</ul>
+				</div>
+			</li>
+			<li style="width:122px"><strong>강좌 관리</strong>
+				<div class="sub_menu">
+					<ul class="depth02 depth02_03">
+						<li><a href="#">오프라인강좌 등록</a></li>
+						<li><a href="#">온라인강좌 등록</a></li>
+						<li><a href="#">오프라인강좌 신청자</a></li>
+						<li><a href="#">온라인강좌 신청자</a></li>
+						<li><a href="#">강좌취소</a></li>
+						<li><a href="#">강좌후기 신고</a></li>
+						<li><a href="#">강사</a></li>
+					</ul>
+				</div>
+			</li>
+			<li style="width:186px"><strong>Market NOW 관리</strong>
+				<div class="sub_menu">
+					<ul class="depth02 depth02_04">
+						<li><a href="#">업계소식</a></li>
+						<li class="hover"><a href="#">전문가컬럼</a></li>
+						<li><a href="#">파워셀러성공담</a></li>
+						<li><a href="#">성공Tip</a></li>
+					</ul>
+				</div>
+			</li>
+			<li style="width:148px"><strong>고객센터 관리</strong>
+				<div class="sub_menu">
+					<ul class="depth02 depth02_05">
+						<li><a href="#">공지사항</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">교육센터 1:1문의</a></li>
+						<li><a href="#">1:1문의 공지관리</a></li>
+					</ul>
+				</div>
+			</li>
+			<li style="width:122px"><strong>쿠폰 관리</strong>
+				<div class="sub_menu">
+					<ul class="depth02 depth02_06">
+						<li><a href="#">강좌쿠폰</a></li>
+						<li><a href="#">인쇄쿠폰</a></li>
+						<li><a href="#">이머니쿠폰</a></li>
+					</ul>
+				</div>
+			</li>
+			<li style="width:125px"><strong>통계 관리</strong>
+				<div class="sub_menu">
+					<ul class="depth02 depth02_07">
+						<li><a href="#">사용자 통계</a></li>
+						<li><a href="#">전체 매출</a></li>
+						<li><a href="#">강좌별 매출</a></li>
+						<li><a href="#">수강 신청</a></li>
+						<li><a href="#">접속 통계</a></li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+		<div class="bg"></div>
+	</div>
+	<!--//gnb e --> 
+</div>
+<!--//header e -->
+<hr />
+
+<!-- container s -->
+<div id="container">
+	<div id="content"> 
+		<!-- tit_area s -->
+		<div class="tit_area">
+			<h2 class="h_01"><span>&gt;</span> 1:1문의 공지</h2>
+			<ul class="path">
+				<li>교육센터관리 &gt;</li>
+				<li><strong>1:1문의 공지관리</strong></li>
+			</ul>
+		</div>
+		<!-- //tit_area e -->
+		
+		<!-- table_01 s -->
+		<div class="table_01 border1">
+			<table summary="1:1문의 공지관리 입력">
+				<caption>1:1문의 공지관리 입력</caption>
+				<colgroup>
+				<col width="100" />
+				<col width="*" />
+				<col width="100" />
+				<col width="*" />
+				</colgroup>
+				<tr>
+					<th scope="row">제목</th>
+					<td colspan="5"><input type="text" name="" id="" title="제목 입력" style="width:800px" /></td>
+				</tr>
+				<tr>
+					<th scope="row">안내</th>
+					<td>
+						<input type="radio" name="info" id="info01" /><label for="info01"><strong>설정</strong></label>
+						<input type="radio" name="info" id="info02" checked="checked" /><label for="info02"><strong>미설정</strong></label>
+					</td>
+					<th scope="row">공지</th>
+					<td>
+						<input type="radio" name="notice" id="notice01" checked="checked" /><label for="notice01"><strong>설정</strong></label>
+						<input type="radio" name="notice" id="notice02" /><label for="notice02"><strong>미설정</strong></label>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">노출여부</th>
+					<td colspan="5">
+						<input type="radio" name="exposure" id="exposure01" /><label for="exposure01"><strong>노출</strong></label>
+						<input type="radio" name="exposure" id="exposure02" checked="checked" /><label for="exposure02"><strong>미노출</strong></label>
+						<input type="checkbox" name="period" id="period01" /> <label for="period01"><strong>기간설정</strong></label>
+						<input type="text" title="시작일" style="width:70px" /> <a href="#"><img src="../../img/btn_calendar.gif" alt="날짜선택" /></a>
+						<select title="시간 선택" style="width:70px">
+							<option selected="selected">00시</option>
+							<option>01시</option>
+							<option>02시</option>
+							<option>03시</option>
+							<option>04시</option>
+							<option>05시</option>
+							<option>06시</option>
+							<option>07시</option>
+							<option>08시</option>
+							<option>09시</option>
+							<option>10시</option>
+							<option>11시</option>
+							<option>12시</option>
+							<option>13시</option>
+							<option>14시</option>
+							<option>15시</option>
+							<option>16시</option>
+							<option>17시</option>
+							<option>18시</option>
+							<option>19시</option>
+							<option>20시</option>
+							<option>21시</option>
+							<option>22시</option>
+							<option>23시</option>
+						</select>
+						<select title="시간 선택" style="width:70px">
+							<option selected="selected">00분</option>
+							<option>01분</option>
+							<option>02분</option>
+							<option>03분</option>
+							<option>04분</option>
+							<option>05분</option>
+							<option>06분</option>
+							<option>07분</option>
+							<option>08분</option>
+							<option>09분</option>
+							<option>10분</option>
+							<option>11분</option>
+							<option>12분</option>
+							<option>13분</option>
+							<option>14분</option>
+							<option>15분</option>
+							<option>16분</option>
+							<option>17분</option>
+							<option>18분</option>
+							<option>19분</option>
+							<option>20분</option>
+							<option>21분</option>
+							<option>22분</option>
+							<option>23분</option>
+						</select>
+						~
+						<input type="text" title="종료일" style="width:70px" /> <a href="#"><img src="../../img/btn_calendar.gif" alt="날짜선택" /></a>
+						<select title="시간 선택" style="width:70px">
+							<option selected="selected">00시</option>
+							<option>01시</option>
+							<option>02시</option>
+							<option>03시</option>
+							<option>04시</option>
+							<option>05시</option>
+							<option>06시</option>
+							<option>07시</option>
+							<option>08시</option>
+							<option>09시</option>
+							<option>10시</option>
+							<option>11시</option>
+							<option>12시</option>
+							<option>13시</option>
+							<option>14시</option>
+							<option>15시</option>
+							<option>16시</option>
+							<option>17시</option>
+							<option>18시</option>
+							<option>19시</option>
+							<option>20시</option>
+							<option>21시</option>
+							<option>22시</option>
+							<option>23시</option>
+						</select>
+						<select title="시간 선택" style="width:70px">
+							<option selected="selected">00분</option>
+							<option>01분</option>
+							<option>02분</option>
+							<option>03분</option>
+							<option>04분</option>
+							<option>05분</option>
+							<option>06분</option>
+							<option>07분</option>
+							<option>08분</option>
+							<option>09분</option>
+							<option>10분</option>
+							<option>11분</option>
+							<option>12분</option>
+							<option>13분</option>
+							<option>14분</option>
+							<option>15분</option>
+							<option>16분</option>
+							<option>17분</option>
+							<option>18분</option>
+							<option>19분</option>
+							<option>20분</option>
+							<option>21분</option>
+							<option>22분</option>
+							<option>23분</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">내용</th>
+					<td colspan="5">
+						<textarea cols="30" rows="10" style="width:810px;height:385px"></textarea>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<!-- // table_01 e -->
+
+		<!-- btn_area s -->
+		<div class="btn_area">
+			<div class="posL"><a href="#" class="btn btn_b_black">삭제</a></div>
+			<div class="posR"><a href="#" class="btn btn_b_black">목록</a><a href="#" class="btn btn_b_blue">저장</a></div>
+		</div>
+		<!-- //btn_area e -->
+
+	</div>
+	<!--//content e --> 
+</div>
+<!--//container e -->
+<hr />
+
+<!-- footer s -->
+<div id="footer">
+	<div class="footer_inner">Copyright &copy; eBay Korea Co., Ltd All right reserved</div>
+</div>
+<!--//footer e -->
+</body>
+</html>

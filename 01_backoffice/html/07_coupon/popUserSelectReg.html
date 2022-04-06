@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ebay edu backoffice</title>
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link type="text/css" rel="stylesheet" href="../../com/css/admin.css" />
+<script type="text/javascript" src="../../com/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../com/js/design.js"></script>
+<script type="text/javascript" src="../../com/js/select.js"></script>
+</head>
+
+<body>
+
+<!-- 팝업_사용자 선택 등록 : 740x? -->
+<div class="popup" style="width:740px">
+	<!-- pop_header s -->
+	<div class="pop_header">
+		<h1>사용자 선택 등록</h1>
+		<a href="#" class="btnClose">닫기</a> 
+	</div>
+	<!-- //pop_header e -->
+	<!-- pop_content s -->
+	<div class="pop_content">
+		<!-- table_01 s -->
+		<div class="table_01">
+			<table summary="ID 검색">
+				<caption>ID 검색</caption>
+				<colgroup>
+				<col width="120" />
+				<col width="*" />
+				</colgroup>
+				<tr>
+					<th scope="row">ID</th>
+					<td>
+						<input type="text" name="srchTxt" id="srchTxt" title="검색어 입력" style="width:450px" /><label for="srchTxt" class="hide">ID</label> <a href="#" class="btn btn_m_black">검색</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<!-- //table_01 e -->
+		
+		<div class="multiple_box">
+			<!-- float_l s -->
+			<div class="float_l">
+				<h2 class="h_02 pt">선택 가능 사용자 (<span class="txt_point">총 3명</span>)</h2>
+				<div class="table_02">
+					<table summary="ID, MARKET을 나타내는 목록">
+						<caption>사용자 목록</caption>
+						<colgroup>
+							<col width="50%" />
+							<col width="50%" />
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">ID</th>
+								<th scope="col">MARKET</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>ROSA</td>
+								<td>G MARKET</td>
+							</tr>
+							<tr>
+								<td>ROSA</td>
+								<td>G MARKET</td>
+							</tr>
+							<tr>
+								<td>ROSA</td>
+								<td>G MARKET</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- //float_l e -->
+			<!-- btn_box s -->
+			<div class="btn_box">
+				<a href="#"><img src="../../img/btn_select_add.gif" alt="추가" /></a>
+				<a href="#"><img src="../../img/btn_select_remove.gif" alt="제거" /></a>
+			</div>
+			<!-- //btn_box e -->
+			<!-- float_r s -->
+			<div class="float_r">
+				<h2 class="h_02 pt">선택된 사용자 (<span class="txt_point">총 2명</span>)</h2>
+				<div class="table_02">
+					<table summary="ID, MARKET을 나타내는 목록">
+						<caption>사용자 목록</caption>
+						<colgroup>
+							<col width="50%" />
+							<col width="50%" />
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">ID</th>
+								<th scope="col">MARKET</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>TORESS</td>
+								<td>AUCTION</td>
+							</tr>
+							<tr>
+								<td>TORESS</td>
+								<td>AUCTION</td>
+							</tr>
+							<tr>
+								<td>TORESS</td>
+								<td>AUCTION</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- //float_r e -->
+		</div>
+
+		<div class="btn_center">
+			<a href="#" class="btn btn_b_blue">확인</a><a href="#" class="btn btn_b_black">취소</a>
+		</div>
+
+	</div>
+	<!-- //pop_content e -->
+</div>
+</body>
+</html>

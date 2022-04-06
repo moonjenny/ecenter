@@ -1,0 +1,429 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ebay edu backoffice</title>
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link type="text/css" rel="stylesheet" href="../../com/css/admin.css" />
+<script type="text/javascript" src="../../com/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../com/js/design.js"></script>
+<script type="text/javascript" src="../../com/js/select.js"></script>
+</head>
+
+<body>
+<div id="skip_nav">
+	<ul>
+		<li><a href="#gnbArea">메뉴 바로가기</a></li>
+		<li><a href="#content">본문 바로가기</a></li>
+	</ul>
+</div>
+<hr />
+
+<!-- header s -->
+<div id="header"> 
+	<!-- section_top s -->
+	<div class="section_top">
+		<h1><span class="hide">ebay edu</span></h1>
+		<div class="btn_r">
+			<a href="#"><img src="../../img/btn_logout.gif" alt="LOGOUT" /></a>
+			<!-- 로그인   
+			<a href="#"><img src="../../img/btn_login.gif" alt="LOGIN" /></a>
+			-->
+		</div>
+		<!-- //section_top e -->
+	</div>
+	<!-- gnb s -->
+	<div id="gnbArea" class="gnb">
+		<ul class="depth01">
+			<li style="width:135px"><strong>관리자 관리</strong>
+				<div class="sub_menu">
+					<ul class="depth02 depth02_01">
+						<li><a href="#">관리자</a></li> <!-- 활성화 시 li의 클래스 : hover -->
+					</ul>
+				</div>
+			</li>
+			<li style="width:122px"><strong>메인 관리</strong>
+				<div class="sub_menu">
+					<ul class="depth02 depth02_02">
+						<li><a href="#">프로모션</a></li>
+						<li><a href="#">배너</a></li>
+						<li><a href="#">팝업</a></li>
+					</ul>
+				</div>
+			</li>
+			<li style="width:122px"><strong>강좌 관리</strong>
+				<div class="sub_menu">
+					<ul class="depth02 depth02_03">
+						<li><a href="#">오프라인강좌 등록</a></li>
+						<li class="hover"><a href="#">온라인강좌 등록</a></li>
+						<li><a href="#">오프라인강좌 신청자</a></li>
+						<li><a href="#">온라인강좌 신청자</a></li>
+						<li><a href="#">강좌취소</a></li>
+						<li><a href="#">강좌후기 신고</a></li>
+						<li><a href="#">강사</a></li>
+					</ul>
+				</div>
+			</li>
+			<li style="width:186px"><strong>Market NOW 관리</strong>
+				<div class="sub_menu">
+					<ul class="depth02 depth02_04">
+						<li><a href="#">업계소식</a></li>
+						<li><a href="#">전문가컬럼</a></li>
+						<li><a href="#">파워셀러성공담</a></li>
+						<li><a href="#">성공Tip</a></li>
+					</ul>
+				</div>
+			</li>
+			<li style="width:148px"><strong>고객센터 관리</strong>
+				<div class="sub_menu">
+					<ul class="depth02 depth02_05">
+						<li><a href="#">공지사항</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">1:1 전문가상담</a></li>
+					</ul>
+				</div>
+			</li>
+			<li style="width:122px"><strong>쿠폰 관리</strong>
+				<div class="sub_menu">
+					<ul class="depth02 depth02_06">
+						<li><a href="#">강좌쿠폰</a></li>
+						<li><a href="#">인쇄쿠폰</a></li>
+						<li><a href="#">이머니쿠폰</a></li>
+					</ul>
+				</div>
+			</li>
+			<li style="width:125px"><strong>통계 관리</strong>
+				<div class="sub_menu">
+					<ul class="depth02 depth02_07">
+						<li><a href="#">사용자 통계</a></li>
+						<li><a href="#">전체 매출</a></li>
+						<li><a href="#">강좌별 매출</a></li>
+						<li><a href="#">수강 신청</a></li>
+						<li><a href="#">접속 통계</a></li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+		<div class="bg"></div>
+	</div>
+	<!--//gnb e --> 
+</div>
+<!--//header e -->
+<hr />
+
+<!-- container s -->
+<div id="container">
+	<div id="content"> 
+		<!-- tit_area s -->
+		<div class="tit_area">
+			<h2 class="h_01"><span>&gt;</span> 온라인강좌등록</h2>
+			<ul class="path">
+				<li>강좌관리 &gt;</li>
+				<li><strong>온라인강좌등록</strong></li>
+			</ul>
+		</div>
+		<!-- //tit_area e -->
+		
+		<h3 class="h_02 mt0">기본정보</h3>
+		<!-- table_01 s -->
+		<div class="table_01 border1">
+			<table summary="기본정보 입력">
+				<caption>기본정보</caption>
+				<colgroup>
+				<col width="120" />
+				<col width="360" />
+				<col width="120" />
+				<col width="*" />
+				</colgroup>
+				<tr>
+					<th scope="row">* 강좌명</th>
+					<td colspan="3"><input type="text" id="lectureName" value="파워셀러들의 매출 끌어올리는 7가지 판매비법" title="강좌명" style="width:800px" /><label for="lectureName" class="hide">강좌명</label></td>
+				</tr>
+				<tr>
+					<th scope="row">* 강의수</th>
+					<td colspan="3">5강</td>
+				</tr>
+				<tr>
+					<th scope="row">* 강의시간</th>
+					<td colspan="3">03시간 55분 50초</td>
+				</tr>
+				<tr>
+					<th scope="row">* 강사명</th>
+					<!-- 201307 미등록강사 삭제 -->
+					<td colspan="3">
+						<strong>등록강사</strong>
+						<a href="#" class="btn btn_m_black">강사선택</a> <input type="text" title="등록강사" style="width:268px" />
+					</td>
+					<!-- 201307 미등록강사 삭제 -->
+				</tr>
+				<!-- 20130814 교육대상, 교육혜택 항목 추가 -->
+				<tr>
+					<th scope="row">교육대상</th>
+					<td colspan="3">
+						<textarea name="" id="" cols="120" rows="10" class="" style="width:810px"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">교육혜택</th>
+					<td colspan="3">
+						<textarea name="" id="" cols="120" rows="10" style="width:810px"></textarea>
+					</td>
+				</tr>
+				<!-- 20130814 교육대상, 교육혜택 항목 추가 -->
+				<!-- 201307 결제와 관련된 항목/페이지 삭제
+				<tr>
+					<th scope="row">* 교육비</th>
+					<td colspan="3">
+						<select title="교육비 선택" style="width:160px">
+							<option selected="selected">선택</option>
+							<option>무료</option>
+							<option selected="selected">유료</option>
+						</select>
+						<input type="text" value="10,000" title="교육비" style="width:235px" /> 원 
+						<input type="checkbox" id="discount" class="ml10" /><label for="discount"><strong>할인가적용</strong></label><input type="text" value="10,000" title="할인가" style="width:240px" /> 원
+					</td>
+				</tr> -->
+				<!-- 201307 이미지 항목 추가 -->
+				<tr>
+					<th scope="row">* 대표 이미지</th><!-- 20131224 텍스트 수정 -->
+					<td colspan="3">
+						<div class="file_box">
+							<img src="../../img/btn_file.gif" alt="파일첨부" class="btn_file" />
+							<input type="text" name="file_reg2" id="text2" class="inputBox" readonly="readonly" value="이미지 사이즈는 420x420 px 입니다." /><!-- 20131224 텍스트 수정 -->
+							<input type="file" name="file_reg2" id="file2" class="hideFile" onchange="document.getElementById('text').value = this.value" />
+						</div>
+					</td>
+				</tr>
+				<!--// 201307 이미지 항목 추가 -->
+				<tr>
+					<th scope="row">관련자료</th>
+					<td colspan="3">
+						<!-- 파일첨부 s -->
+						<div class="file_box">
+							<img src="../../img/btn_file.gif" alt="파일첨부" class="btn_file" />
+							<input type="text" name="file_reg" id="text" class="inputBox" readonly="readonly" />
+							<input type="file" name="file_reg" id="file" class="hideFile" onchange="document.getElementById('text').value = this.value" />
+						</div>
+						<!-- //파일첨부 e -->
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">수료증</th>
+					<td colspan="3">
+						<input type="radio" name="rd_cont" id="rd_cont01" class="rd_cont" value="0" checked="checked" /> <label for="rd_cont01">사용</label>
+						<input type="radio" name="rd_cont" id="rd_cont02" class="rd_cont" value="1" /> <label for="rd_cont02">미사용</label>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">수료증번호</th>
+					<td><input type="text" id="certificate" value="2013-0001" title="수료증번호 입력" style="width:240px" /><label for="certificate" class="hide">수료증번호</label> <a href="#" class="btn btn_m_black">중복체크</a></td>
+					<th scope="row">발행일</th>
+					<td><input type="text" value="2013.06.01" title="발행일" style="width:285px" /> <a href="#"><img src="../../img/btn_calendar.gif" alt="날짜선택" class="valignM" /></a></td>
+				</tr>
+				<tr>
+					<th scope="row">발행업체(발행인)</th>
+					<td><input type="text" id="publication" value="ebay Korea 사장 변광윤" title="발행업체(발행인) 입력" style="width:315px" /><label for="publication" class="hide">발행업체(발행인)</label></td>
+					<th scope="row">직인</th>
+					<td>
+						<!-- 파일첨부 s -->
+						<div class="file_box" style="width:342px">
+							<img src="../../img/btn_file.gif" alt="파일첨부" class="btn_file" />
+							<input type="text" name="file_reg2" id="text2" value="ebay korea 직인.jpg" class="inputBox" readonly="readonly" style="width:245px" />
+							<input type="file" name="file_reg2" id="file2" class="hideFile" onchange="document.getElementById('text').value = this.value" />
+						</div>
+						<!-- //파일첨부 e -->
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">수료내용</th>
+					<td colspan="3">
+						<textarea cols="30" rows="10" style="width:810px;height:138px">위 사람은 ebay의 판매자 회원을 대상으로 주최한 강좌를 수료하였음을 증명함.</textarea>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">후기정보</th>
+					<td colspan="3"><a href="#" class="btn btn_m_black">불러오기</a> <span class="exp">* 기존의 강좌를 등록하실 경우 해당 강좌의 후기를 등록하시기 바랍니다.</span></td>
+				</tr>
+			</table>
+		</div>
+		<!-- //table_01 e -->
+
+		<h3 class="h_02">상세정보</h3>
+		<!-- table_01 s -->
+		<div class="table_01 border1">
+			<table summary="상세정보">
+				<caption>상세정보</caption>
+				<colgroup>
+				<col width="120" />
+				<col width="*" />
+				</colgroup>
+				<tr>
+					<th scope="row">* 내용</th>
+					<td>
+						<textarea cols="30" rows="10" style="width:810px;height:260px">
+■ 교육정의
+매출을 올리는 방법은 분명 따로 있습니다. G마켓, 옥션의 예비판매자, 기존판매자를 위한 성공전략과 판매전략을 전수
+하고, 참가자 개인 별 판매현황 점검을 통한 적극적 판매촉진 전략 수립을 이끌어 냅니다.
+
+■ 교육내용
+
+■ 교육신청
+
+■ 교육혜택						
+						</textarea>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<!-- //table_01 e -->
+		
+		<h3 class="h_02">강의콘텐츠</h3>
+		<!-- table_01 s -->
+		<div class="table_01 border1">
+			<table summary="강의콘텐츠">
+				<caption>강의콘텐츠</caption>
+				<colgroup>
+				<col width="120" />
+				<col width="*" />
+				</colgroup>
+				<tr>
+					<th scope="row">* 강의명</th>
+					<td><input type="text" id="lectureName2" value="전문가 초빙 고급형 온라인 마케팅 과정 (검색엔진 활용) 1강" title="강의명" style="width:800px" /><label for="lectureName2" class="hide">강의명</label></td>
+				</tr>
+				<tr>
+					<th scope="row">* 강의시간</th>
+					<td>30분 50초</td>
+				</tr>
+				<tr>
+					<th scope="row">* 동영상 URL</th>
+					<td><input type="text" id="url" value="http://www.ebayedu.com/onlineedu1" title="동영상 URL" style="width:800px" /><label for="url" class="hide">동영상 URL</label></td>
+				</tr>
+			</table>
+		</div>
+		<!-- //table_01 e -->
+
+		<!-- table_01 s -->
+		<div class="table_01 border1 mt10">
+			<table summary="강의콘텐츠">
+				<caption>강의콘텐츠</caption>
+				<colgroup>
+				<col width="120" />
+				<col width="*" />
+				</colgroup>
+				<tr>
+					<th scope="row">* 강의명</th>
+					<td><input type="text" id="lectureName3" value="전문가 초빙 고급형 온라인 마케팅 과정 (검색엔진 활용) 1강" title="강의명" style="width:730px" /><label for="lectureName3" class="hide">강의명</label> <a href="#"><img src="../../img/btn_add.gif" alt="추가" class="valignM" /></a> <a href="#"><img src="../../img/btn_delete.gif" alt="삭제" class="valignM" /></a></td>
+				</tr>
+				<tr>
+					<th scope="row">* 강의시간</th>
+					<td>30분 50초</td>
+				</tr>
+				<tr>
+					<th scope="row">* 동영상 URL</th>
+					<td><input type="text" id="url2" value="http://www.ebayedu.com/onlineedu1" title="동영상 URL" style="width:800px" /><label for="url2" class="hide">동영상 URL</label></td>
+				</tr>
+			</table>
+		</div>
+		<!-- //table_01 e -->
+
+		<h3 class="h_02">수강후기</h3>
+		<!-- table_01 s -->
+		<div class="table_01 border1">
+			<table summary="수강후기">
+				<caption>수강후기</caption>
+				<colgroup>
+				<col width="120" />
+				<col width="*" />
+				<col width="90" />
+				</colgroup>
+				<tr>
+					<th scope="row">ebayseller <span class="datetime">2013.04.07 09:08</span></th>
+					<td>매우 유익한 교육이라 생각되며 판매자라면 마케팅 교육이 필수적이라 생각합니다. <br />교육 없이 판매자가 된다면 조그만 실수로 벌어진 일이 커질 수 있다는 점을 깨닫게 될 것입니다. </td>
+					<td class="alignR"><a href="#" class="btn btn_m_black">삭제</a></td>
+				</tr>
+				<tr>
+					<th scope="row">ebayseller <span class="datetime">2013.04.07 09:08</span></th>
+					<td>매우 유익한 교육이라 생각되며 판매자라면 마케팅 교육이 필수적이라 생각합니다. <br />교육 없이 판매자가 된다면 조그만 실수로 벌어진 일이 커질 수 있다는 점을 깨닫게 될 것입니다. 판매자로 등록을 한다면 교육을 <br />꼭 받으세요.</td>
+					<td class="alignR"><a href="#" class="btn btn_m_black">삭제</a></td>
+				</tr>
+				<tr>
+					<th scope="row">ebayseller <span class="datetime">2013.04.07 09:08</span></th>
+					<td>매우 유익한 교육이라 생각되며 판매자라면 마케팅 교육이 필수적이라 생각합니다.</td>
+					<td class="alignR"><a href="#" class="btn btn_m_black">삭제</a></td>
+				</tr>
+			</table>
+		</div>
+		<!-- //table_01 e -->
+
+		<!-- paginate s -->
+		<div class="paginate"> <!-- inline의 속성중 여백때분에 enter없이 한줄처리 해야함 -->
+			<a href="#" class="prev">이전페이지</a><strong><span>1</span></strong><a href="#"><span>2</span></a><a href="#"><span>3</span></a><a href="#"><span>4</span></a><a href="#"><span>5</span></a><a href="#"><span>6</span></a><a href="#"><span>7</span></a><a href="#"><span>8</span></a><a href="#"><span>9</span></a><a href="#"><span>10</span></a><a href="#" class="next">다음페이지</a>
+		</div>
+		<!-- //paginate e -->
+
+		<h3 class="h_02">FAQ</h3>
+		<!-- table_01 s -->
+		<div class="table_01 border1">
+			<table summary="FAQ">
+				<caption>FAQ</caption>
+				<colgroup>
+				<col width="120" />
+				<col width="*" />
+				</colgroup>
+				<tr>
+					<th scope="row">제목</th>
+					<td><input type="text" id="titTxt" value="특강 신청은 한 명만 했지만 여러명 참석해도 될까요?" title="제목" style="width:800px" /><label for="titTxt" class="hide">제목</label></td>
+				</tr>
+				<tr>
+					<th scope="row">내용</th>
+					<td>
+						<textarea cols="30" rows="10" style="width:810px;height:180px">한 아이디당 한 분만 참석이 가능합니다.</textarea>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<!-- //table_01 e -->
+
+		<!-- table_01 s -->
+		<div class="table_01 border1 mt10">
+			<table summary="FAQ">
+				<caption>FAQ</caption>
+				<colgroup>
+				<col width="120" />
+				<col width="*" />
+				</colgroup>
+				<tr>
+					<th scope="row">제목</th>
+					<td><input type="text" id="titTxt2" value="특강 신청은 한 명만 했지만 여러명 참석해도 될까요?" title="제목" style="width:730px" /><label for="titTxt2" class="hide">제목</label> <a href="#"><img src="../../img/btn_add.gif" alt="추가" class="valignM" /></a> <a href="#"><img src="../../img/btn_delete.gif" alt="삭제" class="valignM" /></a></td>
+				</tr>
+				<tr>
+					<th scope="row">내용</th>
+					<td>
+						<textarea cols="30" rows="10" style="width:810px;height:180px">한 아이디당 한 분만 참석이 가능합니다.</textarea>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<!-- //table_01 e -->
+		
+		<!-- btn_area s -->
+		<div class="btn_area">
+			<div class="posL"><a href="#" class="btn btn_b_black">삭제</a></div>
+			<div class="posR"><a href="#" class="btn btn_b_black">목록</a><a href="#" class="btn btn_b_blue">저장</a></div>
+		</div>
+		<!-- //btn_area e -->
+	</div>
+	<!--//content e --> 
+</div>
+<!--//container e -->
+<hr />
+
+<!-- footer s -->
+<div id="footer">
+	<div class="footer_inner">Copyright &copy; eBay Korea Co., Ltd All right reserved</div>
+</div>
+<!--//footer e -->
+</body>
+</html>

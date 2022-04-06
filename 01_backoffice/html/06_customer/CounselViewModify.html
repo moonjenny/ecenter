@@ -1,0 +1,380 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ebay edu backoffice</title>
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link type="text/css" rel="stylesheet" href="../../com/css/admin.css" />
+<script type="text/javascript" src="../../com/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../com/js/design.js"></script>
+<script type="text/javascript" src="../../com/js/select.js"></script>
+</head>
+
+<body>
+<div id="skip_nav">
+	<ul>
+		<li><a href="#gnbArea">메뉴 바로가기</a></li>
+		<li><a href="#content">본문 바로가기</a></li>
+	</ul>
+</div>
+<hr />
+
+<!-- header s -->
+<div id="header"> 
+	<!-- section_top s -->
+	<div class="section_top">
+		<h1><span class="hide">ebay edu</span></h1>
+		<div class="btn_r">
+			<a href="#"><img src="../../img/btn_logout.gif" alt="LOGOUT" /></a>
+			<!-- 로그인   
+			<a href="#"><img src="../../img/btn_login.gif" alt="LOGIN" /></a>
+			-->
+		</div>
+		<!-- //section_top e -->
+	</div>
+	<!-- gnb s -->
+	<div id="gnbArea" class="gnb">
+		<ul class="depth01">
+			<li style="width:135px"><strong>관리자 관리</strong>
+				<div class="sub_menu">
+					<ul class="depth02 depth02_01">
+						<li><a href="#">관리자</a></li> <!-- 활성화 시 li의 클래스 : hover -->
+					</ul>
+				</div>
+			</li>
+			<li style="width:122px"><strong>메인 관리</strong>
+				<div class="sub_menu">
+					<ul class="depth02 depth02_02">
+						<li><a href="#">프로모션</a></li>
+						<li><a href="#">배너</a></li>
+						<li><a href="#">팝업</a></li>
+					</ul>
+				</div>
+			</li>
+			<li style="width:122px"><strong>강좌 관리</strong>
+				<div class="sub_menu">
+					<ul class="depth02 depth02_03">
+						<li><a href="#">오프라인강좌 등록</a></li>
+						<li><a href="#">온라인강좌 등록</a></li>
+						<li><a href="#">오프라인강좌 신청자</a></li>
+						<li><a href="#">온라인강좌 신청자</a></li>
+						<li><a href="#">강좌취소</a></li>
+						<li><a href="#">강좌후기 신고</a></li>
+						<li><a href="#">강사</a></li>
+					</ul>
+				</div>
+			</li>
+			<li style="width:186px"><strong>Market NOW 관리</strong>
+				<div class="sub_menu">
+					<ul class="depth02 depth02_04">
+						<li><a href="#">업계소식</a></li>
+						<li><a href="#">전문가컬럼</a></li>
+						<li><a href="#">파워셀러성공담</a></li>
+						<li><a href="#">성공Tip</a></li>
+					</ul>
+				</div>
+			</li>
+			<li style="width:148px"><strong>고객센터 관리</strong>
+				<div class="sub_menu">
+					<ul class="depth02 depth02_05">
+						<li><a href="#">공지사항</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li class="hover"><a href="#">교육센터 1:1문의</a></li><!-- 20131224 메뉴명 수정 -->
+					</ul>
+				</div>
+			</li>
+			<li style="width:122px"><strong>쿠폰 관리</strong>
+				<div class="sub_menu">
+					<ul class="depth02 depth02_06">
+						<li><a href="#">강좌쿠폰</a></li>
+						<li><a href="#">인쇄쿠폰</a></li>
+						<li><a href="#">이머니쿠폰</a></li>
+					</ul>
+				</div>
+			</li>
+			<li style="width:125px"><strong>통계 관리</strong>
+				<div class="sub_menu">
+					<ul class="depth02 depth02_07">
+						<li><a href="#">사용자 통계</a></li>
+						<li><a href="#">전체 매출</a></li>
+						<li><a href="#">강좌별 매출</a></li>
+						<li><a href="#">수강 신청</a></li>
+						<li><a href="#">접속 통계</a></li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+		<div class="bg"></div>
+	</div>
+	<!--//gnb e --> 
+</div>
+<!--//header e -->
+<hr />
+
+<!-- container s -->
+<div id="container">
+	<div id="content"> 
+		<!-- tit_area s -->
+		<div class="tit_area">
+			<h2 class="h_01"><span>&gt;</span> 교육센터 1:1문의</h2><!-- 20131224 메뉴명 수정 -->
+			<ul class="path">
+				<li>고객센터관리 &gt;</li>
+				<li><strong>교육센터 1:1문의</strong></li><!-- 20131224 메뉴명 수정 -->
+			</ul>
+		</div>
+		<!-- //tit_area e -->
+		
+		<h3 class="h_01">질문하기</h3>
+		<!-- table_01 s -->
+		<div class="table_01 border1">
+			<table summary="질문하기">
+				<caption>질문하기</caption>
+				<colgroup>
+				<col width="120" />
+				<col width="280" />
+				<col width="120" />
+				<col width="150" />
+				<col width="120" />
+				<col width="*" />
+				</colgroup>
+				<tr>
+					<th scope="row">등록자</th>
+					<td>제이엘</td>
+					<th scope="row">등록일</th>
+					<td colspan="2">2013.04.30 09:54:34</td>
+				</tr>
+				<tr>
+					<th scope="row">문의항목</th>
+					<td>
+						<select title="문의항목 검색조건 선택" style="width:200px">
+							<option selected="selected">전체</option>
+							<option>마케팅</option>
+							<option>text</option>
+							<option>text</option>
+						</select>
+					</td>
+					<th scope="row">문의ID</th>
+					<td>193</td>
+					<th scope="row">비밀글 여부</th>
+					<td>
+						<input type="radio" name="rd_open" id="rd_open01" value="0" checked="checked"> <label for="rd_open01">공개</label>
+						<input type="radio" name="rd_open" id="rd_open02" value="1"> <label for="rd_open02">비공개</label>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">제목</th>
+					<td colspan="5">필수 세무 상식에 대해 질문드립니다.</td>
+				</tr>
+				<tr>
+					<th scope="row">내용</th>
+					<td colspan="5">이제 막 쇼핑몰을 오픈하려는 한 사람입니다.<br />온라인 쇼핑몰 기초 세무 상식 및 판매가격 선정 등의 방법 좀 알려주세요.<br />답답합니다.</td>
+				</tr>
+				<tr>
+					<th scope="row">프론트 노출여부</th>
+					<td colspan="5">
+						<input type="radio" name="rd_expose" id="rd_expose01" value="0" checked="checked"> <label for="rd_expose01">노출</label>
+						<input type="radio" name="rd_expose" id="rd_expose02" value="1"> <label for="rd_expose02">미노출</label>
+						<input type="text" style="width:600px" value="비노출 사유(코멘트) 작성" /><br />
+						<span class="exp ml125">* 교육센터와 관련없는 부적절한 문의글에 대하여 관리자가 프론트 내 노출여부를 설정할 수 있습니다.</span>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<!-- //table_01 e -->
+
+		<h3 class="h_01 mt40">전문가 답변보기</h3>
+		<!-- table_01 s -->
+		<div class="table_01 border1">
+			<table summary="전문가 답변보기">
+				<caption>전문가 답변보기</caption>
+				<colgroup>
+				<col width="120" />
+				<col width="320" />
+				<col width="150" />
+				<col width="*" />
+				</colgroup>
+				<tr>
+					<th scope="row">로그인 정보</th>
+					<td>ebaydue(김에듀)</td>
+					<th scope="row">답변일/최종수정일</th>
+					<td>2014.01.06 15:20:25 / 2014.01.06 15:20:25 <a href="#" class="btn btn_s_gray ml10">수정이력</a></td>
+				</tr>
+				<tr>
+					<th scope="row">전문가명</th>
+					<td>
+						<select title="전문가명 검색조건 선택" style="width:120px">
+							<option selected="selected">전체</option>
+							<option>text</option>
+							<option>text</option>
+						</select>
+						<a href="#" class="btn btn_m_black ml5">강사선택</a>
+						<input type="text" name="" id="" style="width:80px" />
+					</td>
+					<th scope="row">처리상태</th>
+					<td><strong class="txt_point">문의답변 완료</strong></td>
+				</tr>
+				<tr>
+					<th scope="row">내용</th>
+					<td colspan="3">
+						<input type="text" name="srchTxt" id="srchTxt" value="키워드 검색" style="width:200px" /><label for="srchTxt" class="hide">키워드 검색</label> <a href="#" class="btn btn_m_black">검색</a>
+						<span class="exp">* 관련 FAQ를 검색하여 답변 시 참고해 주세요.</span>
+						<textarea cols="30" rows="10" style="width:810px;height:200px" class="mt10">안녕하세요. ebayEDU 판매자 교육센터입니다. 
+한 ID로 신청해주시고 동반인원으로 교육 참석 가능하십니다. 
+다만 컴퓨터 교육장의 경우 신청자 우선순위로 자리 배정이 되므로 컴퓨터 사용이 어려울 수 있는점 참고해주시기 바랍니다. 
+그럼, 기분 좋은 하루 보내시고 앞으로도 ebayEDU 판매자 교육센터 많은 관심과 참여 부탁드리겠습니다.^^*
+</textarea>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">첨부파일</th>
+					<td colspan="3">
+						<div class="file_box">
+							<img src="../../img/btn_file.gif" alt="파일첨부" class="btn_file" />
+							<input type="text" name="file_reg2" id="text2" class="inputBox" readonly="readonly" />
+							<input type="file" name="file_reg2" id="file2" class="hideFile" onchange="document.getElementById('text').value = this.value" />
+						</div>
+						<div class="mt5">
+							<a href="#"><span class="exp ml70">ebayedu.zip</span></a>
+							<a href="#" class="btn btn_s_gray ml5">X</a>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">수정사유</th>
+					<td colspan="3">
+						<input type="text" style="width:800px" value="텍스트 입력란">
+					</td>
+				</tr>
+			</table>
+		</div>
+		<!-- //table_01 e -->
+
+		<div class="btn_right">
+			<a href="#" class="btn btn_b_black">목록</a>
+			<a href="#" class="btn btn_b_gray">미리보기</a>
+			<a href="#" class="btn btn_b_blue">저장</a>
+		</div>
+
+
+		<!-- 20140129 댓글 추가 Start -->
+		<h2 class="h_01 mt40">댓글 <strong class="txt_point">(25)</strong></h2>
+		<!-- tableListG s -->
+		<div class="tableListG">
+			<table summary="댓글보기입니다.">
+				<caption>댓글보기보기</caption>
+				<colgroup>
+				<col width="120" />
+				<col width="*" />
+				<col width="120" />
+				</colgroup>
+				<thead>
+					<th scope="row" colspan="2">
+						<textarea name="" id="" cols="30" rows="10" style="width:790px; height:48px;">추가문의 댓글은 문의글을 작성한 본인만 작성이 가능합니다.  
+로그인 후 이용해 주세요.</textarea>
+						<p class="text_length">0 / 500 자</p>
+					</th>
+					<td class="alignC">
+						<a href="#" class="btn_08 btn_black"><span>확인</span></a>
+					</td>
+				</thead>
+				<tr>
+					<th scope="row"><span>pearldesign</span></th>
+					<td>좋은 강의 감사합니다. 그런데 상세페이지 템플릿은 어디서 다운 받는건가요?</td>
+					<td>
+						<p class="alignR">2014-01-06 07:54</p>
+						<p class="alignR"><a href="#">댓글</a> | <a href="#">수정</a> | <a href="#">삭제</a></p>
+					</td>
+				</tr>
+				<!-- 댓글 수정 Start -->
+				<tr>
+					<td colspan="2">
+						<div class="reply_modify">
+							<strong>pearldesign</strong>
+							<textarea name="" id="" cols="30" rows="10" style="width:790px; height:48px;">좋은 강의 감사합니다. 그런데 상세페이지 템플릿은 어디서 다운 받는건가요?</textarea>
+							<p class="text_length">0 / 500 자</p>
+							<div class="btn_area">
+								<a href="#">등록</a> | <a href="#"> 취소</a>
+							</div>
+						</div>
+					</td>
+					<td>
+						<p class="alignR">2014-01-06 07:54</p>
+						<p class="alignR"><a href="#">댓글</a> | <a href="#" class="on">수정</a> | <a href="#">삭제</a></p>
+					</td>
+				</tr>
+				<!-- 댓글 수정 End -->
+				<tr>
+					<th scope="row"><span class="point_blue">ebay EDU</span></th>
+					<td>나눔고딕 폰트는 네이버에서 나눠주는 무료폰트구요, esm에서 나눠주는 디자인가이드 자료에도 들어있네요. 폰트 복사하셔서 쓰시는 컴퓨터 제어판 글꼴에 붙여넣으시면 사용가능합니다.<img class="tbl_ico pl05" src="../../img/ico_new.png" alt="new"></td>
+					<td>
+						<p class="alignR">2014-01-06 07:54</p>
+						<p class="alignR"><a href="#">댓글</a></p>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><span>kkosily</span></th>
+					<td>차근차근 처음부터 설명해주셔서 잘 듣고갑니다. 좋은 강의 감사합니다.<img class="tbl_ico pl05" src="../../img/ico_new.png" alt="new"></td>
+					<td>
+						<p class="alignR">2014-01-07 01:30</p>
+						<p class="alignR"><a href="#">댓글</a></p>
+					</td>
+				</tr>
+				<!-- 댓글의댓글 Start -->
+				<tr class="reply_re">
+					<th>&nbsp;</th>
+					<td colspan="2">
+						<div class="txt_box">
+							<textarea name="" id="" cols="30" rows="10" style="width:810px; height:48px;">댓글의 댓글 달기 영역입니다.</textarea>
+							<p class="text_length">0 / 500 자</p>
+							<div class="btn_area">
+								<a href="#">등록</a> | <a href="#"> 취소</a>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<!-- 댓글의댓글 End -->
+			</table>
+		</div>
+		<!-- //tableListG e -->
+		<!-- 20140129 댓글 추가 End -->
+
+
+
+		<!-- table_01 s -->
+		<div class="table_01 border1 mt40">
+			<table summary="다음/이전문의 보기">
+				<caption>다음/이전문의 보기</caption>
+				<colgroup>
+				<col width="120" />
+				<col width="*" />
+				<col width="110" />
+				</colgroup>
+				<tr>
+					<th scope="row">다음문의</th>
+					<td><a href="#">쿠폰관련 문의드립니다.</a></td>
+					<td><strong>문의접수</strong></td>
+				</tr>
+				<tr>
+					<th scope="row">이전문의</th>
+					<td><a href="#">쿠폰관련 문의드립니다.</a></td>
+					<td><strong class="txt_point">문의답변 완료</strong></td>
+				</tr>
+			</table>
+		</div>
+		<!-- //table_01 e -->
+
+	</div>
+	<!--//content e --> 
+</div>
+<!--//container e -->
+<hr />
+
+<!-- footer s -->
+<div id="footer">
+	<div class="footer_inner">Copyright &copy; eBay Korea Co., Ltd All right reserved</div>
+</div>
+<!--//footer e -->
+</body>
+</html>

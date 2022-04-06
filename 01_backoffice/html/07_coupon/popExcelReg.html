@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ebay edu backoffice</title>
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link type="text/css" rel="stylesheet" href="../../com/css/admin.css" />
+<script type="text/javascript" src="../../com/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../com/js/design.js"></script>
+<script type="text/javascript" src="../../com/js/select.js"></script>
+</head>
+
+<body>
+
+<!-- 팝업_Excel 일괄 등록 : 500x? -->
+<div class="popup" style="width:500px">
+	<!-- pop_header s -->
+	<div class="pop_header">
+		<h1>EXCEL 일괄 등록</h1>
+		<a href="#" class="btnClose">닫기</a> 
+	</div>
+	<!-- //pop_header e -->
+	<!-- pop_content s -->
+	<div class="pop_content">
+		<p>다운로드 받으신 사용자 엑셀 파일에 정보 입력 후 등록하여 주십시오.</p>
+
+		<!-- table_01 s -->
+		<div class="table_01 mt20">
+			<table summary="난수 생성하기">
+				<caption>난수 생성하기</caption>
+				<colgroup>
+				<col width="120" />
+				<col width="*" />
+				</colgroup>
+				<tr>
+					<th scope="row">파일등록</th>
+					<td>
+						<!-- 파일첨부 s -->
+						<div class="file_box2">
+							<img src="../../img/btn_file.gif" alt="파일첨부" class="btn_file" />
+							<input type="text" name="file_reg" id="text" class="inputBox" readonly="readonly" />
+							<input type="file" name="file_reg" id="file" class="hideFile" onchange="document.getElementById('text').value = this.value" />
+						</div>
+						<!-- //파일첨부 e -->
+					</td>
+				</tr>
+			</table>
+		</div>
+		<!-- //table_01 e -->
+
+		<div class="btn_center"><a href="#" class="btn btn_b_blue">확인</a><a href="#" class="btn btn_b_black">취소</a></div>
+
+	</div>
+	<!-- //pop_content e -->
+</div>
+</body>
+</html>

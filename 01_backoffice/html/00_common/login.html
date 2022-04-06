@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ebay edu backoffice</title>
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link type="text/css" rel="stylesheet" href="../../com/css/admin.css" />
+<script type="text/javascript" src="../../com/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../com/js/design.js"></script>
+<script type="text/javascript" src="../../com/js/select.js"></script>
+<!-- 20130801 로그인 script -->
+<script>
+	$(document).ready(function(){
+		$(".login_info .pw_f").focus(function(e){
+			$(".login_info .pw_f").hide();
+			$(".login_info .pw").show();
+			$(".login_info .pw").focus();
+		});
+		
+		$(".login_info .pw").focusout(function(e){
+			
+			if($(".login_info .pw")[0].value.length < 1) {
+				$(".login_info .pw")[0].value = '';
+				$(".login_info .pw").hide();
+				$(".login_info .pw_f").show();
+			}
+		})
+		
+		$(".login_info .id").focus(function(e){
+			if($(".login_info .id")[0].value == '아이디')
+				$(".login_info .id")[0].value = '';
+		});
+		
+		$(".login_info .id").focusout(function(e){
+			if($(".login_info .id")[0].value.length < 1) {
+				$(".login_info .id")[0].value = '아이디';
+			}
+		})
+	})
+</script>
+<!--// 20130801 로그인 script -->
+</head>
+
+<body>
+	<div id="wrap">
+		<!-- login_box s -->
+		<div class="login_box">
+			<img src="../../img/admin_ebayedu.gif" alt="ebay edu 관리자 로그인" />
+			<!-- 20131224 텍스트 수정 s -->
+			<ul class="id_box">
+				<li><input type="radio" name="chkLogin" id="chkLogin_01" /><label for="chkLogin_01"><strong>옥션 판매자ID 로그인</strong></label></li>
+				<li><input type="radio" name="chkLogin" id="chkLogin_02" /><label for="chkLogin_02"><strong>G마켓 판매자ID 로그인</strong></label></li>
+			</ul>
+			<!-- 20131224 텍스트 수정 e -->
+			<fieldset>
+				<legend>로그인 영역</legend>
+				<!-- 20130801 로그인 수정 -->
+				<div class="input_login">
+					<ul class="login_info">
+						<li>
+							<input class="id" type="text" value="아이디" />
+						</li>
+						<li class="mt10">
+							<input class="pw_f" type="text" value="비밀번호" />
+							<input class="pw" style="display: none;" type="password" value="" />
+						</li>
+					</ul>
+					<a href="#" class="btn_login"><img src="../../img/btn_login.gif" alt="LOGIN" /></a>
+					<p><input type="checkbox" id="chk_id" /><label for="chk_id">아이디 저장</label></p>
+				</div>
+				<!-- 20130801 로그인 수정 -->
+			</fieldset>
+			<ul class="ligin_guide">
+				<li>EBAY EDU는 Auction과 Gmarket 판매자 아이디로 로그인을 하실 수 있습니다.</li><!-- 20131224 텍스트 수정 -->
+			</ul>
+		</div>
+		<!-- //login_box e -->
+	</div>
+</body>
+</html>

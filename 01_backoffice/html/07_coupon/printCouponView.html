@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ebay edu backoffice</title>
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link type="text/css" rel="stylesheet" href="../../com/css/admin.css" />
+<script type="text/javascript" src="../../com/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../com/js/design.js"></script>
+<script type="text/javascript" src="../../com/js/select.js"></script>
+</head>
+
+<body>
+<div id="skip_nav">
+	<ul>
+		<li><a href="#gnbArea">메뉴 바로가기</a></li>
+		<li><a href="#content">본문 바로가기</a></li>
+	</ul>
+</div>
+<hr />
+
+<!-- header s -->
+<div id="header"> 
+	<!-- section_top s -->
+	<div class="section_top">
+		<h1><span class="hide">ebay edu</span></h1>
+		<div class="btn_r">
+			<a href="#"><img src="../../img/btn_logout.gif" alt="LOGOUT" /></a>
+			<!-- 로그인   
+			<a href="#"><img src="../../img/btn_login.gif" alt="LOGIN" /></a>
+			-->
+		</div>
+		<!-- //section_top e -->
+	</div>
+	<!-- gnb s -->
+	<div id="gnbArea" class="gnb">
+		<ul class="depth01">
+			<li style="width:135px"><strong>관리자 관리</strong>
+				<div class="sub_menu">
+					<ul class="depth02 depth02_01">
+						<li><a href="#">관리자</a></li> <!-- 활성화 시 li의 클래스 : hover -->
+					</ul>
+				</div>
+			</li>
+			<li style="width:122px"><strong>메인 관리</strong>
+				<div class="sub_menu">
+					<ul class="depth02 depth02_02">
+						<li><a href="#">프로모션</a></li>
+						<li><a href="#">배너</a></li>
+						<li><a href="#">팝업</a></li>
+					</ul>
+				</div>
+			</li>
+			<li style="width:122px"><strong>강좌 관리</strong>
+				<div class="sub_menu">
+					<ul class="depth02 depth02_03">
+						<li><a href="#">오프라인강좌 등록</a></li>
+						<li><a href="#">온라인강좌 등록</a></li>
+						<li><a href="#">오프라인강좌 신청자</a></li>
+						<li><a href="#">온라인강좌 신청자</a></li>
+						<li><a href="#">강좌취소</a></li>
+						<li><a href="#">강좌후기 신고</a></li>
+						<li><a href="#">강사</a></li>
+					</ul>
+				</div>
+			</li>
+			<li style="width:186px"><strong>Market NOW 관리</strong>
+				<div class="sub_menu">
+					<ul class="depth02 depth02_04">
+						<li><a href="#">업계소식</a></li>
+						<li><a href="#">전문가컬럼</a></li>
+						<li><a href="#">파워셀러성공담</a></li>
+						<li><a href="#">성공Tip</a></li>
+					</ul>
+				</div>
+			</li>
+			<li style="width:148px"><strong>고객센터 관리</strong>
+				<div class="sub_menu">
+					<ul class="depth02 depth02_05">
+						<li><a href="#">공지사항</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">1:1 전문가상담</a></li>
+					</ul>
+				</div>
+			</li>
+			<li style="width:122px"><strong>쿠폰 관리</strong>
+				<div class="sub_menu">
+					<ul class="depth02 depth02_06">
+						<li><a href="#">강좌쿠폰</a></li>
+						<li class="hover"><a href="#">인쇄쿠폰</a></li>
+						<li><a href="#">이머니쿠폰</a></li>
+					</ul>
+				</div>
+			</li>
+			<li style="width:125px"><strong>통계 관리</strong>
+				<div class="sub_menu">
+					<ul class="depth02 depth02_07">
+						<li><a href="#">사용자 통계</a></li>
+						<li><a href="#">전체 매출</a></li>
+						<li><a href="#">강좌별 매출</a></li>
+						<li><a href="#">수강 신청</a></li>
+						<li><a href="#">접속 통계</a></li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+		<div class="bg"></div>
+	</div>
+	<!--//gnb e --> 
+</div>
+<!--//header e -->
+<hr />
+
+<!-- container s -->
+<div id="container">
+	<div id="content"> 
+		<!-- tit_area s -->
+		<div class="tit_area">
+			<h2 class="h_01"><span>&gt;</span> 인쇄쿠폰</h2>
+			<ul class="path">
+				<li>쿠폰관리 &gt;</li>
+				<li><strong>인쇄쿠폰</strong></li>
+			</ul>
+		</div>
+		<!-- //tit_area e -->
+		
+		<h3 class="h_02 mt0">쿠폰정보</h3>
+		<!-- table_01 s -->
+		<div class="table_01 border1">
+			<!-- 201307 쿠폰정보 수정 --->
+			<table summary="쿠폰정보">
+				<caption>쿠폰정보</caption>
+				<colgroup>
+				<col width="120" />
+				<col width="430" />
+				<col width="120" />
+				<col width="*" />
+				</colgroup>
+				<tr>
+					<th scope="row">쿠폰명</th>
+					<td colspan="3"><input type="text" style="width:800px" value="Ebay 가입자 5,000,000,000명 돌파 기념" /></td>
+				</tr>
+				<tr>
+					<th scope="row">적용강좌</th>
+					<td colspan="3">
+						<input type="radio" name="lecture" id="lecture01" checked="checked" /><label for="lecture01"><strong>모든 강좌</strong></label>
+						<input type="radio" name="lecture" id="lecture02" /><label for="lecture02"><strong>특정 강좌</strong></label>
+						<a href="#" class="btn btn_m_black">강좌찾기</a> <input type="text" style="width:550px" />
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">할인액(율)</th>
+					<td>
+						<input type="radio" name="discount" id="discount01" checked="checked" /><label for="discount01"><strong>정액 할인</strong></label> <input type="text" style="width:70px" /> <strong>원</strong>
+						<input type="radio" name="discount" id="discount02" class="ml10" /><label for="discount02"><strong>정률 할인</strong></label> <input type="text" style="width:70px" /> <strong>%</strong>
+					</td>
+					<th scope="row">유효기간</th>
+					<td>
+						<input type="text" style="width:75px" /> <img src="../../img/btn_calendar.gif" alt="날짜선택" />
+						~
+						<input type="text" style="width:75px" /> <img src="../../img/btn_calendar.gif" alt="날짜선택" />
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">발급일</th><!-- 201307 발급일 추가 -->
+					<td>2013.03.30</td><!-- 201307 발급일 추가 -->
+					<th scope="row">등록일</th>
+					<td>2013.03.30</td>
+				</tr>
+			</table>
+			<!--// 201307 쿠폰정보 수정 --->
+		</div>
+		<!-- //table_01 e -->
+
+		<!-- tit_area2 s -->
+		<div class="tit_area2">
+			<h3 class="h_02 pt">쿠폰 난수 (<span class="txt_point">총 20개</span>)</h3>
+			<div class="posR"><a href="#" class="btn btn_s_black">난수 생성하기</a></div>
+		</div>
+		<!--// tit_area2 e -->
+
+		<!-- table_02 s -->
+		<div class="table_02">
+			<table summary="번호, 난수, 난수 생성일시, ID, 이메일, 휴대폰, 사용여부를 나타내는 목록">
+				<caption>쿠폰 난수 목록</caption>
+				<colgroup>
+				<col width="60" />
+				<col width="175" />
+				<col width="175" />
+				<col width="175" />
+				<col width="175" />
+				<col width="*" />
+				<col width="100" />
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">번호</th>
+						<th scope="col">난수</th>
+						<th scope="col">난수 생성일시</th>
+						<th scope="col">ID</th>
+						<th scope="col">이메일</th>
+						<th scope="col">휴대폰</th>
+						<th scope="col">사용여부</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>20</td>
+						<td>1234abcd5678</td>
+						<td>2013-05-01 18:00</td>
+						<td>versatile01</td>
+						<td>versatile01@nate.com</td>
+						<td>010-1234-5678</td>
+						<td>사용</td>
+					</tr>
+					<tr>
+						<td>19</td>
+						<td>4567mnop8901</td>
+						<td>2013-05-01 18:00</td>
+						<td>versatile01</td>
+						<td>versatile01@nate.com</td>
+						<td>010-1234-5678</td>
+						<td>사용</td>
+					</tr>
+					<tr>
+						<td>18</td>
+						<td>1234abcd5678</td>
+						<td>2013-05-01 18:00</td>
+						<td>glen</td>
+						<td>versatile01@nate.com</td>
+						<td>010-1234-5678</td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td>17</td>
+						<td>1234abcd5678</td>
+						<td>2013-05-01 18:00</td>
+						<td>versatile01</td>
+						<td>magi@uzen.net</td>
+						<td>010-1234-5678</td>
+						<td>미사용<p class="mg"><a href="#" class="btn btn_s_gray">사용중지</a></p></td> <!-- 201307 사용여부 수정 -->
+					</tr>
+					<tr>
+						<td>16</td>
+						<td>1234abcd5678</td>
+						<td>2013-05-01 18:00</td>
+						<td>versatile01</td>
+						<td>versatile01@nate.com</td>
+						<td>010-1234-5678</td>
+						<td>사용<p class="mg"><a href="#" class="btn btn_s_gray">사용중지</a></p></td> <!-- 201307 사용여부 수정 -->
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!-- //table_02 e -->
+		
+		<!-- btn_right s -->
+		<div class="btn_right"><a href="#" class="btn btn_b_black">EXCEL 다운로드</a></div>
+		<div class="btn_right"><a href="#" class="btn btn_b_black">목록</a><a href="#" class="btn btn_b_blue">저장</a></div>
+		</div>
+		<!-- //btn_right e -->
+
+	</div>
+	<!--//content e --> 
+</div>
+<!--//container e -->
+<hr />
+
+<!-- footer s -->
+<div id="footer">
+	<div class="footer_inner">Copyright &copy; eBay Korea Co., Ltd All right reserved</div>
+</div>
+<!--//footer e -->
+</body>
+</html>

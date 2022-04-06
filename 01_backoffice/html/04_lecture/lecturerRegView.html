@@ -1,0 +1,224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ebay edu backoffice</title>
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link type="text/css" rel="stylesheet" href="../../com/css/admin.css" />
+<script type="text/javascript" src="../../com/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../com/js/design.js"></script>
+<script type="text/javascript" src="../../com/js/select.js"></script>
+</head>
+
+<body>
+<div id="skip_nav">
+	<ul>
+		<li><a href="#gnbArea">메뉴 바로가기</a></li>
+		<li><a href="#content">본문 바로가기</a></li>
+	</ul>
+</div>
+<hr />
+
+<!-- header s -->
+<div id="header"> 
+	<!-- section_top s -->
+	<div class="section_top">
+		<h1><span class="hide">ebay edu</span></h1>
+		<div class="btn_r">
+			<a href="#"><img src="../../img/btn_logout.gif" alt="LOGOUT" /></a>
+			<!-- 로그인   
+			<a href="#"><img src="../../img/btn_login.gif" alt="LOGIN" /></a>
+			-->
+		</div>
+		<!-- //section_top e -->
+	</div>
+	<!-- gnb s -->
+	<div id="gnbArea" class="gnb">
+		<ul class="depth01">
+			<li style="width:135px"><strong>관리자 관리</strong>
+				<div class="sub_menu">
+					<ul class="depth02 depth02_01">
+						<li><a href="#">관리자</a></li> <!-- 활성화 시 li의 클래스 : hover -->
+					</ul>
+				</div>
+			</li>
+			<li style="width:122px"><strong>메인 관리</strong>
+				<div class="sub_menu">
+					<ul class="depth02 depth02_02">
+						<li><a href="#">프로모션</a></li>
+						<li><a href="#">배너</a></li>
+						<li><a href="#">팝업</a></li>
+					</ul>
+				</div>
+			</li>
+			<li style="width:122px"><strong>강좌 관리</strong>
+				<div class="sub_menu">
+					<ul class="depth02 depth02_03">
+						<li><a href="#">오프라인강좌 등록</a></li>
+						<li><a href="#">온라인강좌 등록</a></li>
+						<li><a href="#">오프라인강좌 신청자</a></li>
+						<li><a href="#">온라인강좌 신청자</a></li>
+						<li><a href="#">강좌취소</a></li>
+						<li><a href="#">강좌후기 신고</a></li>
+						<li class="hover"><a href="#">강사</a></li>
+					</ul>
+				</div>
+			</li>
+			<li style="width:186px"><strong>Market NOW 관리</strong>
+				<div class="sub_menu">
+					<ul class="depth02 depth02_04">
+						<li><a href="#">업계소식</a></li>
+						<li><a href="#">전문가컬럼</a></li>
+						<li><a href="#">파워셀러성공담</a></li>
+						<li><a href="#">성공Tip</a></li>
+					</ul>
+				</div>
+			</li>
+			<li style="width:148px"><strong>고객센터 관리</strong>
+				<div class="sub_menu">
+					<ul class="depth02 depth02_05">
+						<li><a href="#">공지사항</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">1:1 전문가상담</a></li>
+					</ul>
+				</div>
+			</li>
+			<li style="width:122px"><strong>쿠폰 관리</strong>
+				<div class="sub_menu">
+					<ul class="depth02 depth02_06">
+						<li><a href="#">강좌쿠폰</a></li>
+						<li><a href="#">인쇄쿠폰</a></li>
+						<li><a href="#">이머니쿠폰</a></li>
+					</ul>
+				</div>
+			</li>
+			<li style="width:125px"><strong>통계 관리</strong>
+				<div class="sub_menu">
+					<ul class="depth02 depth02_07">
+						<li><a href="#">사용자 통계</a></li>
+						<li><a href="#">전체 매출</a></li>
+						<li><a href="#">강좌별 매출</a></li>
+						<li><a href="#">수강 신청</a></li>
+						<li><a href="#">접속 통계</a></li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+		<div class="bg"></div>
+	</div>
+	<!--//gnb e --> 
+</div>
+<!--//header e -->
+<hr />
+
+<!-- container s -->
+<div id="container">
+	<div id="content"> 
+		<!-- tit_area s -->
+		<div class="tit_area">
+			<h2 class="h_01"><span>&gt;</span> 강사</h2>
+			<ul class="path">
+				<li>강좌관리 &gt;</li>
+				<li><strong>강사</strong></li>
+			</ul>
+		</div>
+		<!-- //tit_area e -->
+		
+		<!-- table_01 s -->
+		<div class="table_01 border1">
+			<table summary="강사 입력">
+				<caption>강사</caption>
+				<colgroup>
+				<col width="120" />
+				<col width="*" />
+				</colgroup>
+				<tr>
+					<th scope="row">강사명</th>
+					<td><input type="text" id="lecturerName" title="강사명" style="width:450px" /><label for="lecturerName" class="hide">강사명</label></td>
+				</tr>
+				<tr>
+					<th scope="row">휴대폰</th>
+					<td>
+						<select title="휴대폰 앞자리 선택" style="width:120px">
+							<option selected="selected">선택</option>
+							<option>010</option>
+							<option>011</option>
+							<option>016</option>
+							<option>017</option>
+							<option>018</option>
+							<option>019</option>
+						</select>
+						-
+						<input type="text" title="휴대폰 중간자리 선택" style="width:140px" />
+						-
+						<input type="text" title="휴대폰 끝자리 선택" style="width:140px" />
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">이메일</th>
+					<td>
+						<input type="text" name="email1" id="email1" title="이메일 아이디" style="width:200px" />
+						@
+						<input type="text" name="email2" id="email2" title="이메일 도메인" style="width:210px" />
+						<select title="이메일 도메인 직접입력 또는 선택" style="width:198px">
+							<option selected="selected">선택</option>
+							<option>직접입력</option>
+							<option>naver.com</option>
+							<option>nate.com</option>
+							<option>hanmail.net</option>
+							<option>korea.com</option>
+							<option>gmail.com</option>
+							<option>hotmail.com</option>
+							<option>empal.com</option>
+							<option>lycos.co.kr</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">강사이미지</th>
+					<td>
+						<!-- 파일첨부 s -->
+						<div class="file_box">
+							<img src="../../img/btn_file.gif" alt="파일첨부" class="btn_file" />
+							<input type="text" name="file_reg" id="text" class="inputBox" readonly="readonly" value="이미지 사이즈는 200x200 px 입니다." onblur="checkField(this)" onfocus="clearField(this)" /><!-- 20131224 설명문구 수정 -->
+							<input type="file" name="file_reg" id="file" class="hideFile" onchange="document.getElementById('text').value = this.value" />
+						</div>
+						<!-- //파일첨부 e -->
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">연혁</th>
+					<td>
+						<textarea cols="30" rows="10" style="width:810px;height:260px"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">교육과정명</th>
+					<td>
+						<textarea cols="30" rows="10" style="width:810px;height:260px"></textarea>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<!-- //table_01 e -->
+
+		<div class="btn_area">
+			<div class="posL"><a href="#" class="btn btn_b_black">삭제</a></div>
+			<div class="posR"><a href="#" class="btn btn_b_black">목록</a><a href="#" class="btn btn_b_blue">저장</a></div>
+		</div>
+
+	</div>
+	<!--//content e --> 
+</div>
+<!--//container e -->
+<hr />
+
+<!-- footer s -->
+<div id="footer">
+	<div class="footer_inner">Copyright &copy; eBay Korea Co., Ltd All right reserved</div>
+</div>
+<!--//footer e -->
+</body>
+</html>

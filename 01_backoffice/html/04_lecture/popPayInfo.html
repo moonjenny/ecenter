@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ebay edu backoffice</title>
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link type="text/css" rel="stylesheet" href="../../com/css/admin.css" />
+<script type="text/javascript" src="../../com/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../com/js/design.js"></script>
+<script type="text/javascript" src="../../com/js/select.js"></script>
+</head>
+
+<body>
+<!-- 팝업_결제정보 : 740x? -->
+<div class="popup" style="width:740px">
+	<!-- pop_header s -->
+	<div class="pop_header">
+		<h1>결제정보</h1>
+		<a href="#" class="btnClose">닫기</a> 
+	</div>
+	<hr />
+	<!-- //pop_header e -->
+	<!-- pop_content s -->
+	<div class="pop_content">
+		<h2 class="h_02 mt0">개인정보</h2>
+		<!-- table_01 s -->
+		<div class="table_01 border1">
+			<table summary="개인정보">
+				<caption>개인정보</caption>
+				<colgroup>
+				<col width="120" />
+				<col width="220" />
+				<col width="120" />
+				<col width="*" />
+				</colgroup>
+				<tr>
+					<th scope="row">이름</th>
+					<td colspan="3">이로사</td>
+				</tr>
+				<tr>
+					<th scope="row">이메일</th>
+					<td>rosa@gmail.com</td>
+					<th scope="row">휴대폰</th>
+					<td>010-5892-3370</td>
+				</tr>
+				<tr>
+					<th scope="row">신청일</th>
+					<td>2013.03.25</td>
+					<th scope="row">취소일</th>
+					<td>2013.04.01</td>
+				</tr>
+				<tr>
+					<th scope="row">결제상태</th>
+					<td>
+						<!-- 신용카드, 실시간계좌이체일 경우  -->
+						완료
+
+						<!-- 무통장 입금일 경우
+						<a href="#" class="btn btn_s_gray">결제완료</a>
+						 -->
+					</td>
+					<th scope="row">결제수단</th>
+					<td>신용카드</td>
+				</tr>
+				<tr>
+					<th scope="row">쿠폰사용여부</th>
+					<td>사용</td>
+					<th scope="row">환불여부</th>
+					<td>미환불</td>
+				</tr>
+			</table>
+		</div>
+		<!-- //table_01 e -->
+
+		<h2 class="h_02">쿠폰정보</h2>
+		<!-- table_01 s -->
+		<div class="table_01 border1">
+			<table summary="쿠폰정보">
+				<caption>쿠폰정보</caption>
+				<colgroup>
+				<col width="120" />
+				<col width="220" />
+				<col width="120" />
+				<col width="*" />
+				</colgroup>
+				<tr>
+					<th scope="row">쿠폰명</th>
+					<td colspan="3">이베이 창립 50주년 기념 쿠폰</td>
+				</tr>
+				<tr>
+					<th scope="row">할인액(할인율)</th>
+					<td>10%</td>
+					<th scope="row">혜택가</th>
+					<td>1,000</td>
+				</tr>
+			</table>
+		</div>
+		<!-- //table_01 e -->
+		
+		<h2 class="h_02">결제정보</h2>
+		<!-- table_01 s -->
+		<div class="table_01 border1">
+			<table summary="결제정보">
+				<caption>결제정보</caption>
+				<colgroup>
+				<col width="120" />
+				<col width="220" />
+				<col width="120" />
+				<col width="*" />
+				</colgroup>
+				<tr>
+					<th scope="row">결제강좌</th>
+					<td colspan="3">[온라인] ESM PLUS 통합 상품관리 촬영 중급 과정</td>
+				</tr>
+				<tr>
+					<th scope="row">결제수단</th>
+					<td>
+						<!-- 신용카드일 경우 -->
+						신용카드/신한카드
+
+						<!-- 실시간계좌이체일 경우
+						실시간계좌이체/신한은행
+						-->
+						
+						<!-- 무통장 입금일 경우
+						무통장입금/신한은행
+						-->
+					</td>
+					<th scope="row">결제일시</th>
+					<td>2013.04.20 15:00:00</td>
+				</tr>
+				<tr>
+					<th scope="row">사용금액</th>
+					<td>9,000</td>
+					<th scope="row">환불상태변경</th>
+					<td>
+						환불완료
+
+						<!-- 무통장 입금일 경우
+						<a href="#" class="btn btn_s_gray">환불완료</a>
+						-->
+					</td>
+				</tr>
+			</table>
+		</div>
+		<!-- //table_01 e -->
+
+		<h2 class="h_02">환불계좌정보</h2>
+		<!-- table_01 s -->
+		<div class="table_01 border1">
+			<table summary="환불계좌정보">
+				<caption>환불계좌정보</caption>
+				<colgroup>
+				<col width="120" />
+				<col width="220" />
+				<col width="120" />
+				<col width="*" />
+				</colgroup>
+				<tr>
+					<th scope="row">예금주</th>
+					<td colspan="3">이로사</td>
+				</tr>
+				<tr>
+					<th scope="row">은행명</th>
+					<td>신한은행</td>
+					<th scope="row">계좌번호</th>
+					<td>092843120396</td>
+				</tr>
+			</table>
+		</div>
+		<!-- //table_01 e -->
+
+		<div class="btn_area">
+			<a href="#" class="btn btn_b_black">확인</a>
+		</div>
+
+	</div>
+	<!-- //pop_content e -->
+</div>
+</body>
+</html>
