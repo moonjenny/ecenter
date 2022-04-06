@@ -1,0 +1,58 @@
+@charset "utf-8";
+html {width: 100%; height: 100%; color:#666;}
+body,div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, fieldset, legend, input, button, textarea, p, blockquote ,th ,td {margin:0; padding:0; font-family:"돋움", dotum,Tahoma, arial, sans-serif; color: #666;}
+body {height:100%; font-size:12px;}
+form {margin: 0; padding: 0;}
+table {border-collapse: collapse; border-spacing:0; /*table-layout:fixed;*/}
+table th{text-align:center; font-weight:bold;}
+hr {display:none;}
+fieldset,img {border:0;}
+legend {display:none;}
+address {font-style:normal;}
+li{list-style-type:none;}
+a:link, a:visited{text-decoration:none; color: #666;}
+a:active, a:hover{text-decoration:none; color: #333;}
+h1,h2,h3,h4,h5,h6 {font-size:12px; font-weight:normal;}
+sup {vertical-align:baseline;}
+sub {vertical-align:baseline;}
+table caption{text-indent: -9999px; font-size: 0; line-height: 0;}
+input,button,textarea,select{font-size:12px;}
+.clearfix {display: inline-block;}
+.clearfix:after {content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clear{clear:both;}
+.disp_none{display:none;}
+.hide{visibility:hidden;position:absolute;top:0;left:0;width:1px;height:1px;font-size:0;line-height:0}
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+
+/* form */
+button {border:0; padding:0; background:transparent; cursor:pointer; *overflow:visible; position: relative;}
+label {padding:0 9px 0 4px;vertical-align:-1px;}
+input[type=text], input[type=password]{height:28px; padding:0 10px; vertical-align:middle; line-height:28px; background:#fff; border:1px solid #ddd;}
+input[type=text]:focus, input[type=password]:focus{padding:0 9px; background:url(../../img/bg_input2.gif) repeat-x 0 0; border-color:#2eaae0; border-left-width:2px; border-right-width:2px;}
+input[type=checkbox] {width:13px;height:13px;vertical-align:text-top;}
+input[type="radio"] {width:13px; height:13px; vertical-align:middle;}
+
+/* select box title */
+span.selectbox_title {position:relative; background:#fff url(../../img/arrow.gif) no-repeat  right center; height:28px; padding:0 30px 0 8px; _padding:0 30px 0 8px;border:1px #ddd solid; text-align:left;line-height:28px;vertical-align:top;}
+span.selectbox_title strong {display:inline; width:100%; height:1em; padding:1px 0 1px; font-size:12px; font-weight:normal; color:#666; word-break:break-all;}
+span.selectbox_title_focus {border-color:#777;}
+span.selectbox_title_focus strong {color:#666;}
+span.selectbox_title_disabled {background-color:#eee;}
+span.selectbox_title_disabled strong {color:#666;}
+
+/* select box option */
+div.selectbox_option {position:relative; background:#fff; border:1px solid #777; overflow:hidden; z-index:20;}
+div.selectbox_option li {list-style:none;}
+div.selectbox_option a {display:block; height:1em; padding:3px 7px 5px; _padding:1px 7px 6px; font-size:12px; color:#666; word-break:break-all; line-height:1.4em; text-decoration:none; overflow:hidden; text-decoration:none !important;}
+div.selectbox_option a.on,
+div.selectbox_option a:hover {background:#eee; color:#000; text-decoration:none !important;}
+
+/* select box multiple */
+span.selectbox_multiple {display:inline-block; background:#fff; border:1px #ddd solid; overflow:hidden; z-index:20;}}
+span.selectbox_multiple ul li {display:block; height:1em; font-size:12px; color:#666; word-break:break-all; line-height:1.4em; padding:1px 3px 4px; _padding:2px 3px 3px; overflow:hidden;}
+span.selectbox_multiple ul li.on {background:#f5f5f5; color:#666;}
+span.selectbox_multiple_focus {border-color:#666;}
+span.selectbox_multiple_focus ul li.on {background:#f5f5f5; color:#666;}
+span.selectbox_multiple_disabled {background-color:#EEE;}
+span.selectbox_multiple_disabled ul li {color:#999;}
