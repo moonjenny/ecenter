@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ebay edu</title>
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link type="text/css" rel="stylesheet" href="../../com/css/import.css" />
+<script type="text/javascript" src="../../com/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../com/js/design.js"></script>
+<script type="text/javascript" src="../../com/js/select.js"></script>
+</head>
+
+<body>
+
+<!-- 팝업_체크포인트 : 740x656 -->
+<div class="popup" style="width:740px">
+	<!-- pop_header s -->
+	<div class="pop_header">
+		<h1><img src="../../img/title/pop_title_check.gif" alt="체크포인트" /></h1>
+		<a href="#" class="btnClose">닫기</a> 
+	</div>
+	<!-- //pop_header e -->
+	<!-- pop_content s -->
+	<div class="pop_content">
+		<!-- 20131010 수정 -->
+		<h2 class="h_01">
+			아래 항목들을 입력하시고 동의하시면 강좌 신청 페이지로 이동합니다.
+			<span class="exp pl30 font_normal">(* 표시는 필수 입력 항목입니다)</span>
+		</h2>
+		<!--// 20131010 수정 -->
+		<!-- popTableC s -->
+		<div class="popTableC">
+			<table summary="체크포인트 입력 테이블입니다.">
+				<caption>체크포인트 입력</caption>
+				<colgroup>
+				<!--20131108 수정 및 추가-->
+				<col width="120" />
+				<col width="*" />
+				<col width="120" />
+				<col width="*" />
+				<!--// 20131108 수정 및 추가-->
+				</colgroup>
+				<tr>
+					<th scope="row">회원 ID</th>
+					<td>hong1234</td>
+					<!--20131108 수정 및 추가-->
+					<th scope="row"><label for="user_name">회원명</label></th>
+					<td><input type="text" name="user_name" id="user_name" title="회원명 입력" maxlength="4" /><span class="pl10 fontRed">회원명을 입력해 주세요.</span></td>
+					<!--// 20131108 수정 및 추가-->
+				</tr>
+				<tr>
+					<th scope="row"><label for="mobile">휴대폰</label></th>
+					<!--20131108 수정 및 추가-->
+					<td colspan="3">
+					<!--// 20131108 수정 및 추가-->
+						<select name="mobile" id="mobile" title="휴대폰 번호 첫자리 선택"  style="width:93px">
+							<option>010</option>
+							<option>011</option>
+							<option>016</option>
+							<option>017</option>
+							<option>018</option>
+							<option>019</option>
+						</select>
+						-
+						<input type="text" name="mobile" id="mobile2" title="휴대폰 번호 중간자리 입력" maxlength="4" style="width:73px" />
+						-
+						<input type="text" name="mobile" id="mobile3" title="휴대폰 번호 뒷자리 입력" maxlength="4" style="width:73px" />
+						<!--20131108 수정 및 추가-->
+						<span class="pl10 fontRed">휴대폰 번호를 입력해 주세요.</span>
+						<!--// 20131108 수정 및 추가-->
+					</td>
+					
+				</tr>
+				<tr>
+					<th scope="row"><label for="email">이메일</label></th>
+					<!--20131108 수정 및 추가-->
+					<td colspan="4">
+					<!--// 20131108 수정 및 추가-->
+						<input type="text" id="email" style="width:160px" title="이메일 아이디 입력" />
+						@
+						<input type="text" id="email2" style="width:140px" title="도메인 직접입력" />
+						<select id="email3" title="도메인 선택">
+							<option selected="selected">직접입력</option>
+							<option>naver.com</option>
+							<option>nate.com</option>
+							<option>hanmail.net</option>
+							<option>korea.com</option>
+							<option>gmail.com</option>
+							<option>hotmail.com</option>
+							<option>empal.com</option>
+							<option>lycos.co.kr</option>
+						</select>
+						<!--20131108 수정 및 추가-->
+						<p class="mt05 fontRed">이메일을 입력해 주세요.</p>
+						<!--// 20131108 수정 및 추가-->
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">관심분야</th>
+					<!--20131108 수정 및 추가-->
+					<td colspan="4">
+					<!--// 20131108 수정 및 추가-->
+						<div class="relative">
+							<input type="checkbox" name="interest" id="foundation" /><label for="foundation">창업기초</label>
+							<input type="checkbox" name="interest" id="design" /><label for="design">디자인/촬영</label>
+							<input type="checkbox" name="interest" id="marketing" /><label for="marketing">마케팅</label>
+							<input type="checkbox" name="interest" id="tax" /><label for="tax">세무</label>
+							<input type="checkbox" name="interest" id="expert" /><label for="expert">전문가 특강</label>
+							<span class="exp mt15 alignR">* 복수선택 가능</span> <!-- 20131010 추가 -->
+							<!-- 20131010 삭제
+							<p class="mt15 alignR">* 최소한 하나의 관심분야를 선택해 주세요. (복수선택 가능)</p>--><!-- 20131010 텍스트,css 수정 -->
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<!-- //popTableC e -->
+		<h2 class="h_01 mt30">정보 제공 동의</h2>
+		<!-- 20130819 텍스트수정 -->
+		<div class="gray_box">
+			<p>1. 개인정보 수집 항목  및 이용목적</p>
+			<ul class="dot">
+				<li>성명, 이메일주소, 휴대폰번호 : 본인확인, 교육서비스 제공</li>
+				<li>이메일주소 , 휴대폰번호 : 수강신청 확인, 불만처리</li>
+			</ul>
+			<p class="mt10">2. 개인정보 보유 및 이용기간 </p>
+			<ul class="dot">
+				<li>수집 이용목적 달성 (이용내역이 없을 시 3년 보관 후 삭제) 또는 회원탈퇴 시 까지 </li>
+			</ul>
+			<p class="mt20">개인정보 수집 및 이용에 동의하십니까?</p>
+		</div>
+		<!--// 20130819 텍스트수정 -->
+		<!-- 20130819 체크박스 추가 -->
+		<p class="mt10 alignC">
+			<input type="checkbox" id="chk_agree" /><label for="chk_agree">동의합니다</label>
+			<input type="checkbox" id="chk_noagree" /><label for="chk_noagree">동의하지 않습니다</label>
+			<!--20131108 수정 및 추가-->
+			<span class="fontRed">동의에 체크하셔야 강좌를 신청할 수 있습니다.</span>
+			<!--// 20131108 수정 및 추가-->
+		</p>
+		<!--// 20130819 체크박스 추가 -->
+		<div class="btn_center">
+			<a href="#" class="btn_02 btn_black"><span>취소</span></a><a href="#" class="btn_02 btn_blue"><span>확인</span></a>
+		</div>
+	</div>
+	<!-- //pop_content e -->
+</div>
+</body>
+</html>

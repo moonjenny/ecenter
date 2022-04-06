@@ -1,0 +1,395 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ebay edu</title>
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link type="text/css" rel="stylesheet" href="../../com/css/import.css" />
+<script type="text/javascript" src="../../com/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../com/js/design.js"></script>
+<script type="text/javascript" src="../../com/js/select.js"></script>
+</head>
+
+<body>
+	<div id="skip_nav">
+		<ul>
+			<li><a href="#gnb">메뉴 바로가기</a></li>
+			<li><a href="#contents">본문 바로가기</a></li>
+		</ul>
+	</div>
+	<hr />
+
+	<div id="wrap">
+		<!-- header s -->
+		<div id="header">
+			<div class="hearderCon">
+				<div class="hlogo"><a href="#"><img src="../../img/common/h_logo_ebay_edu.gif" alt="ebay edu" /></a></div><!-- 20130809 로고이미지사이즈변경 -->
+				<div class="miniBar">
+					<ul>
+						<!-- 201307 GNB(로그아웃) -->
+						<!-- <li><a href="#"><img src="../../img/common/tnb_s0.gif" width="43" height="9" alt="Logout" /></li> -->
+						<li><a href="#"><img src="../../img/common/tnb_s1.gif" width="34" height="9" alt="Login" /> </a></li>
+						<li><a href="#"><img src="../../img/common/tnb_s2.gif" width="42" height="9" alt="my page" /></a></li>
+						<li><a href="#"><img src="../../img/common/tnb_s3.gif" width="68" height="9" alt="ebay edu 안내" /></a></li>
+						<li><a href="#"><img src="../../img/common/tnb_s4.gif" width="47" height="9" alt="site map" /></a></li>
+						<li><a href="#"><img src="../../img/common/tnb_s5.gif" width="51" height="9" alt="고객센터문의" /></a></li><!-- 20130808 메인유틸리티 추가 -->
+						<!--// 201307 GNB(로그아웃) -->
+					</ul>
+					<!-- miniBarSch s -->
+					<div id="miniBarSch" class="miniBarSch">
+						<a href="#"><img src="../../img/common/btn_search_01.gif" alt="검색" /></a>
+						<div class="schArea" style="display: none;">
+							<label for="topSrch" class="hide">강좌검색</label><input type="text" name="topSrch" id="topSrch" value="강좌검색" title="강좌검색" onblur="checkField(this)" onfocus="clearField(this)" /><input type="image" src="../../img/common/btn_search_01.gif" name="miniBarSch" id="gnb_search" alt="검색" />
+						</div>
+						<div class="dim"></div>
+					</div>
+					<!-- //miniBarSch e -->
+				</div>
+				<ul class="gnb">
+					<li><a href="#"><img src="../../img/common/gnb_m1.gif" width="115" height="32" alt="교육과정 안내" /></a></li>
+					<li><a href="#"><img src="../../img/common/gnb_m2.gif" width="121" height="32" alt="오픈마켓 소식" /></a></li>
+					<li><a href="#"><img src="../../img/common/gnb_m3.gif" width="102" height="32" alt="교육센터 소개" /></a></li>
+					<li><a href="#"><img src="../../img/common/gnb_m4.gif" width="164" height="32" alt="에듀 고객센터" /></a></li>
+				</ul>
+			</div>
+
+			<!-- 201308012 서브메뉴 추가 -->
+			<div class="depth on">
+				<ul>
+					<li class="sub_01">
+						<a href="#"><img src="../../img/common/sub_01_01.gif" alt="오프라인 강좌/분야별" /></a>
+						<a href="#"><img src="../../img/common/sub_01_02.gif" alt="오프라인 강좌/일정별" /></a>
+						<a href="#"><img src="../../img/common/sub_01_03.gif" alt="온라인 강좌" /></a>
+					</li>
+					<li class="sub_02">
+						<a href="#"><img src="../../img/common/sub_02_01.gif" alt="업계소식" /></a>
+						<a href="#"><img src="../../img/common/sub_02_02.gif" alt="전문가컬럼" /></a>
+						<a href="#"><img src="../../img/common/sub_02_03.gif" alt="파워셀러 성공담" /></a>
+						<a href="#"><img src="../../img/common/sub_02_04.gif" alt="성공 TIP" /></a>
+					</li>
+					<li class="sub_03">
+						<a href="#"><img src="../../img/common/sub_03_01.gif" alt="EBAY EDU 소개" /></a>
+						<a href="#"><img src="../../img/common/sub_03_02.gif" alt="교육과정" /></a>
+						<a href="#"><img src="../../img/common/sub_03_03.gif" alt="강사진" /></a>
+						<a href="#"><img src="../../img/common/sub_03_04.gif" alt="강의시설" /></a>
+					</li>
+					<li class="sub_04">
+						<a href="#"><img src="../../img/common/sub_04_01.gif" alt="공지사항" /></a>
+						<a href="#"><img src="../../img/common/sub_04_02.gif" alt="FAQ" /></a>
+						<a href="#"><img src="../../img/common/sub_04_03.gif" alt="1:1 전문가" /></a>
+					</li>
+				</ul>
+			</div>
+			<!--// 201308012 서브메뉴 추가 -->
+
+		</div>
+		<!-- //header e -->
+		<hr />
+		
+		<!-- contents s -->
+		<div id="contents">
+			<!-- location s -->
+			<div class="location">
+				<ul class="depth" style="height: 90px;">
+				</ul>
+				<p id="allView"><a href="#"><span>전체보기</span></a></p>
+				<!-- 전체보기 layer s -->
+				<div id="allViewSub" class="allViewSub">
+					<ul>
+						<li class="line">
+							<div class="subTit"><img src="../../img/title/location_tit1.gif" width="95" height="17" alt="교육과정 안내"></div>
+							<ul>
+								<li><a href="#">오프라인 강좌/일정별</a></li>
+								<li><a href="#">오프라인 강좌/분야별</a></li>
+								<li><a href="#">온라인강좌</a></li>
+							</ul>
+						</li>
+						<li class="line">
+							<div class="subTit"><img src="../../img/title/location_tit2.gif" width="127" height="17" alt="MARKET NOW"></div>
+							<ul>
+								<li><a href="#">업계소식</a></li>
+								<li><a href="#">전문가컬럼</a></li>
+								<li><a href="#">파워셀러 성공담</a></li>
+								<li><a href="#">판매활용 TIP</a></li>
+							</ul>
+						</li>
+						<li class="line">
+							<div class="subTit"><img src="../../img/title/location_tit3.gif" width="95" height="17" alt="교육센터 소개"></div>
+							<ul>
+								<li><a href="#">EBAY EDU 소개</a></li>
+								<li><a href="#">교육과정</a></li>
+								<li><a href="#">강사진</a></li>
+								<li><a href="#">강의시설</a></li>
+							</ul>
+						</li>
+						<li class="line">
+							<div class="subTit"><img src="../../img/title/location_tit4.gif" width="60" height="17" alt="교육센터"></div>
+							<ul>
+								<li><a href="#">공지사항</a></li>
+								<li><a href="#">FAQ</a></li>
+								<li><a href="#">교육센터 1:1 문의</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<!-- //전체보기 layer e -->
+			</div>
+			<!-- //location e -->
+
+			<div class="gray_box2 mt30 terms">
+				<h2 class="h2_tit">온라인 판매자 교육센터 개인정보취급방침</h2>
+				<p>
+					주식회사 이베이코리아(이하 “회사”)는 회사가 운영하는 판매자교육센터(www.ebayedu.com, 이하 “이베이에듀”)를 이용하는 이용자님들의 개인정보를 매우 중요하게 생각하며 아래와 같은 개인정보취급방침을 가지고 있습니다. 이 개인정보취급방침은 개인정보와 관련한 법령 또는 지침의 변경이 있는 경우 갱신되고, 이베이에듀 정책의 변화에 따라 달라질 수 있으니 이용자께서는 이베이에듀 사이트를 방문시 수시로 확인하여 주시기 바랍니다. 이베이에듀의 개인정보취급방침은 다음과 같은 내용을 담고 있습니다. <br /><br />
+				</p>
+				<ol>
+					<li><a href="#tab01">1. 개인정보의 수집•이용</a></li>
+					<li><a href="#tab02">2. 개인정보 제3자 제공</a></li>
+					<li><a href="#tab03">3. 개인정보 취급위탁</a></li>
+					<li><a href="#tab04">4. 이용자 개인정보의 보유 : 이용기간 및 파기</a></li>
+					<li><a href="#tab05">5. 쿠키(Cookie)의 운용 및 거부</a></li>
+					<li><a href="#tab06">6. 이용자의 권리</a></li>
+					<li><a href="#tab07">7. 이용자의 의무</a></li>
+					<li><a href="#tab08">8. 링크 사이트에 대한 책임</a></li>
+					<li><a href="#tab09">9. 개인정보의 기술적/관리적 보호 대책</a></li>
+					<li><a href="#tab10">10. 개인정보관리책임자</a></li>
+					<li><a href="#tab11">11. 고지의 의무</a></li>
+				</ol>
+				<h3 class="h3_tit" id="tab01">1. 개인정보의 수집•이용</h3>
+				<ol>
+					<li><span class="first_letter">가.</span>회사가 개인정보를 수집하는 목적은 이용자의 신분과 서비스 이용의사를 확인하여 최적화되고 맞춤화된 서비스를 제공하기 위함입니다. </li>
+					<li>
+						<span class="first_letter">나.</span> 회사는 개인정보를 수집•이용목적 이외에 다른 용도로 이를 이용하거나 이용자의 동의 없이 제3자에게 이를 제공하지 않습니다.
+						<ol>
+							<li><span class="first_letter">1)</span> 회원 
+								<ol>
+									<li><span class="first_letter">-</span> 옥션/G마켓 아이디, 비밀번호: 판매자회원 여부확인, SSO연동</li>
+									<li>&lt; 교육신청시 수집항목 &gt; 
+										<ol>
+											<li><span class="first_letter">-</span> 성명, 이메일주소, 휴대폰번호,: 회사가 제공하는 서비스의 이용에 따르는 본인확인, 교육 서비스 제공 </li>
+											<li><span class="first_letter">-</span> 이메일주소, 휴대폰번호 : 수강신청 확인, 불만처리</li>
+										</ol>
+									</li>
+								</ol>
+							</li>
+							<li><span class="first_letter">2)</span> 기타 
+								<ol>
+									<li>서비스 이용과정이나 사업처리 과정에서 아래와 같은 정보들이 자동으로 생성되어 수집될 수 있습니다.</li>
+									<li>- IP Address, 방문일시, 서비스 이용 기록: 부정 이용 방지, 비인가 사용 방지, 신규 서비스 개발 및 맞춤서비스 제공 등</li>
+								</ol>
+							</li>
+						</ol>
+					</li>
+					<li><span class="first_letter">다.</span>회사는 이용자의 개인정보를 수집할 경우 반드시 이용자의 동의를 얻어 수집하며, 이용자의 기본적 인권을 침해할 우려가 있는 인종, 출신지, 본적지, 사상, 정치적 성향, 범죄기록, 건강상태 등의 정보는 이용자의 동의 또는 법령의 규정에 의한 경우 이외에는 수집하지 않습니다.</li>
+					<li><span class="first_letter">라.</span>회사는 회원 가입을 만 14세 이상인 경우에 가능하도록 하며 개인정보의 수집•이용에 법정대리인의 동의가 필요한 만 14세 미만 아동의 개인정보는 원칙적으로 수집하지 않습니다. 단, 법정대리인의 동의를 얻은 경우에는 만 14세 미만 이용자의 개인정보를 수집•이용할 수 있습니다.</li>
+					<li><span class="first_letter">마.</span> 회사는 다음과 같은 방법으로 개인정보를 수집할 수 있습니다.
+						<ol>
+							<li><span class="first_letter">1)</span> 홈페이지, 서면, 팩스, 전화, 고객센터 문의하기</li>
+							<li><span class="first_letter">2)</span> 생성정보 수집 툴을 통한 자동 수집</li>
+						</ol>
+					</li>
+				</ol>
+
+				<h3 class="h3_tit" id="tab02">2. 개인정보의 제 3자 제공</h3>
+				<ol>
+					<li><span class="first_letter">가.</span> 회사는 웹 페이지화면을 통하여 공개된 정보를 제외하고는 이용자의 개인정보를 이용자의 사전 동의 없이 위 제1조에서 고지한 목적 외의 용도로 사용하거나 제3자에게 제공하지 않습니다. 다만, 다음의 경우에는 예외로 합니다. 
+						<ol>
+							<li><span class="first_letter">1)</span> 이용자들이 사전에 공개하거나 또는 제 3자 제공에 동의한 경우</li>
+							<li><span class="first_letter">2)</span> 법령의 규정에 의거하거나, 수사, 조사 목적으로 법령에 정해진 절차와 방법에 따라 수사기관 및 감독당국의 요구가 있는 경우</li>
+						</ol>
+					</li>
+					<li><span class="first_letter">나.</span> 회사는 이용자에게 보다 더 나은 서비스를 제공하기 위하여 사전 동의를 얻어 개인정보를 제휴사 등 제3자에게 제공 또는 공유할 수 있습니다. 또한 이용자가 일단 개인정보의 제공에 동의하더라도 언제든지 그 동의를 철회할 수 있습니다.</li>
+				</ol>
+
+				<h3 class="h3_tit" id="tab03">3. 개인정보의 취급위탁</h3>
+				<ol>
+					<li><span class="first_letter">가.</span> 회사는 원활하고 향상된 교육서비스를 위하여 개인정보 취급을 타인에게 위탁할 수 있습니다.</li>
+					<li><span class="first_letter">나.</span> 회사는 개인정보의 처리와 관련하여 아래와 같이 업무를 위탁하고 있으며, 관계법령에 따라 위탁 계약 시 개인정보가 안전하게 관리될 수 있도록 필요한 조치를 하고 있습니다. 또한 위탁처리하는 정보는 원활한 서비스를 제공하기 위하여 필요한 최소한의 정보에 국한됩니다.</li>
+				</ol>
+				<p>회사의 이용자의 개인정보 위탁 처리 시 수탁업체 및 위탁 목적은 아래와 같습니다</p>
+				<div class="tableListA border1 mt20">
+					<table class="mt10">
+						<colgroup>
+							<col width="50%" />
+							<col width="50%" />
+						</colgroup>
+						<tr>
+							<th class="alignC">수탁업체</th>
+							<th class="alignC">위탁업무 내용</th>
+						</tr>
+						<tr>
+							<td>KTM직업전문학교</td>
+							<td>오프라인 교육 참석 확인 및 교육 서비스 제공</td>
+						</tr>
+				</table>
+				</div>
+
+				<h3 class="h3_tit" id="tab04">4. 이용자 개인정보의 보유 : 이용기간 및 파기</h3>
+				<p>회사는 이용자의 개인정보를 원칙적으로 고지 및 약정한 기간 동안 보유 및 이용하며 개인정보의 수집 및 이용목적이 달성되면 지체 없이 파기합니다. 단, 다음의 정보에 대해서는 아래의 이유로 명시한 기간 동안 보존합니다 </p>
+				<ol class="mt10">
+					<li><span class="first_letter">가.</span> 관련법령 및 회사 방침에 의한 정보보유 사유 <br />
+						상법 등 관계법령의 규정에 의하여 보존할 필요가 있는 경우 법령에서 규정한 일정한 기간 동안 이용자 개인정보를 보관합니다. 이 경우 회사는 보관하는 정보를 그 보관의 목적으로만 이용하며 보존기간은 아래와 같습니다.
+						<ol>
+							<li><span class="first_letter">①</span> 계약 또는 청약철회 등에 관한 기록 
+								<ol>
+									<li>보존 이유 : 전자상거래 등에서의 소비자보호에 관한 법률 제6조 및 시행령 제6조</li>
+									<li>보존 기간 : 5년</li>
+								</ol>
+							</li>
+							<li><span class="first_letter">②</span> 대금결제 및 재화 등의 공급에 관한 기록 
+								<ol>
+									<li>보존 이유 : 전자상거래 등에서의 소비자보호에 관한 법률 제6조 및 시행령 제6조</li>
+									<li>보존 기간 : 5년</li>
+								</ol>
+							</li>
+							<li><span class="first_letter">③</span> 소비자의 불만 또는 분쟁처리에 관한 기록 
+								<ol>
+									<li>보존 이유 : 전자상거래 등에서의 소비자보호에 관한 법률 제6조 및 시행령 제6조</li>
+									<li>보존 기간 : 3년</li>
+								</ol>
+							</li>
+							<li><span class="first_letter">④</span> 접속에 관한 기록 
+								<ol>
+									<li>보존 이유 : 통신비밀보호법 제15조의2 및 시행령 제41조 </li>
+									<li>보존기간 : 3개월 </li>
+								</ol>
+							</li>
+						</ol>
+					</li>
+					<li><span class="first_letter">나.</span> 수집된 개인정보의 보유•이용기간은 서비스이용계약체결(회원가입)시부터 서비스이용계약해지(탈퇴신청, 직권탈퇴 포함)입니다. 또한 동의 해지 시 회사는 이용자의 개인정보를 상기 명시한 정보보유 사유에 따라 일정 기간 저장하는 자료를 제외하고는 지체 없이 파기하며 개인정보취급이 제3자에게 위탁된 경우에는 수탁자에게도 파기하도록 지시합니다.
+
+					</li>
+					<li></li>
+					<li><span class="first_letter">라.</span> 2012년8월18일 이후 가입자가 3년간 이베이에듀에서 이용기록이 없을 시, 서비스 미이용자의 개인정보는 ‘정보통신망 이용촉진 및 정보보호등에 관한 법률 제29조’ 에 근거하여 이용자에게 사전통지하고 개인정보를 파기하거나 별도로 분리하여 저장 관리합니다. 단, 통신비밀보호법 등의 관계법령의 규정에 의하여 보존할 필요가 있는 경우 관계법령에서 규정한 일정한 기간 동안 이용자 개인정보를 보관합니다</li>
+					<li><span class="first_letter">마.</span> 파기방법
+						<ol>
+							<li>이용자의 개인정보는 수집 및 이용목적이 달성된 후에는 지체 없이 파기됩니다. 종이에 출력된 개인정보는 분쇄기로 분쇄하거나 소각 등을 통하여 파기하고, 전자적 파일형태로 저장된 개인정보는 기록을 재생할 수 없는 기술적 방법을 사용하여 파기합니다.</li>
+						</ol>
+					</li>
+				</ol>
+
+				<h3 class="h3_tit" id="tab05">5. 쿠키(Cookie)의 운용 및 거부 </h3>
+				<ol>
+					<li><span class="first_letter">가.</span> 쿠키의 사용 목적
+						<ol>
+							<li><span class="first_letter">①</span> 회사는 개인 맞춤 서비스를 제공하기 위해서 이용자에 대한 정보를 저장하고 수시로 불러오는 '쿠키(cookie)'를 사용합니다. 쿠키는 웹사이트 서버가 이용자의 브라우저에게 전송하는 소량의 정보로서 이용자 컴퓨터의 하드디스크에 저장됩니다.</li>
+							<li><span class="first_letter">②</span> 회사는 쿠키의 사용을 통해서만 가능한 특정된 맞춤형 서비스를 제공할 수 있습니다.</li>
+							<li><span class="first_letter">③</span>회사는 회원을 식별하고 회원의 로그인 상태를 유지하기 위해 쿠키를 사용할 수 있습니다.</li>
+						</ol>
+					</li>
+					<li><span class="first_letter">나.</span> 쿠키의 설치/운용 및 거부
+						<ol>
+							<li><span class="first_letter">①</span> 이용자는 쿠키 설치에 대한 선택권을 가지고 있습니다. 따라서 이용자는 웹브라우저에서 옵션을 조정함으로써 모든 쿠키를 허용/거부하거나, 쿠키가 저장될 때마다 확인을 거치도록 할 수 있습니다. 
+								<ol>
+									<li>- 쿠키 설치 허용 여부를 지정하는 방법(Internet Explorer의 경우)은 다음과 같습니다. </li>
+									<li>o	[도구] 메뉴에서 [인터넷 옵션]을 선택합니다.</li>
+									<li>o	[개인정보 탭]을 클릭합니다.</li>
+									<li>o	[개인정보취급 수준]을 설정하시면 됩니다.</li>
+								</ol>
+							</li>
+							<li><span class="first_letter">②</span> 쿠키의 저장을 거부할 경우에는 개인 맞춤서비스 등 회사가 제공하는 일부 서비스는 이용이 어려울 수 있습니다.</li>
+						</ol>
+					</li>
+				</ol>
+
+				<h3 class="h3_tit" id="tab06">6 이용자 및 법정대리인의 권리</h3>
+				<ol>
+					<li><span class="first_letter">가.</span> 이용자는 옥션/지마켓 사이트를 통하여 언제든지 개인정보를 열람, 정정 처리하실 수 있으며, 당사의 개인정보관리책임자에게 전자우편 또는 서면으로 요청하신 경우 열람, 정정, 삭제 처리해드리겠습니다. 단, 회원 아이디(ID), 성명, 은 정정이 불가능하며, 개명으로 인한 성명 변경 및 행정상의 문제로 인한 사업자등록번호 변경은 예외적으로 허용 될 수 있습니다. 기타 법률에 따라 정정 또는 삭제가 금지되거나 제한되어 있는 경우에는 해당 처리가 제한될 수 있습니다. 또한 개인정보 오류에 대한 정정 요청한 경우에는 다른 법률에 따라 개인정보의 제공을 요청받는 경우가 아닌 한 정정을 완료하기 전까지 당해 개인정보를 이용 또는 제공하지 않습니다, 만약 잘못된 개인정보를 이미 제공한 경우에는 정정 처리 결과를 제 3자에게 통지하여 정정이 이루어지도록 하겠습니다. </li>
+					<li><span class="first_letter">나.</span> 이용자는 옥션/지마켓 사이트를 통하여 언제든지 이베이에듀 사이트의 개인정보에 대하여 처리의 정지를 요구 할 수 있습니다. 다만 아래의 경우에 해당하는 경우 처리정지 요구를 거절할 수 있습니다.
+						<ol>
+							<li><span class="first_letter">1)</span> 법률에 특별한 규정이 있거나 법령상 의무를 준수하기 위하여 불가피한 경우</li>
+							<li><span class="first_letter">2)</span> 다른 사람의 생명•신체를 해할 우려가 있거나 다른 사람의 재산과 그 밖의 이익을 부당하게 침해할 우려가 있는 경우</li>
+							<li><span class="first_letter">3)</span> 개인정보를 처리하지 아니하면 정보주체와 약정한 서비스를 제공하지 못하는 등 계약의 이행이 곤란한 경우로서 정보주체가 그 계약의 해지 의사를 명확하게 밝히지 아니한 경우 </li>
+						</ol>
+					</li>
+					<li><span class="first_letter">다.</span> 회원가입 등을 통해 개인정보의 수집•이용•제공에 대해 회원님께서 동의하신 내용을 언제든지 철회할 수 있습니다. 동의철회는 회사 사이트 내 “회원 탈퇴 신청”을 클릭하거나 개인정보관리책임자에게 서면, 전화, 이메일 등으로 연락하시면 지체 없이 개인정보의 삭제 등 필요한 조치를 하겠습니다. 다만 법률 또는 약관의 규정에 따라 회사가 회원님의 개인정보를 보존하여야 하는 경우에는 해당 처리가 제한될 수 있습니다. 이 경우 회원님은 본인 식별을 위하여 반드시 회원아이디(ID)와 본인확인 식별정보를 밝히셔야 하며, 철회로 인해 서비스에 다소 제약이 있거나 일부 서비스를 이용하지 못하실 수 있습니다.</li>
+				</ol>
+
+				<h3 class="h3_tit" id="tab07">7. 이용자의 의무</h3>
+				<p>이용자는 자신의 개인정보를 보호할 의무가 있으며, 회사의 귀책사유가 없이 ID, 비밀번호, 접근매체 등의 양도•대여•분실이나 로그인 상태에서 이석 등 이용자 본인의 부주의나 브라우져 취약점, 관계법령에 의한 보안조치로 차단할 수 없는 방법이나 기술을 사용한 해킹 등 회사가 상당한 주의에도 불구하고 통제할 수 없는 인터넷 상의 문제 등으로 개인정보가 유출되어 발생한 문제에 대해 회사는 일체의 책임을 지지 않습니다.</p>
+				<ol class="mt10">
+					<li><span class="first_letter">가.</span> 이용자는 자신의 개인정보를 최신의 상태로 유지해야 하며, 이용자의 부정확한 정보 입력으로 발생하는 문제의 책임은 이용자 자신에게 있습니다.</li>
+					<li><span class="first_letter">나.</span> 타인의 개인정보를 도용한 회원가입 시 이용자자격 상실과 함께 법에 의거하여 처벌될 수 있습니다.</li>
+					<li><span class="first_letter">다.</span> 이용자는 아이디, 비밀번호 등에 대해 보안을 유지할 책임이 있으며 제3자에게 이를 양도하거나 대여할 수 없습니다. 이용자는 회사의 개인정보보호정책에 따라 보안을 위해 비밀번호의 주기적 변경에 협조할 의무가 있습니다.</li>
+					<li><span class="first_letter">라.</span> 이용자는 회사의 서비스를 이용한 후에는 반드시 로그인 계정을 종료하고 웹 브라우저 프로그램을 종료해야 합니다.</li>
+					<li><span class="first_letter">마.</span> 이용자는 "정보 통신망 이용촉진 및 정보보호 등에 관한 법률", “개인정보보호법” 등 기타 개인정보에 관한 법률을 준수하여야 합니다.</li>
+				</ol>
+
+				<h3 class="h3_tit" id="tab08">8. 링크 사이트에 대한 책임</h3>
+				<p>회사는 이용자에게 다른 웹사이트에 대한 링크를 제공할 수 있습니다. 다만, 링크되어 있는 웹사이트들이 개인정보를 수집하는 행위에 대해서는 본 "개인정보취급방침"이 적용되지 않습니다.</p>
+
+				<h3 class="h3_tit" id="tab09">9. 개인정보의 기술적/관리적 보호 대책 </h3>
+				<p>회사는 이용자들의 개인정보를 취급함에 있어 개인정보가 분실, 도난, 누출, 변조 또는 훼손되지 않도록 안전성 확보를 위하여 다음과 같은 기술적/관리적 보호대책을 강구하고 있습니다.</p>
+				<ol class="mt10">
+					<li><span class="first_letter">가.</span> 개인정보의 암호화</li>
+					<li>이용자의 비밀번호는 일방향 암호화하여 저장 및 관리되고 있으며, 개인정보의 확인 및 변경은 비밀번호를 알고 있는 본인에 의해서만 가능합니다. 비밀번호는 이용자의 생일, 전화번호 등 타인이 추측하기 쉬운 숫자 등을 이용하지 않도록 비밀번호 생성규칙을 수립하여 적용하고 있습니다..  </li>
+					<li><span class="first_letter">나.</span> 해킹 등에 대비한 대책</li>
+					<li>회사는 해킹 등 회사 정보통신망 침입에 의해 이용자의 개인정보가 유출되는 것을 방지하기 위해 침입탐지 및 침입차단 시스템을 24시간 가동하고 있습니다. 만일의 사태에 대비하여 모든 침입탐지 시스템과 침입차단 시스템은 이중화로 구성하여 운영하고 있으며, 민감한 개인정보는 암호화 통신 등을 통하여 네트워크상에서 개인정보를 안전하게 전송할 수 있도록 하고 있습니다. </li>
+					<li><span class="first_letter">다.</span> 개인정보 취급자의 최소화 및 교육</li>
+					<li>회사는 회사의 개인정보 취급자를 최소한으로 제한하며, 개인정보 취급자에 대한 교육 등 관리적 조치를 통해 개인정보보호의 중요성을 인식시키고 있습니다.</li>
+					<li><span class="first_letter">라.</span> 개인정보보호 전담부서의 운영</li>
+					<li>회사는 개인정보의 효율적 보호를 위해 개인정보보호전담부서를 운영하고 있으며, 개인정보취급방침의 이행사항 및 개인정보 취급자의 준수여부를 확인하여 문제가 발견될 경우 즉시 수정할 수 있도록 노력하고 있습니다.</li>
+				</ol>
+
+				<h3 class="h3_tit" id="tab10">10. 개인정보관리책임자</h3>
+				<p>회사는 이용자가 회사의 서비스를 안전하게 이용할 수 있도록 최선을 다하고 있습니다. 이용자는 회사의 서비스 이용과 관련한 모든 개인정보보호 민원을 개인정보관리책임자 또는 전담부서로 신고하실 수 있으며, 회사는 이용자의 신고사항에 대해 신속하고 성실하게 답변해드리고 있습니다.</p>
+				<p class="mt10">[개인정보관리책임자]</p>
+				<ol>
+					<li>성명 : 길기현</li>
+					<li>소속부서 : Site Ops 실</li>
+					<li>직위 : 상무</li>
+					<li>전자우편 : privacy@corp.auction.co.kr</li>
+					<li>전화번호 : 02-589-8990</li>
+					<li>FAX : 02-589-8985</li>
+				</ol>
+				<p class="mt10">기타 개인정보침해에 대한 신고 또는 상담이 필요하신 경우에는 아래 기관으로 문의하시기 바랍니다.</p>
+				<ol>
+					<li>- 개인정보침해신고센터 (www.118.or.kr / 118) </li>
+					<li>- 정보보호마크인증위원회 (www.eprivacy.or.kr / 02-550-9531~2) </li>
+					<li>- 대검찰청 사이버범죄수사단 (cybercid@spo.go.kr/ 02-3480-3571)</li>
+					<li>- 경찰청 사이버테러대응센터 (www.ctrc.go.kr / 02-392-0330)</li>
+				</ol>
+
+				<h3 class="h3_tit" id="tab11">11. 고지의 의무 </h3>
+				<p>회사는 법령, 정책 또는 보안기술의 변경에 따라 개인정보 개인정보처리방침을 추가, 삭제 및 수정, 기타 변경하는 경우에는 공지사항 또는 이메일을 통해 고지하며 시행의 시기, 변경된 내용을 정보주체가 쉽게 확인할 수 있도록 변경 전•후를 비교하여 공개하도록 할 예정입니다</p>
+				<ol class="mt10">
+					<li>공고일자 : 2013년  8월 26일</li>
+					<li>시행일자 : 2013년  8월 26일</li>
+				</ol>
+
+
+			</div>
+
+		</div>
+		<!-- //contents e -->
+		<hr />
+
+		<!-- footer s -->
+		<div id="footer">
+			<div class="footerCon">
+				<ul class="fNavi">
+					<li class="n1"><a href="#">eby edu 소개</a></li>
+					<li class="n2"><a href="#">이용약관</a></li>
+					<li class="n3"><a href="#">개인정보취급방침</a></li>
+					<li class="n4"><a href="http://adcenter.auction.co.kr/Default.aspx" target="_blank" title="새창">판매광고센터</a></li>
+					<li class="n5"><a href="http://www.about.co.kr" target="_blank" title="새창">어바웃</a></li>
+					<li class="n6"><a href="http://securitycenter.auction.co.kr/index.html" target="_blank" title="새창">안전거래 센터</a></li>
+				</ul>
+				<ul class="info">
+					<li class="tel">tel:1588-0184</li>
+					<li class="fax">Fax:02-589-8829</li>
+					<li class="mail">Mail.Infomatiln@corp.quction.co.kr</li>
+					<li class="add">주소:경기도 부천시 원미구 부일로 223(상동)투나빌딩 6층</li>
+					<li class="center">상담가능시간:오전 9시~오후6시 (토요일 및 공휴일 휴무)</li>
+				</ul>
+				<p class="copyright">COPYRIGHT(C) 1998-2012 ebay.Inc. ALL RIGHT RESERVED.</p>
+				<p class="flogo1"><a href="http://www.auction.co.kr/?frm=headertab&amp;redirect=1" target="_blank" title="새창"><img src="../../img/common/f_logo_auction.gif" width="57" height="23" alt="auction" /></a></p>
+				<p class="flogo2"><a href="http://www.gmarket.co.kr" target="_blank" title="새창"><img src="../../img/common/f_logo_gmarket.gif" width="71" height="23" alt="gmarket" /></a></p>
+			</div>
+		</div>
+		<!-- //footer e -->
+		
+	</div>
+</body>
+</html>

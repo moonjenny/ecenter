@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ebay edu</title>
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link type="text/css" rel="stylesheet" href="../../com/css/import.css" />
+<script type="text/javascript" src="../../com/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../com/js/design.js"></script>
+<script type="text/javascript" src="../../com/js/select.js"></script>
+</head>
+
+<body>
+
+<!-- 팝업_이용동의 : 740x? -->
+<div class="popup" style="width:740px">
+	<!-- pop_header s -->
+	<div class="pop_header">
+		<h1><img src="../../img/title/pop_tit_agree.gif" alt="이용동의" /></h1>
+		<a href="#" class="btnClose">닫기</a> 
+	</div>
+	<!-- //pop_header e -->
+	<!-- pop_content s -->
+	<div class="pop_content">
+		<h2 class="h_01">eBay edu 회원정보 이용동의</h2>
+		<!-- 20130819 텍스트수정 -->
+		<ul class="gray_box dot">
+			<li>EBAY EDU는 AUCTION과 GMARKET에서 가입하신 아이디 및 비밀번호로 로그인을 하실 수 있습니다.</li>
+			<li>처음 로그인을 하신 회원님께서는 이용약관에 동의하시면 별도의 가입절차 없이 EBAY EDU에서 제공하는 서비스를 <br />자유롭게 이용하실 수 있습니다.</li>
+			<li>EBAY EDU는 약관에 동의하신 회원님의 아이디 및 이메일 정보를 3년간 보관합니다.</li>
+		</ul>
+		<!--// 20130819 텍스트수정 -->
+		<h2 class="h_01 mt30 ">사이트 이용약관</h2>
+
+		<!-- agree_box s 20130819 텍스트수정 -->
+		<div class="agree_box">
+		<strong>G마켓, 옥션 회원 정보 이용 및 개인정보수집 동의</strong><br /><br />
+이베이에듀는 옥션과 지마켓 사이트의 판매자를 대상으로 판매관련 교육서비스를 제공하고 있는 패밀리 사이트 입니다. <br /><br />
+교육서비스 제공을 위하여 옥션과 지마켓에서 사용 하고 있는 아이디, 패스워드를 이용하여 판매회원 여부 확인 및 패밀리 사이트 로그인 연동(SSO)을 위해 활용하고자 하오니 동의하여 주시기 바랍니다.
+		</div>
+		<!-- //agree_box e 20130819 텍스트수정 -->
+
+		<!-- 20130819 텍스트추가 -->
+		<p class="alignC">
+			<input type="checkbox" id="chk_agree" /><label for="chk_agree">동의합니다</label>
+			<input type="checkbox" id="chk_noagree" /><label for="chk_noagree">동의하지 않습니다</label>
+		</p>
+		<!--// 20130819 텍스트추가 -->
+		<div class="btn_center">
+			<a href="#" class="btn_02 btn_blue"><span>확인</span></a>
+		</div>
+	</div>
+	<!-- //pop_content e -->
+</div>
+
+</body>
+</html>
