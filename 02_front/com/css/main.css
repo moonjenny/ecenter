@@ -1,0 +1,121 @@
+@charset "utf-8";
+@import url("base.css");
+@import url("layout.css");
+@import url("class.css");
+/* intro */
+.intro #header{background:#2eaae0;}
+.intro .year_applicant{position:absolute; left:85px; top:19px;}
+.intro .year_applicant img{padding-right:30px; vertical-align:middle;}
+.intro .num_applicant{position:absolute; right:100px; top:39px;}
+.intro .num_applicant span{padding-right:10px; vertical-align:4px; letter-spacing:-1px; font-family:Verdana; font-size:45px; color:#fff;}
+
+/* 20131125 메인배너 삭제 Start
+.promotion{position:relative; width:100%; height:361px;}
+.promotion .slide{width:100%; height:361px; overflow:hidden;}
+.promotion .control{position:absolute; left:0; top:321px; overflow:hidden;}
+.promotion .control a{margin-right:1px;}
+20131125 메인배너 삭제 End */
+
+/* 20131202 메인배너 수정 Start */
+/* 메인배너 */
+.promotion{position:relative; width:100%; height:361px; overflow:hidden;}
+.promotion .corner {float:left; width:321px;}
+.promotion .corner ul {overflow:hidden;}
+.promotion .corner li {float:left; width:160px; height:60px;}
+.promotion .corner li a {display:block; width:100%; height:100%; background:url(../../img/main/alliance.gif) no-repeat;}
+.promotion .corner li a span {display:none;}
+.promotion .corner li a.alliance01 {background-position: 0 0;}
+.promotion .corner li a:hover.alliance01 {background-position: 0 -180px;}
+.promotion .corner li a.alliance02 {background-position: -160px 0;}
+.promotion .corner li a:hover.alliance02 {background-position: -160px -180px;}
+.promotion .corner li a.alliance03 {background-position: 0 -60px;}
+.promotion .corner li a:hover.alliance03 {background-position: 0 -240px;}
+.promotion .corner li a.alliance04 {background-position: -160px -60px;}
+.promotion .corner li a:hover.alliance04 {background-position: -160px -240px;}
+.promotion .corner li a.alliance05 {background-position: 0 -120px;}
+.promotion .corner li a:hover.alliance05 {background-position: 0 -300px;}
+.promotion .corner li a.alliance06 {background-position: -160px -120px;}
+.promotion .corner li a:hover.alliance06 {background-position: -160px -300px;}
+
+.promotion .slide{float:left; width:639px; overflow:hidden;}
+.promotion .control{position:absolute; left:562px; bottom:15px; overflow:hidden;} /* 20131223 left값 수정 */
+.promotion .control:first-of-type {left:562px;} /* 20131224 */
+.promotion .control a{display:block; width:19px; height:18px; float:left; margin-right:3px; background:url(../../img/main/btn_control.png) no-repeat;}
+.promotion .control a.num01 {background-position: 0 0;}
+.promotion .control a:hover.num01, .promotion .control a.num01.on {background-position: 0 -18px;}
+.promotion .control a.num02 {background-position: -22px 0;}
+.promotion .control a:hover.num02, .promotion .control a.num02.on {background-position: -22px -18px;}
+.promotion .control a.num03 {background-position: -44px 0;}
+.promotion .control a:hover.num03, .promotion .control a.num03.on {background-position: -44px -18px;}
+.promotion .control a span {display:none;}
+/*오픈팝업 */
+/* 20140108 수정 Start */
+.popOpen {position:absolute;top:-25px; right:-5px; z-index:10;}
+.popOpen .text_box {position:absolute; bottom:25px; *bottom:28px; left:25px; width:400px; color:#333;}
+.popOpen .text_box .btn_close {position:absolute; top:2px; right:3px;}
+/* 20140108 수정 End */
+/* 20131202 메인배너 수정 End */
+
+.ebay_major{width:100%; margin-top:10px;}
+.ebay_major:after{content:""; clear:both; display:block;}
+.ebay_major li{position:relative; float:left; width:320px; height:480px;}
+
+.ebay_week{position:relative; width:100%;}
+.ebay_week .btn_rolling{position:absolute; right:0; top:0;}
+.week_date{width:100%;}
+.week_date:after{content:""; clear:both; display:block;}
+.week_date li{float:left; position:relative; width:119px; height:130px; margin-right:1px; text-align:center;}
+.week_date li a{display:inline-block; width:119px; height:130px; background:url(../../img/main/bg_week.png) no-repeat 0 0;}
+.week_date li.sun{margin-right:0;}
+.week_date li.all{width:120px;}
+.week_date li.all a{display:inline-block; width:120px;  background:url(../../img/main/bg_week_all.png) no-repeat 0 0;}
+.week_date li a.selected{background-position:0 -130px;}
+.week_date li span{font-family:Verdana; font-weight:bold; color:#a3abb3;}
+.week_date li .month{position:absolute; left:15px; top:25px; font-size:16px; letter-spacing:-1px;}
+.week_date li .day{position:absolute; left:33px; top:37px; font-size:40px; color:#677078; letter-spacing:-3px;}
+.week_date li .week{display:inline-block; padding-top:90px; font-size:14px; text-align:center;}
+.week_date li.sun .month{color:#fe613e;}
+.week_date li.sun .day{color:#fe613e;}
+.week_date li.sun .week{color:#f78f78;}
+.week_date li a.selected span{color:#d5eef9;}
+.week_date li a.selected .day{color:#fff;}
+.week_lecture{width:100%;}
+.week_lecture:after{content:""; clear:both; display:block;}
+.week_lecture li{position:relative; float:left; width:159px; height:160px; margin-right:1px; margin-bottom:1px;}
+.week_lecture li.last{width:160px; height:160px; margin-right:0;}
+/* 20130710 금주강좌 버튼추가 start */
+.week_lecture li.btn_next{background:#677078 url(../../img/btn/btn_right2.gif) no-repeat 50% 50%;}
+.week_lecture li.btn_next a{display:inline-block; width:100%; height:160px;}
+.week_lecture li.btn_prev{background:#677078 url(../../img/btn/btn_left2.gif) no-repeat 50% 50%;}
+.week_lecture li.btn_prev a{display:inline-block; width:100%; height:160px;}
+/* 20130710 버튼 추가 end */
+
+.over_box{position:relative; width:100%; height:160px; padding:0; overflow:hidden;}
+.over_box .cover{position:absolute; left:0; top:0; width:100%; background:#f5f5f5;}
+.over_info{width:100%; height:125px; padding-top:35px; background:#2eaae0;}
+.over_info p{padding-left:20px; color:#fff; line-height:1.4em;}
+.over_info p.date{font-size:11px; padding:5px 0 15px 20px;}
+
+.sec_list{width:100%;}
+.sec_list:after{content:""; clear:both; display:block;}
+.sec_list .list_box{float:left;}
+.sec_list .list_box{width:259px; height:130px; margin-right:1px; background:#f5f5f5;}
+.sec_list .list_column{width:260px; margin-right:0 !important;}
+
+.mylecture_info{width:100%; height:58px; margin-top:20px; background:#414c56;} /* 20130812 height값 수정 */ /* 20131126 margin 수정 */
+.mylecture_info:after{content:""; clear:both; display:block;}
+.mylecture_info p{float:left; width:130px; padding-top:23px; text-align:center; font-size:14px; font-weight:bold; color:#fff;}
+.mylecture_info ul{float:right; width:830px; height:58px; background:#677078;} /* 20130812 height값 수정 */
+.mylecture_info ul li{position:relative; float:left; padding-top:19px; padding-left:40px; font-size:14px; font-weight:bold; color:#d2d4d7}
+.mylecture_info ul li span{padding-left:10px; font-family:Verdana; font-size:17px; color:#fff;}
+.mylecture_info ul li span a{color:#fff;}
+
+.go_box{width:100%; margin-top:20px; overflow:hidden;} /* 20131126 margin 수정 */
+.go_box ul{width:961px;}
+.go_box ul:after{content:""; clear:both; display:block;}
+.go_box li{float:left; margin:0 1px 1px 0;}
+.go_box li img{vertical-align:top;}
+
+/* 강의시설 추가 20131126 */
+.promotion .slide.full {width:960px;}
+.promotion .control.left {left:0;}

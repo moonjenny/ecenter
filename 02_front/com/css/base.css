@@ -1,0 +1,65 @@
+@charset "utf-8";
+html {color:#666; width: 100%; height: 100%;}
+body,div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, fieldset, legend, input, button, textarea, p, blockquote ,th ,td {margin:0; padding:0; font-family:"돋움", dotum,Tahoma, arial, sans-serif; color: #666;}
+body {font-size:12px; height:100%;}
+form {margin: 0; padding: 0;}
+table {border-collapse: collapse; border-spacing:0;}
+hr {display:none;}
+fieldset,img {border:0;}
+legend {display: none;}
+address {font-style: normal;}
+del,ins {text-decoration:none;}
+li {list-style-type:none;}
+a:link, a:visited {text-decoration:none; color: #666;}
+a:active, a:hover {text-decoration:none; color: #333;}
+th {text-align:left;}
+h1,h2,h3,h4,h5,h6 {font-size:12px; font-weight:normal;}
+q:before,q:after {content:'';}
+abbr,acronym {border:0;font-variant:normal;}
+sup {vertical-align:baseline;}
+sub {vertical-align:baseline;}
+table caption, legend {text-indent: -9999px; font-size: 0; line-height: 0;}
+input,button,textarea,select{font-size:12px;}
+.hidden {position:absolute; left: 0; top:-9999px;}
+.clearfix {display: inline-block;}
+.clearfix:after {content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clear{clear:both;}
+.hide{position:absolute; visibility:hidden; overflow:hidden; width:1px; height:1px; font-size:0; line-height:0}
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */
+button {border:0; padding:0; background:transparent; cursor:pointer; *overflow:visible; position: relative;}
+input[type="radio"] {width:13px; height:13px; vertical-align:middle;}
+code,pre{padding: 0 3px 2px;font-family: Monaco, Menlo, Consolas, "Courier New", monospace !important;font-size: 12px;color: #333333;margin:3px 0 20px 0;clear:both;}
+
+/* form */
+label {padding:0 9px 0 4px;vertical-align:-1px;}
+label.hide {font-size:0;padding:0;position:absolute;left:-999999px;}
+input[type=text], input[type=password]{height:28px; padding:0 10px; vertical-align:middle; line-height:28px; background:#fff; border:1px solid #677078;}
+input[type=text]:focus, input[type=password]:focus{padding-right:8px; background:url(../../img/common/bg_input2.gif) repeat-x 0 0; border-color:#2eaae0; border-left-width:2px; border-right-width:2px;}
+input[type=checkbox] {width:13px;height:13px;vertical-align:text-top}
+
+/* select box title */
+span.selectbox_title {position:relative; background:#fff url(../../img/common/arrow_location2.gif) no-repeat  right center; height:28px; padding:0 30px 0 8px; _padding:0 30px 0 8px;border:1px #6c747c solid; text-align:left;line-height:28px;vertical-align:top;}
+span.selectbox_title strong {display:inline; width:100%; height:1em; padding:1px 0 1px; font-size:12px; font-weight:normal; color:#666; word-break:break-all;}
+span.selectbox_title_focus {border-color:#777;}
+span.selectbox_title_focus strong {color:#666;}
+span.selectbox_title_disabled {background-color:#eee;}
+span.selectbox_title_disabled strong {color:#666;}
+
+/* select box option */
+div.selectbox_option {position:relative; background:#fff; border:1px solid #777; overflow:hidden;}
+div.selectbox_option li {list-style:none;}
+div.selectbox_option a {display:block; height:1em; padding:3px 7px 5px; _padding:1px 7px 6px; font-size:12px; color:#666; word-break:break-all; line-height:1.4em; text-decoration:none; overflow:hidden; text-decoration:none !important;}
+div.selectbox_option a.on,
+div.selectbox_option a:hover {background:#eee; color:#000; text-decoration:none !important;}
+
+/* select box multiple */
+span.selectbox_multiple {display:inline-block; background:#fff; border:1px #ddd solid; overflow:hidden;}
+span.selectbox_multiple ul li {display:block; height:1em; font-size:12px; color:#666; word-break:break-all; line-height:1.4em; padding:1px 3px 4px; _padding:2px 3px 3px; overflow:hidden;}
+span.selectbox_multiple ul li.on {background:#f5f5f5; color:#666;}
+span.selectbox_multiple_focus {border-color:#666;}
+span.selectbox_multiple_focus ul li.on {background:#f5f5f5; color:#666;}
+span.selectbox_multiple_disabled {background-color:#EEE;}
+span.selectbox_multiple_disabled ul li {color:#999;}

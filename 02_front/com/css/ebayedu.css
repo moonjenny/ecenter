@@ -1,0 +1,314 @@
+@charset "utf-8";
+/* login s */
+.login_box{width:958px; height:320px; padding-top:83px; text-align:center; border:1px solid #ddd;}
+.login_box .id_box{margin-top:20px;}
+.login_box .id_box li{display:inline; padding:18px 7px 0;}
+.login_box .id_box label img{vertical-align:middle;}
+.input_login{position:relative; width:530px; margin:0 auto; padding-top:25px; text-align:left;}
+.input_login:after{content:""; clear:both; display:block;}
+.input_login ul{margin-bottom:20px;}
+.input_login ul li{position:relative;}
+.input_login ul li input[type=text], .input_login ul li input[type=password]{width:367px; height:38px; line-height:38px; font-size:18px; color:#333;}
+.input_login ul li input[type=text]:focus, .input_login ul li input[type=password]:focus{padding-right:8px; background:url(../../img/common//bg_input.gif) repeat-x 0 0; border-color:#2eaae0; border-left-width:2px; border-right-width:2px;}
+.input_login ul li label{position:absolute; left:10px; top:11px; font-size:18px; color:#999;}
+.input_login .btn_login{position:absolute; right:0; top:25px;}
+.input_login .save_id{float:left;}
+.input_login .find_idpw{float:right; padding-top:2px; font-size:11px;}
+.input_login .find_idpw span{padding-left:10px;}
+.input_login .find_idpw a{color:#999;}
+/* login e */
+
+/* 팝업 : 이용동의 */
+.agree_box{height:200px; margin-bottom:10px; padding:20px; overflow:auto; line-height:1.6em; color:#999; border:1px solid #677078;}
+
+/* 교육과정안내 > 상세 */
+.detail_box{width:100%; background:#f6f6f6;}
+.detail_box:after{content:""; clear:both; display:block;}
+.detail_box .sec_l{float:left; width:420px;}
+.detail_box .sec_r{position:relative; float:right; width:460px; padding:30px 40px 0;} /* 20130814 padding수정 */
+.detail_box .sec_r h2.h_detail{margin:10px 0 15px; font-size:24px; color:#333; font-weight:bold;}
+.detail_box .sec_r .btn_sns{position:absolute; right:0; top:0;}
+.detail_box .star_box{position:relative;}
+.detail_box .star_box .btn_dwn{position:absolute; left:183px; top:8px;}
+.detail_box .tbl_detail{width:100%}
+.detail_box .tbl_detail th{padding:10px 0; border-bottom:1px solid #ddd;}
+.detail_box .tbl_detail td{padding:10px 0; border-bottom:1px solid #ddd;}
+.detail_box .tbl_detail td .ml{margin-left:10px;}
+.detail_box .number_person{margin-top:0; font-size:24px;} /* 20130814 margin수정 */
+.detail_box .number_person .num_apply{font-family:Verdana; font-size:45px; vertical-align:-2px; letter-spacing:-1px;}/* 20131108 사이즈 수정*/
+.detail_box .number_person .capacity{font-family:Verdana; font-size:30px; vertical-align:-2px; color:#999}
+.detail_box .number_person .slash{background:url(../../img/common/slash.gif) no-repeat 0 0; color:#999}
+
+.lecture_info{clear:both; width:880px; margin-bottom:20px; padding:40px; background:#f6f6f6;}
+.f-nav{z-index: 9999;position: fixed;top: 0;width: 960px;margin: 0 auto 10px;}
+.lecture_info.fixed{}
+.lecture_info:after{content:""; clear:both; display:block;}
+.lecture_info .sec_l{float:left; width:150px;}
+.lecture_info .sec_r{float:right; width:730px; line-height:1.6em;} /* 20131121 줄간격조정 */
+.lecture_info .sec_r h4{margin:25px 0 10px; font-size:14px; font-weight:bold;}
+.lecture_info .sec_r p{line-height:1.6em;}
+.box_img_txt{width:100%;}
+.box_img_txt:after{content:""; clear:both; display:block;}
+.box_img_txt .img_l{position:relative; float:left; width:300px;}
+.box_img_txt .img_l .btn_tr{position:absolute; right:0; top:0; width:100px;}
+.box_img_txt .img_l .btn_tr li .btn_04{line-height:1.2em;}
+.box_img_txt .img_l .btn_tr li .btn_04 span{display:inline-block; padding-top:30px;}
+.box_img_txt .img_l .btn_tr li .btn_04.btn_blue span{display:inline-block; padding-top:38px;}
+.box_img_txt .txt_r{float:right; width:400px; padding-left:30px; line-height:1.6em;} /* 20131121 줄간격 조정 */
+.box_img_txt .txt_r ul li{line-height:1.7em;}
+.box_img_txt .txt_r .h4_map{margin-bottom:5px;}
+
+
+
+.star_num{font-size:20px; vertical-align:-5px; color:#333;}
+.star_num strong{font-family:Verdana; font-size:24px; vertical-align:-2px;}
+.star_rating, .star_rating span{display:inline-block;overflow:hidden;width:25px;height:21px;background:url(../../img/ico/ico_star.png) no-repeat}
+.star_rating{width:125px;vertical-align:middle}
+.star_rating span{background-position:0 -21px;font-size:0;line-height:0;text-indent:-100px;*text-indent:0;vertical-align:top}
+.star_rating2, .star_rating2 span{display:inline-block;overflow:hidden;width:17px;height:14px;background:url(../../img/ico/ico_star2.png) no-repeat}
+.star_rating2{width:85px;vertical-align:middle}
+.star_rating2 span{background-position:0 -14px;font-size:0; line-height:0;text-indent:-100px;*text-indent:0;vertical-align:top}
+
+.star_reg{position:relative; width:100%; height:80px; background:#f6f6f6;}
+.star_reg:after{content:""; clear:both; display:block;}
+.star_reg dt{float:left; width:100px; padding:33px 0 0 30px;}
+.star_reg dd{float:right; width:830px;}
+.star_reg dd ul{float:left; width:665px;}
+.star_reg dd ul li{float:left; width:133px; padding-top:32px;}
+.star_reg dd .btn_01{position:absolute; right:0; top:0;}
+
+.review_reg{position:relative; width:100%; height:80px; background:#fff;}
+.review_reg div{width:809px; height:58px; padding:10px; border:1px solid #677078; border-right:0 none;}
+.review_reg textarea{width:809px; height:58px; border:0 none; overflow:auto;}
+.review_reg .btn_01{position:absolute; right:0; top:0;}
+
+.faq{border-top:2px solid #2a2a2a; border-bottom:2px solid #2a2a2a;}
+.faq dt{width:100%; padding:8px; border-top:1px solid #ddd;} /* 20131121 padding 수정 */
+.faq dt.border0{border-top:0 none;}
+.faq dt:after{content:""; clear:both; display:block;}
+.faq dt .num{float:left; width:120px; text-align:center;}
+.faq dt .question{float:right; width:840px;}
+.faq .toggle_tit{cursor:pointer; line-height:1.6em; color:#666;}
+.faq .toggle_tit .tit_faq {font-weight:bold; color:#333;}
+.faq .toggle_con{padding:8px 8px 8px 120px; line-height:1.6em; border-top:1px solid #ddd; background:#f6f6f6;} /* 20131121 padding 수정 */
+
+/* 팝업 : 강사소개, 교육장소 */
+.popup .box_img_txt .txt_r{width:350px;}
+.popup .box_img_txt .txt_r .h_01{color:#666;}
+.popup .box_img_txt .txt_r .h_map{margin-bottom:5px; font-size:14px; font-weight:bold; color:#666;}
+.popup .box_img_txt p{line-height:1.6em;}
+.popup .box_img_txt pre {line-height:1.6em; margin:0 auto; color:#666;}
+
+/* 팝업 : 신고하기 */
+.popup .txtarea_box{width:100%;}
+.popup .txtarea_box textarea{border:1px solid #677078;}
+
+/* 팝업 : 체크포인트 */
+.popup .popTable .txt_guide{position:absolute; right:0; top:2px; font-size:11px; color:#999;}
+
+/* 교육과정안내 > 오프라인 일정별 */
+.lecture_schedule{width:100%; background:#f5f5f5 url(../../img/edu/bg_calendar.gif) repeat-y 0 0;}
+.lecture_schedule:after{content:""; clear:both; display:block;}
+.lecture_schedule .schedule_l{float:left; width:210px; padding:30px; text-align:center;}
+.lecture_schedule .schedule_r{float:right; width:610px; padding:35px 40px;}
+.calendar{width:210px; margin:0 auto; padding-top:10px;}
+.calendar thead th{width:30px; height:30px; text-align:center; vertical-align:middle;}
+.calendar tbody td{width:30px; height:30px; text-align:center; line-height:30px; color:#fff;}
+.calendar tbody td a{display:block; width:30px; height:30px; color:#fff;}
+.calendar tbody td.inactive{color:#bbb !important;}
+.calendar tbody td.sun a{color:#ffc4b4;}
+.calendar tbody td.selected a{background-color:#1c6787;}
+.calendar tbody td.today a{background-image:url(../../img/common/bg_today.gif);}
+.lecture_schedule .schedule_r p{line-height:1.6em;}
+.lecture_schedule .schedule_r dt{margin-top:35px; font-size:18px; font-weight:bold; color:#333;}
+.lecture_schedule .schedule_r dd.period{margin-top:2px; font-family:Verdana; font-size:28px; font-weight:bold; color:#2eaae0;}
+.lecture_schedule .schedule_r dd.field{margin-top:8px; font-size:14px;}
+.lecture_schedule .schedule_r dd.field span{padding-right:10px;}
+
+/* 팝업 : 강사의 모든 강좌 보기 */
+.popup .box_img_txt .img_l2{float:left; width:200px;}
+.popup .box_img_txt .txt_r2{float:right; width:450px; padding-left:30px; line-height:1.6em;}
+.popup .box_img_txt .txt_r2 ul li{line-height:1.7em;}
+.popup .box_img_txt .txt_r2 pre{color:#666; line-height:1.7em;} /* 20131121 에디터 스타일추가 */
+
+/* 팝업_강의보기 */
+.popup .pop_content h2.tit_big{font-size:24px; font-weight:bold; color:#333; letter-spacing:-1px;}
+.popup .exp2 span{padding-right:15px;}
+.video_box{padding:30px 0; text-align:center;}
+
+/* 고객센터 */
+tr.toggle_tit{cursor:pointer;}
+tr.toggle_tit td span.tit_faq{font-weight:bold;}
+tr.toggle_con{background:#f6f6f6; line-height:1.6em;}
+.tab_faq_01 a{background:url(../../img/btn/tab_faq_01.png) no-repeat 0 0}
+.tab_faq_02 a{background:url(../../img/btn/tab_faq_02.png) no-repeat 0 0}
+.tab_faq_03 a{background:url(../../img/btn/tab_faq_03.png) no-repeat 0 0}
+.tab_faq_04 a{background:url(../../img/btn/tab_faq_04.png) no-repeat 0 0}
+.tab_faq_05 a{background:url(../../img/btn/tab_faq_05.png) no-repeat 0 0}
+/*20131031 a:hover 추가*/
+.tab_faq_01 a:hover{background:url(../../img/btn/tab_faq_01.png) no-repeat 0 -60px}
+.tab_faq_02 a:hover{background:url(../../img/btn/tab_faq_02.png) no-repeat 0 -60px}
+.tab_faq_03 a:hover{background:url(../../img/btn/tab_faq_03.png) no-repeat 0 -60px}
+.tab_faq_04 a:hover{background:url(../../img/btn/tab_faq_04.png) no-repeat 0 -60px}
+.tab_faq_05 a:hover{background:url(../../img/btn/tab_faq_05.png) no-repeat 0 -60px}
+.tblSearch label img{vertical-align:middle;}
+
+.bnr_guide{width:100%;}
+.bnr_guide:after{content:""; clear:both; display:block;}
+.bnr_guide li{float:left;}
+.bnr_guide li.mr{margin-right:1px;}
+
+/* 마이페이지 메인 */
+.all_lecture{width:960px; overflow:hidden;}
+.all_lecture ul{width:970px;}
+.all_lecture:after{content:""; clear:both; display:block;}
+.all_lecture li{float:left; position:relative; width:455px; height:94px; padding:30px 0 0 20px; margin-top:10px; margin-right:10px; background:#f5f5f5;}
+.all_lecture li div{position:absolute; right:0; top:0; width:124px; height:90px; padding-top:34px; text-align:center; background:#2eaae0;}
+.all_lecture li div span{font-family:Verdana; font-size:45px; font-weight:bold; color:#fff; letter-spacing:-1px;}
+.mypage_interest{position:relative; width:100%;}
+.slide_teacher{width:100%; /*height:231px;*/ overflow:hidden;}
+.slide_teacher ul{width:100%; /*height:231px;*/ overflow:hidden;}
+.slide_teacher ul:after{content:""; clear:both; display:block;}
+.slide_teacher ul li{float:left;height:231px;} /* 20130717 height 추가 */
+.slide_teacher ul li li{width:191px; height:231px; margin-right:1px;}
+.slide_teacher ul li .tr_img{width:191px; height:191px;}
+.slide_teacher ul li .tr_info{width:191px; height:40px; background:#f5f5f5;}
+.slide_teacher ul li .tr_info:after{content:""; clear:both; display:block;}
+.slide_teacher ul li .tr_info p{float:left; padding-top:15px; padding-left:20px; font-weight:bold; color:#2d3032;}
+.slide_teacher ul li .btn_tr_lecture{float:right;}
+/* 20130725 추가 Start */
+.slide_teacher .nodata{width: 100%;text-align: center;line-height: 14em;font-size: 16px;border-bottom: 1px solid #677078;}
+.box_nodata {font-size:11px; padding: 8px 0 0 8px;} /* 20130725 수정 */
+ /*.box_nodata .nodata {font-size:16px;padding-bottom:5px;} 20130725 삭제 */
+/* 20130725 추가 End */
+.mypage_interest .control{position:absolute; right:0; top:0; overflow:hidden;}
+.mypage_interest .control a{margin-left:1px;}
+.mypage_interest .btn-area {position: absolute; right: 0; top: 0;overflow: hidden;}
+.mypage_interest .btn-area a {margin-left:1px;}
+
+/* 마이페이지  탭 */
+.gray_box h3{margin:30px 0 5px; font-size:14px; font-weight:bold; color:#666;}
+.tab_mylecture_01 a{background:url(../../img/btn/tab_mylecture_01.png) no-repeat 0 0}
+.tab_mylecture_02 a{background:url(../../img/btn/tab_mylecture_02.png) no-repeat 0 0}
+.tab_mylecture_03 a{background:url(../../img/btn/tab_mylecture_03.png) no-repeat 0 0}
+.tab_mylecture_04 a{background:url(../../img/btn/tab_mylecture_04.png) no-repeat 0 0}
+.tab_mylecture_05 a{background:url(../../img/btn/tab_mylecture_05.png) no-repeat 0 0}/*20131108 즐겨찾기 이미지 추가*/
+
+/* 마이페이지 > 온라인강좌 > 수강중인 강좌 취소 */
+.cancel_step_01{width:100%; height:50px; background:url(../../img/mypage/cancel_step_01.gif) no-repeat 0 0;}
+.cancel_step_02{width:100%; height:50px; background:url(../../img/mypage/cancel_step_02.gif) no-repeat 0 0;}
+.cancel_step_03{width:100%; height:50px; background:url(../../img/mypage/cancel_step_03.gif) no-repeat 0 0;}
+
+/* 마이페이지 > 수강취소 계좌환불 */
+.lable_dis{position:relative; display:inline-block;}
+.lable_dis label{position:absolute; left:10px; top:11px;}
+
+/* 교육과정 안내 > 오프라인 강좌 분야별 */
+.tab_offline_01 a{background:url(../../img/btn/tab_offline_01.png) no-repeat 0 0}
+.tab_offline_02 a{background:url(../../img/btn/tab_offline_02.png) no-repeat 0 0}
+.tab_offline_03 a{background:url(../../img/btn/tab_offline_03.png) no-repeat 0 0}
+.tab_offline_04 a{background:url(../../img/btn/tab_offline_04.png) no-repeat 0 0}
+.tab_offline_05 a{background:url(../../img/btn/tab_offline_05.png) no-repeat 0 0}
+
+/* 팝업 : 수료증 */
+.print_box {border:2px solid #2d3032;}
+.print_box span {padding:0 0 0 10px;}
+.print_box h2 {padding: 70px 0 90px;}
+.print_box h3 {padding: 60px 0 0;}
+.print_box dl {padding:0 40px}
+.print_box dt {float:left; width:10%;}
+.print_box dd {padding-bottom:8px}
+/* 20130805 css 수정 Start */
+.print_box .stamp {position:relative;margin:135px 60px 90px 0;height: 75px;}
+.print_box .stamp span {position:absolute; top:28px; right:62px;font-size:14px;color:#2d3032;z-index:10}
+/* 20130805 css 수정 End */
+
+/* 마이페이지 > 쿠폰함 */
+.tab_coupon_01 a{background:url(../../img/btn/tab_coupon_01.png) no-repeat 0 0}
+.tab_coupon_02 a{background:url(../../img/btn/tab_coupon_02.png) no-repeat 0 0}
+
+/* 마이페이지 > 관심강좌 */
+.total_box{position:relative; width:100%; height:110px; background:#f5f5f5;}
+.total_box .total_list{padding:30px 0 0 90px; text-align:center;}
+.total_box .total_list:after{content:""; clear:both; display:block;}
+.total_box .total_list div{float:left; width:210px; text-align:center;}
+.total_box .total_list div label{font-size:11px; font-weight:bold;}
+.total_box .total_list div input{width:180px; margin-top:5px;  text-align:right; font-weight:bold; color:#333;}
+.total_box  .btn_03{position:absolute; right:0; top:0;}
+.total_box .minus{padding-left:10px; background:url(../../img/ico/ico_minus.gif) no-repeat 0 33px;}
+.total_box .equal{padding-left:10px; background:url(../../img/ico/ico_equal.gif) no-repeat 0 31px;}
+
+/* 마이페이지 > 관심강사 */
+.tr_name{margin:5px 0; font-size:14px; font-weight:bold;}
+/*.alignL ul{padding-left:10px;}*/
+.alignL ul li{line-height:1.6em;}
+
+/* 온라인 강의 뷰 */
+.box_img_txt .tableListC th{padding:15px 0 13px;}
+.box_img_txt .tableListC td{padding:15px 0 13px;}
+
+/* 결제 > 강좌신청하기완료 */
+.total_box2{position:relative; width:900px; height:100px; padding:0 30px; background:#f5f5f5;}
+.total_box2 p{padding-top:25px; text-align:right;}
+.total_box2 p.alignL{text-align:left; padding-left:150px;}
+.total_box2 .txt_total{color:#333;}
+.total_box2 span.sum{padding-left:10px; font-family:Verdana; font-size:40px; font-weight:bold; color:#2eaae0; vertical-align:-3px; letter-spacing:-1px;}
+.total_box2 .btn_right{position:absolute; right:0; top:0;}
+
+/* 결제 > 쿠폰적용 팝업 */
+.popup .total_box2{width:620px;}
+.popup .total_box2 p{padding-top:20px;}
+
+/* 결제 */
+.chk_box li{display:inline; padding:0 30px;}
+
+/* 마켓나우 > 파워셀러 성공담 목록 */
+.list_lecturer{width:100%; overflow:hidden;}
+.list_lecturer ul{width:100%;}
+.list_lecturer ul:after{content:""; clear:both; display:block;}
+.list_lecturer ul li{float:left; width:191px; margin-top:30px; background:#f5f5f5; border-left:1px solid #fff;}
+.list_lecturer ul li.first{width:192px; border-left:0 none;}
+.list_lecturer ul li .img_box{width:100%; height:192px; border-bottom:1px solid #fff;}
+.list_lecturer ul li .txt_box{height:77px; padding:13px 15px 0;}
+.list_lecturer ul li .txt_box .txt_tit{height:48px; line-height:1.6em;}
+.list_lecturer ul li .txt_box .txt_name{color:#2d3032;}
+
+/* ebay edu 소개 */
+.int_cont{line-height:1.6em;}
+.curriculum_box{border-bottom:1px solid #343434;line-height:1.5em;}
+.curriculum_box li{padding:30px 0; border-top:1px solid #dfdede;}
+.curriculum_box li:first-child{border-top:0 none !important;}
+.curriculum_box li dl{width:100%;}
+.curriculum_box li dl:after{content:""; clear:both; display:block;}
+.curriculum_box li dt{float:right; width:826px; height:18px; padding-bottom:10px;}
+.curriculum_box li dd{float:right; width:826px;}
+.curriculum_box li dd.cur_num{float:left; width:134px; padding-top:10px; text-align:center;}
+/** ebay edu 소개 추가_jenny **/
+.introduce_box li dl{width:100%;}
+.introduce_box li dl:after{content:""; clear:both; display:block;}
+.introduce_box li dt{float:left; height:100px; margin:0 20px 20px 0;background:#f5f5f5;text-align:center;}
+.teach_class {overflow:hidden;}
+.teach_class li{float:left;}
+.introduce_box dd {line-height:1.5em;} /* 20131121 줄간격 스타일 추가 */
+
+/* 사이트맵_130715 */
+.sitemap {position:relative;}
+.sitemap ul {overflow:hidden;}
+.sitemap li {float:left; width: 239px;margin-right: 1px;}
+.sitemap li:after {content:""; clear:both; overflow:hidden;}
+.sitemap li dd {text-align:center;background-color:#f5f5f5;border-top:1px solid #fff;}
+.sitemap li dd a {display:block;padding:15px 0;color: #646464;}/*20131031 padding 사이즈 변경*/
+.sitemap li dd a:hover, sitemap li dd a:focus {background:#2eaae0;font-weight:bold;color:#fff;}
+
+/* 이용약관. 개인정보취급방침_130824 */
+.terms .h2_tit{text-align:center; font-size:24px; font-weight:bold; margin-bottom:30px;}
+.terms .h3_tit {font-size:14px; font-weight:bold;margin:20px auto 10px;}
+.terms ol {padding-left: 16px;}
+.terms li {line-height: 18px;position: relative;}
+.terms .first_letter {margin: 0 4px 0 -16px;}
+
+/* 2014-04-15 start */
+ul.pre_privacy {margin-top:20px;}
+ul.pre_privacy li {padding-left:10px; background:url(../../img/ico/ico_arrow.png) no-repeat 0 center;}
+ul.pre_privacy li a:hover {text-decoration:underline;}
+/* 2014-04-15 end */
