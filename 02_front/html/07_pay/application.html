@@ -1,0 +1,544 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ebay edu</title>
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link type="text/css" rel="stylesheet" href="../../com/css/import.css" />
+<script type="text/javascript" src="../../com/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../com/js/design.js"></script>
+<script type="text/javascript" src="../../com/js/select.js"></script>
+</head>
+
+<body>
+	<div id="skip_nav">
+		<ul>
+			<li><a href="#gnb">메뉴 바로가기</a></li>
+			<li><a href="#contents">본문 바로가기</a></li>
+		</ul>
+	</div>
+	<hr />
+
+	<div id="wrap">
+		<!-- header s -->
+		<div id="header">
+			<div class="hearderCon">
+				<div class="hlogo"><a href="#"><img src="../../img/common/h_logo_ebay_edu.gif" width="111" height="58" alt="ebay edu" /></a></div>
+				<div class="miniBar">
+					<ul>
+						<li><a href="#"><img src="../../img/common/tnb_s0.gif" width="43" height="9" alt="Logout" /> <!-- <img src="../../img/common/tnb_s1.gif" width="34" height="9" alt="Login" /> --></a></li>
+						<li><a href="#"><img src="../../img/common/tnb_s2.gif" width="42" height="9" alt="my page" /></a></li>
+						<li><a href="#"><img src="../../img/common/tnb_s3.gif" width="68" height="9" alt="ebay edu 안내" /></a></li>
+						<li><a href="#"><img src="../../img/common/tnb_s4.gif" width="47" height="9" alt="site map" /></a></li>
+					</ul>
+					<!-- miniBarSch s -->
+					<div id="miniBarSch" class="miniBarSch">
+						<a href="#"><img src="../../img/common/btn_search_01.gif" alt="검색" /></a>
+						<div class="schArea" style="display: none;">
+							<label for="topSrch" class="hide">강좌검색</label><input type="text" name="topSrch" id="topSrch" value="강좌검색" title="강좌검색" onblur="checkField(this)" onfocus="clearField(this)" /><input type="image" src="../../img/common/btn_search_01.gif" name="miniBarSch" id="gnb_search" alt="검색" />
+						</div>
+						<div class="dim"></div>
+					</div>
+					<!-- //miniBarSch e -->
+				</div>
+				<ul class="gnb">
+					<li><a href="#"><img src="../../img/common/gnb_m1.gif" width="115" height="32" alt="교육과정 안내" /></a></li>
+					<li><a href="#"><img src="../../img/common/gnb_m2.gif" width="121" height="32" alt="오픈마켓 소식" /></a></li>
+					<li><a href="#"><img src="../../img/common/gnb_m3.gif" width="102" height="32" alt="교육센터 소개" /></a></li>
+					<li><a href="#"><img src="../../img/common/gnb_m4.gif" width="164" height="32" alt="에듀 고객센터" /></a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- //header e -->
+		<hr />
+		
+		<!-- contents s -->
+		<div id="contents">
+			<!-- location s -->
+			<div class="location">
+				<ul class="depth">
+					<li class="home"><a href="#">홈</a></li>
+					<li><!-- 화살표가 있을 경우 class="arrow" -->
+						<a href="#">결제</a>					
+					</li> 
+					<li>
+						<a href="#">강좌 신청하기</a>					
+					</li> 
+				</ul>
+				<p id="allView"><a href="#"><span>전체보기</span></a></p>
+				<!-- 전체보기 layer s -->
+				<div id="allViewSub" class="allViewSub">
+					<ul>
+						<li class="line">
+							<div class="subTit"><img src="../../img/title/location_tit1.gif" width="95" height="17" alt="교육과정 안내" /></div>
+							<ul>
+								<li><a href="#">오프라인 강좌/분야별</a></li>
+								<li><a href="#">오프라인강좌/일정별</a></li>
+								<li><a href="#">온라인강좌</a></li>
+							</ul>
+						</li>
+						<li class="line">
+							<div class="subTit"><img src="../../img/title/location_tit2.gif" width="127" height="17" alt="MARKET NOW" /></div>
+							<ul>
+								<li><a href="#">업계소식</a></li>
+								<li><a href="#">전문가컬럼</a></li>
+								<li><a href="#">파워셀러 성공담</a></li>
+								<li><a href="#">성공 TIP</a></li>
+							</ul>
+						</li>
+						<li class="line">
+							<div class="subTit"><img src="../../img/title/location_tit3.gif" width="95" height="17" alt="교육센터 소개" /></div>
+							<ul>
+								<li><a href="#">EBAY Edu 소개</a></li>
+								<li><a href="#">교육과정</a></li>
+								<li><a href="#">강사진</a></li>
+								<li><a href="#">강의시설</a></li>
+								<li><a href="#">제휴서비스</a></li>
+							</ul>
+						</li>
+						<li class="line">
+							<div class="subTit"><img src="../../img/title/location_tit4.gif" width="60" height="17" alt="교육센터" /></div>
+							<ul>
+								<li><a href="#">공지사항</a></li>
+								<li><a href="#">FAQ</a></li>
+								<li><a href="#">1:1 전문가상담</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<!-- //전체보기 layer e -->
+			</div>
+			<!-- //location e -->
+			
+			<h1 class="bigtit"><img src="../../img/title/tit_application.gif" alt="APPLICATION 강좌 신청하기" /></h1>
+			<div class="h_gray mt40">
+				<h2><img src="../../img/title/tit_lecture_coupon.gif" alt="신청 강좌 확인 및 쿠폰 적용" /></h2>
+			</div>
+			<h2 class="h_01 mt20">오프라인 강좌</h2>
+			<!-- tableListA s -->
+			<div class="tableListA border1">
+				<table summary="강좌명, 최초 교육비, 혜택가, 최종 교육비를 나타내는 목록">
+					<caption>강좌 목록</caption>
+					<colgroup>
+					<col width="50" />
+					<col width="100" />
+					<col width="*" />
+					<col width="100" />
+					<col width="100" />
+					<col width="100" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col"><input type="checkbox" name="chk_all_sel" id="chk_all_sel" /></th>
+							<th scope="col" colspan="2">강좌명</th>
+							<th scope="col">최초 교육비</th>
+							<th scope="col">혜택가</th>
+							<th scope="col">최종 교육비</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr> 
+							<td><input type="checkbox" /></td>
+							<td><a href="#"><img src="../../img/temp/temp_100x100.jpg" alt="강의 사진" /></a></td> <!-- 이미지 사이즈 : 100x100 -->
+							<td class="alignL">
+								<p><a href="#"><strong>[창업기초_초급]</strong> 전문가 초빙 실무형 온라인 마케팅 과정 (검색엔진 활용)</a></p>
+								<p class="exp mg"><strong>교육일시 :</strong> 2013-04-29 15:00~18:00&nbsp;&nbsp;<strong>강사 :</strong> 이베이</p>
+							</td>
+							<td>10,000</td>
+							<td>0 <p class="mg"><a href="#" class="btn_gray"><span>쿠폰적용</span></a></p></td>
+							<td>10,000</td>
+						</tr>
+						<tr> 
+							<td><input type="checkbox" /></td>
+							<td><a href="#"><img src="../../img/temp/temp_100x100.jpg" alt="강의 사진" /></a></td>
+							<td class="alignL">
+								<p><a href="#"><strong>[창업기초_초급]</strong> 전문가 초빙 실무형 온라인 마케팅 과정 (검색엔진 활용)</a></p>
+								<p class="exp mg"><strong>교육일시 :</strong> 2013-04-29 15:00~18:00&nbsp;&nbsp;<strong>강사 :</strong> 이베이</p>
+							</td>
+							<td>10,000</td>
+							<td>0 <p class="mg"><a href="#" class="btn_gray"><span>쿠폰적용</span></a></p></td>
+							<td>10,000</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- //tableListA e -->
+
+			<h2 class="h_01 mt40">온라인 강좌</h2>
+			<!-- tableListA s -->
+			<div class="tableListA border1">
+				<table summary="강좌명, 최초 교육비, 혜택가, 최종 교육비를 나타내는 목록">
+					<caption>강좌 목록</caption>
+					<colgroup>
+					<col width="50" />
+					<col width="100" />
+					<col width="*" />
+					<col width="100" />
+					<col width="100" />
+					<col width="100" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col"><input type="checkbox" name="chk_all_sel2" id="chk_all_sel2" /></th>
+							<th scope="col" colspan="2">강좌명</th>
+							<th scope="col">최초 교육비</th>
+							<th scope="col">혜택가</th>
+							<th scope="col">최종 교육비</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr> 
+							<td><input type="checkbox" /></td>
+							<td><a href="#"><img src="../../img/temp/temp_100x100.jpg" alt="강의 사진" /></a></td> <!-- 이미지 사이즈 : 100x100 -->
+							<td class="alignL">
+								<p><a href="#"><strong>[창업기초_초급]</strong> 전문가 초빙 실무형 온라인 마케팅 과정 (검색엔진 활용)</a></p>
+								<p class="exp mg"><strong>강의 수/강의 시간 :</strong> 총 5강/03시간 45분 03초&nbsp;&nbsp;<strong>강사 :</strong> 이베이</p>
+							</td>
+							<td>10,000</td>
+							<td>0<p class="mg"><a href="#" class="btn_gray"><span>쿠폰적용</span></a></p></td>
+							<td>10,000</td>
+						</tr>
+						<tr> 
+							<td><input type="checkbox" /></td>
+							<td><a href="#"><img src="../../img/temp/temp_100x100.jpg" alt="강의 사진" /></a></td> 
+							<td class="alignL">
+								<p><a href="#"><strong>[창업기초_초급]</strong> 전문가 초빙 실무형 온라인 마케팅 과정 (검색엔진 활용)</a></p>
+								<p class="exp mg"><strong>강의 수/강의 시간 :</strong> 총 5강/03시간 45분 03초&nbsp;&nbsp;<strong>강사 :</strong> 이베이</p>
+							</td>
+							<td>10,000</td>
+							<td>10,000<p class="mg"><a href="#" class="btn_gray"><span>쿠폰적용</span></a></p></td>
+							<td>10,000</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- //tableListA e -->
+			
+			<div class="mt20">
+				<span class="pr10">선택한 강좌</span> <a href="#" class="btn_02 btn_blue"><span>강좌신청</span></a>&nbsp;&nbsp;<a href="#" class="btn_02 btn_black"><span>삭제</span></a>
+			</div>
+			<div class="total_box mt40">
+				<div class="total_list" style="padding-left:150px">
+					<div>
+						<label for="pay01">최초 교육비 (TOTAL)</label>
+						<input type="text" id="pay01" value="38,000" />
+					</div>
+					<div class="minus">
+						<label for="pay02">혜택가 (TOTAL)</label>
+						<input type="text" id="pay02" value="10,000" />
+					</div>
+					<div class="equal">
+						<label for="pay03">최종 교육비 (TOTAL)</label>
+						<input type="text" id="pay03" value="28,000" />
+					</div>
+				</div>
+			</div>
+
+			<div class="h_gray mt40">
+				<h2><img src="../../img/title/tit_pay_info.gif" alt="결제정보 입력" /></h2>
+			</div>
+			<h3 class="h_01 mt20">결제수단 선택</h3>
+			<div class="tableListE">
+				<table summary="결제수단 선택">
+					<caption>결제수단 선택</caption>
+					<tr>
+						<th>
+							<ul class="chk_box">
+								<li><input type="radio" name="chkPay" id="chkPay01" checked="checked" /> <label for="chkPay01">신용카드</label></li>
+								<li><input type="radio" name="chkPay" id="chkPay02" /> <label for="chkPay02">실시간 계좌이체</label></li>
+								<li><input type="radio" name="chkPay" id="chkPay03" /> <label for="chkPay03">무통장 입금</label></li>
+							</ul>
+						</th>
+					</tr>
+					<tr>
+						<td class="alignC">
+							<select title="카드 선택" style="width:270px">
+								<option>카드 선택</option>
+							</select>
+							<select title="할부 선택" style="width:195px">
+								<option>할부 선택</option>
+							</select>
+						</td>
+					</tr>
+				</table>
+			</div>
+
+			<h3 class="h_01 mt20">결제수단 선택</h3>
+			<div class="tableListE">
+				<table summary="결제수단 선택">
+					<caption>결제수단 선택</caption>
+					<tr>
+						<th>
+							<ul class="chk_box">
+								<li><input type="radio" name="chkPay" id="chkPay01" /> <label for="chkPay01">신용카드</label></li>
+								<li><input type="radio" name="chkPay" id="chkPay02" checked="checked" /> <label for="chkPay02">실시간 계좌이체</label></li>
+								<li><input type="radio" name="chkPay" id="chkPay03" /> <label for="chkPay03">무통장 입금</label></li>
+							</ul>
+						</th>
+					</tr>
+					<tr>
+						<td>
+							<ul class="dot">
+								<li>은행을 거치지 않고 회원님 계좌에서 바로 이체되는 편리한 서비스입니다. (이체 수수료는 무료, 최소 이체금액 200원)</li>
+								<li><strong>&lt;결제하기&gt;</strong> 버튼을 클릭한 후, 이체하실 은행 계좌번호를 입력해 주십시오. (결제시 공인인증서 필수)</li>
+							</ul>
+						</td>
+					</tr>
+				</table>
+			</div>
+
+			<h3 class="h_01 mt20">결제수단 선택</h3>
+			<div class="tableListE">
+				<table summary="결제수단 선택">
+					<caption>결제수단 선택</caption>
+					<tr>
+						<th>
+							<ul class="chk_box">
+								<li><input type="radio" name="chkPay" id="chkPay01" /> <label for="chkPay01">신용카드</label></li>
+								<li><input type="radio" name="chkPay" id="chkPay02" /> <label for="chkPay02">실시간 계좌이체</label></li>
+								<li><input type="radio" name="chkPay" id="chkPay03" checked="checked" /> <label for="chkPay03">무통장 입금</label></li>
+							</ul>
+						</th>
+					</tr>
+					<tr>
+						<td class="alignC">
+							<select title="입금은행 선택" style="width:270px">
+								<option>입금은행 선택</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<ul class="dot">
+								<li>입금하실 은행을 선택하신 후, <strong>&lt;결제하기&gt;</strong> 버튼을 클릭합니다.</li>
+								<li>다음 화면에 나타나는 <strong>&lt;이베이 계좌번호로 입금&gt;</strong>하시면 결제가 완료됩니다.</li>
+							</ul>
+						</td>
+					</tr>
+				</table>
+			</div>
+			
+			<!-- tableListE s -->
+			<div class="tableListE mt20">
+				<table summary="현금영수증 신청">
+					<caption>현금영수증 신청</caption>
+					<colgroup>
+					<col width="120" />
+					<col width="*" />
+					</colgroup>
+					<tr>
+						<th scope="row">현금영수증 신청</th>
+						<td>
+							<span><input type="radio" name="cashReceipt" id="cashReceipt01" checked="checked" /><label for="cashReceipt01">신청</label></span>
+							<span><input type="radio" name="cashReceipt" id="cashReceipt02" /><label for="cashReceipt02">미신청</label></span>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">용도선택</th>
+						<td>
+							<span><input type="radio" name="use" id="use01" checked="checked" /><label for="use01">개인소득공제용</label></span>
+							<span><input type="radio" name="use" id="use02" /><label for="use02">사업자 증빙용</label></span>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">&nbsp;</th>
+						<td>
+							<select title="선택" style="width:120px">
+								<option>휴대전화 번호</option>
+							</select>
+							<select title="휴대폰 앞자리 선택" style="width:120px">
+								<option>010</option>
+								<option>011</option>
+								<option>016</option>
+								<option>017</option>
+								<option>018</option>
+								<option>019</option>
+							</select>
+							-
+							<input name="mobile" type="text" title="휴대폰 중간자리 입력" maxlength="4" style="width:99px" />
+							-
+							<input name="mobile" type="text" title="휴대폰 뒷자리 입력" maxlength="4" style="width:99px" />
+						</td>
+					</tr>
+				</table>
+			</div>
+			<!-- //tableListE e -->
+
+			<!-- tableListE s -->
+			<div class="tableListE mt20">
+				<table summary="현금영수증 신청">
+					<caption>현금영수증 신청</caption>
+					<colgroup>
+					<col width="120" />
+					<col width="*" />
+					</colgroup>
+					<tr>
+						<th scope="row">현금영수증 신청</th>
+						<td>
+							<span><input type="radio" name="cashReceipt" id="cashReceipt01" checked="checked" /><label for="cashReceipt01">신청</label></span>
+							<span><input type="radio" name="cashReceipt" id="cashReceipt02" /><label for="cashReceipt02">미신청</label></span>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">용도선택</th>
+						<td>
+							<span><input type="radio" name="use" id="use01" checked="checked" /><label for="use01">개인소득공제용</label></span>
+							<span><input type="radio" name="use" id="use02" /><label for="use02">사업자 증빙용</label></span>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row"></th>
+						<td>
+							<select title="선택" style="width:120px">
+								<option>주민등록 번호</option>
+							</select>
+							<input type="text" style="width:166px" title="앞자리 입력" maxlength="4" />
+							-
+							<input type="text" style="width:166px" title="뒷자리 입력" maxlength="4" />
+						</td>
+					</tr>
+				</table>
+			</div>
+			<!-- //tableListE e -->
+
+			<!-- tableListE s -->
+			<div class="tableListE mt20">
+				<table summary="현금영수증 신청">
+					<caption>현금영수증 신청</caption>
+					<colgroup>
+					<col width="120" />
+					<col width="*" />
+					</colgroup>
+					<tr>
+						<th scope="row">현금영수증 신청</th>
+						<td>
+							<span><input type="radio" name="cashReceipt" id="cashReceipt01" checked="checked" /><label for="cashReceipt01">신청</label></span>
+							<span><input type="radio" name="cashReceipt" id="cashReceipt02" /><label for="cashReceipt02">미신청</label></span>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">용도선택</th>
+						<td>
+							<span><input type="radio" name="use" id="use01" checked="checked" /><label for="use01">개인소득공제용</label></span>
+							<span><input type="radio" name="use" id="use02" /><label for="use02">사업자 증빙용</label></span>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row"></th>
+						<td>
+							<select title="선택" style="width:120px">
+								<option>카드 번호</option>
+							</select>
+							<input type="text" title="카드번호 입력" maxlength="4" style="width:65px" />
+							-
+							<input type="text" title="카드번호 입력" maxlength="4" style="width:65px" />
+							-
+							<input type="text" title="카드번호 입력" maxlength="4" style="width:65px" />
+							-
+							<input type="text" title="카드번호 입력" maxlength="4" style="width:65px" />
+						</td>
+					</tr>
+				</table>
+			</div>
+			<!-- //tableListE e -->
+
+			<!-- tableListE s -->
+			<div class="tableListE mt20">
+				<table summary="현금영수증 신청">
+					<caption>현금영수증 신청</caption>
+					<colgroup>
+					<col width="120" />
+					<col width="*" />
+					</colgroup>
+					<tr>
+						<th scope="row">현금영수증 신청</th>
+						<td>
+							<span><input type="radio" name="cashReceipt" id="cashReceipt01" checked="checked" /><label for="cashReceipt01">신청</label></span>
+							<span><input type="radio" name="cashReceipt" id="cashReceipt02" /><label for="cashReceipt02">미신청</label></span>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">용도선택</th>
+						<td>
+							<span><input type="radio" name="use" id="use01" /><label for="use01">개인소득공제용</label></span>
+							<span><input type="radio" name="use" id="use02" checked="checked" /><label for="use02">사업자 증빙용</label></span>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row"></th>
+						<td>
+							<label for="regNum01" style="vertical-align:-5px">사업자 등록 번호</label>
+							<input type="text" name="regNum" id="regNum01" title="사업자 등록 번호 앞자리 입력" maxlength="4" style="width:103px" />
+							-
+							<input type="text" name="regNum" id="regNum02" title="사업자 등록 번호 중간자리 입력" maxlength="4" style="width:103px" />
+							-
+							<input type="text" name="regNum" id="regNum03" title="사업자 등록 번호 뒷자리 입력" maxlength="4" style="width:103px" />
+						</td>
+					</tr>
+				</table>
+			</div>
+			<!-- //tableListE e -->
+
+			<!-- tableListE s -->
+			<div class="tableListE mt20">
+				<table summary="현금영수증 신청">
+					<caption>현금영수증 신청</caption>
+					<colgroup>
+					<col width="120" />
+					<col width="*" />
+					</colgroup>
+					<tr>
+						<th scope="row">현금영수증 신청</th>
+						<td>
+							<span><input type="radio" name="cashReceipt" id="cashReceipt01" /><label for="cashReceipt01">신청</label></span>
+							<span><input type="radio" name="cashReceipt" id="cashReceipt02" checked="checked" /><label for="cashReceipt02">미신청</label></span>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<!-- //tableListE e -->
+
+			<h3 class="h_01 mt40">결제하기</h3>
+			<div class="total_box2">
+				<p class="alignL">최초 교육비 (<strong>38,000원</strong>) - 혜택가 (<strong>10,000원</strong>) = <strong class="txt_total">최종 결제 금액</strong> <span class="sum">50,000</span> <strong>원</strong></p>
+				<div class="btn_right">
+					<a href="#" class="btn_04 btn_black"><span>취소하기</span></a><a href="#" class="btn_04 btn_blue"><span>결제하기</span></a>
+				</div>
+			</div>
+			<ul class="gray_box dot mt40">
+				<li>&lsquo;오프라인 강좌&rsquo;와 &lsquo;온라인 강좌&rsquo;를 동시에 신청하는 경우에는 무통장 입금을 결제 수단으로 선택할 수 없습니다.</li>
+			</ul>
+		</div>
+		<!-- //contents e -->
+		<hr />
+
+		<!-- footer s -->
+		<div id="footer">
+			<div class="footerCon">
+				<ul class="fNavi">
+					<li class="n1"><a href="#">eby edu 소개</a></li>
+					<li class="n2"><a href="#">이용약관</a></li>
+					<li class="n3"><a href="#">개인정보취급방침</a></li>
+					<li class="n4"><a href="http://adcenter.auction.co.kr/Default.aspx" target="_blank" title="새창">판매광고센터</a></li>
+					<li class="n5"><a href="http://www.about.co.kr" target="_blank" title="새창">어바웃</a></li>
+					<li class="n6"><a href="http://securitycenter.auction.co.kr/index.html" target="_blank" title="새창">안전거래 센터</a></li>
+				</ul>
+				<ul class="info">
+					<li class="tel">tel:1588-0184</li>
+					<li class="fax">Fax:02-589-8829</li>
+					<li class="mail">Mail.Infomatiln@corp.quction.co.kr</li>
+					<li class="add">주소:경기도 부천시 원미구 부일로 223(상동)투나빌딩 6층</li>
+					<li class="center">상담가능시간:오전 9시~오후6시 (토요일 및 공휴일 휴무)</li>
+				</ul>
+				<p class="copyright">COPYRIGHT(C) 1998-2012 ebay.Inc. ALL RIGHT RESERVED.</p>
+				<p class="flogo1"><a href="http://www.auction.co.kr/?frm=headertab&amp;redirect=1" target="_blank" title="새창"><img src="../../img/common/f_logo_auction.gif" width="57" height="23" alt="auction" /></a></p>
+				<p class="flogo2"><a href="http://www.gmarket.co.kr" target="_blank" title="새창"><img src="../../img/common/f_logo_gmarket.gif" width="71" height="23" alt="gmarket" /></a></p>
+			</div>
+		</div>
+		<!-- //footer e -->
+		
+	</div>
+</body>
+</html>

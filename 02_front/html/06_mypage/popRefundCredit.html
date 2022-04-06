@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ebay edu</title>
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link type="text/css" rel="stylesheet" href="../../com/css/import.css" />
+<script type="text/javascript" src="../../com/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../com/js/design.js"></script>
+<script type="text/javascript" src="../../com/js/select.js"></script>
+</head>
+
+<body>
+
+<!-- 팝업_영수증 : 500x? -->
+<div class="popup" style="width:500px">
+	<!-- pop_header s -->
+	<div class="pop_header">
+		<h1><img src="../../img/title/pop_tit_refund.gif" alt="환불정보" /></h1>
+		<a href="#" class="btnClose">닫기</a> 
+	</div>
+	<!-- //pop_header e -->
+	<!-- pop_content  s -->
+	<div class="pop_content">
+		<h2 class="h_01">취소정보</h2>
+		<!-- popTableC s -->
+		<div class="popTableC">
+			<table summary="취소구분, 취소일시를 포함하는 취소정보입니다.">
+				<caption>취소정보</caption>
+				<colgroup>
+				<col width="130" />
+				<col width="*" />
+				</colgroup>
+				<tr>
+					<th scope="row">취소구분</th>
+					<td>환불완료(수강 취소)</td>
+				</tr>
+				<tr>
+					<th scope="row">취소일시</th>
+					<td>2013-04-30 오후 7:03:00</td>
+				</tr>
+			</table>
+		</div>
+		<!-- //popTableC e -->
+		<h2 class="h_01 mt30">환불정보</h2>
+		<!-- popTableC s -->
+		<div class="popTableC">
+			<table summary="환불방법, 카드사, 승인취소 요청일시를 포함하는 환불정보입니다.">
+				<caption>환불정보</caption>
+				<colgroup>
+				<col width="130" />
+				<col width="*" />
+				</colgroup>
+				<tr>
+					<th scope="row">환불방법</th>
+					<td>신용카드 승인 취소</td>
+				</tr>
+				<tr>
+					<th scope="row">카드사</th>
+					<td>현대카드</td>
+				</tr>
+				<tr>
+					<th scope="row">승인취소 요청일시</th>
+					<td>2013-04-31 오전 1:00:15</td>
+				</tr>
+			</table>
+		</div>
+		<!-- //popTableC e -->
+		<ul class="letter_spac dot mt30">
+			<li>실제 카드승인 취소는 이베이에서 카드사로 승인취소를 요청한날로부터 <br />3~5일 후에 이루어집니다.</li>
+			<li>카드 승인취소여부와 정확한 환불일자는 해당 카드사에서 확인하실 수 있습니다.</li>
+		</ul>
+	</div>
+	<!-- //pop_content e -->
+</div>
+
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ebay edu</title>
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link type="text/css" rel="stylesheet" href="../../com/css/import.css" />
+<script type="text/javascript" src="../../com/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../com/js/design.js"></script>
+<script type="text/javascript" src="../../com/js/select.js"></script>
+</head>
+
+<body>
+	<div id="skip_nav">
+		<ul>
+			<li><a href="#gnb">메뉴 바로가기</a></li>
+			<li><a href="#contents">본문 바로가기</a></li>
+		</ul>
+	</div>
+	<hr />
+
+	<div id="wrap">
+		<!-- header s -->
+		<div id="header">
+			<div class="hearderCon">
+				<div class="hlogo"><a href="#"><img src="../../img/common/h_logo_ebay_edu.gif" width="111" height="58" alt="ebay edu" /></a></div>
+				<div class="miniBar">
+					<ul>
+						<li><a href="#"><img src="../../img/common/tnb_s0.gif" width="43" height="9" alt="Logout" /> <!-- <img src="../../img/common/tnb_s1.gif" width="34" height="9" alt="Login" /> --></a></li>
+						<li><a href="#"><img src="../../img/common/tnb_s2.gif" width="42" height="9" alt="my page" /></a></li>
+						<li><a href="#"><img src="../../img/common/tnb_s3.gif" width="68" height="9" alt="ebay edu 안내" /></a></li>
+						<li><a href="#"><img src="../../img/common/tnb_s4.gif" width="47" height="9" alt="site map" /></a></li>
+					</ul>
+					<!-- miniBarSch s -->
+					<div id="miniBarSch" class="miniBarSch">
+						<a href="#"><img src="../../img/common/btn_search_01.gif" alt="검색" /></a>
+						<div class="schArea" style="display: none;">
+							<label for="topSrch" class="hide">강좌검색</label><input type="text" name="topSrch" id="topSrch" value="강좌검색" title="강좌검색" onblur="checkField(this)" onfocus="clearField(this)" /><input type="image" src="../../img/common/btn_search_01.gif" name="miniBarSch" id="gnb_search" alt="검색" />
+						</div>
+						<div class="dim"></div>
+					</div>
+					<!-- //miniBarSch e -->
+				</div>
+				<ul class="gnb">
+					<li><a href="#"><img src="../../img/common/gnb_m1.gif" width="115" height="32" alt="교육과정 안내" /></a></li>
+					<li><a href="#"><img src="../../img/common/gnb_m2.gif" width="121" height="32" alt="오픈마켓 소식" /></a></li>
+					<li><a href="#"><img src="../../img/common/gnb_m3.gif" width="102" height="32" alt="교육센터 소개" /></a></li>
+					<li><a href="#"><img src="../../img/common/gnb_m4.gif" width="164" height="32" alt="에듀 고객센터" /></a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- //header e -->
+		<hr />
+		
+		<!-- contents s -->
+		<div id="contents">
+			<!-- location s -->
+			<div class="location">
+				<ul class="depth">
+					<li class="home"><a href="#">홈</a></li>
+					<li><!-- 화살표가 있을 경우 class="arrow" -->
+						<a href="#">마이 페이지</a>							
+					</li> 
+					<li>
+						<a href="#">나의 온라인 강좌</a>						
+					</li> 
+				</ul>
+				<p id="allView"><a href="#"><span>전체보기</span></a></p>
+				<!-- 전체보기 layer s -->
+				<div id="allViewSub" class="allViewSub">
+					<ul>
+						<li class="line">
+							<div class="subTit"><img src="../../img/title/location_tit1.gif" width="95" height="17" alt="교육과정 안내" /></div>
+							<ul>
+								<li><a href="#">오프라인 강좌/분야별</a></li>
+								<li><a href="#">오프라인강좌/일정별</a></li>
+								<li><a href="#">온라인강좌</a></li>
+							</ul>
+						</li>
+						<li class="line">
+							<div class="subTit"><img src="../../img/title/location_tit2.gif" width="127" height="17" alt="MARKET NOW" /></div>
+							<ul>
+								<li><a href="#">업계소식</a></li>
+								<li><a href="#">전문가컬럼</a></li>
+								<li><a href="#">파워셀러 성공담</a></li>
+								<li><a href="#">성공 TIP</a></li>
+							</ul>
+						</li>
+						<li class="line">
+							<div class="subTit"><img src="../../img/title/location_tit3.gif" width="95" height="17" alt="교육센터 소개" /></div>
+							<ul>
+								<li><a href="#">EBAY Edu 소개</a></li>
+								<li><a href="#">교육과정</a></li>
+								<li><a href="#">강사진</a></li>
+								<li><a href="#">강의시설</a></li>
+								<li><a href="#">제휴서비스</a></li>
+							</ul>
+						</li>
+						<li class="line">
+							<div class="subTit"><img src="../../img/title/location_tit4.gif" width="60" height="17" alt="교육센터" /></div>
+							<ul>
+								<li><a href="#">공지사항</a></li>
+								<li><a href="#">FAQ</a></li>
+								<li><a href="#">1:1 전문가상담</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<!-- //전체보기 layer e -->
+			</div>
+			<!-- //location e -->
+			
+			<h1 class="bigtit"><img src="../../img/title/tit_online_lecture.gif" alt="ON-LINE LECTURE 온라인 강좌" /></h1>
+			<div class="cancel_step_02"><span class="hide">STEP 02. 환불 정보 확인</span></div>
+			<!-- tableListA s -->
+			<div class="tableListA border1 mt20">
+				<table summary="강좌 신청일, 강좌명, 환불예정금액, 구분를 포함하는 환불 정보 목록입니다.">
+					<caption>환불 정보 목록</caption>
+					<colgroup>
+					<col width="130" />
+					<col width="100" />
+					<col width="*" />
+					<col width="100" />
+					<col width="100" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">강좌 신청일</th>
+							<th scope="col" colspan="2">강좌명</th>
+							<th scope="col">환불예정금액</th>
+							<th scope="col">구분</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>2013-03-15</td>
+							<td><a href="#"><img src="../../img/temp/temp_100x100.jpg" alt="" /></a></td> <!-- 이미지 사이즈 : 100x100 / 이미지 없을 경우 : -->
+							<td class="alignL">
+								<p><a href="#"><strong>[창업기초_초급]</strong> 전문가 초빙 실무형 온라인 마케팅 과정 (검색엔진 활용)</a></p>
+								<p class="exp"><strong>유효기간 :</strong> 2013-03-01 ~ 2013-03-31&nbsp;&nbsp;<strong>강사 :</strong> 이베이</p>
+							</td>
+							<td>
+								<p class="mg">10,000</p>
+							</td>
+							<td>
+								<p class="mg">수강취소대상</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- //tableListA e -->
+			<div class="btn_center">
+				<a href="#" class="btn_02 btn_black"><span>이전</span></a><a href="#" class="btn_02 btn_blue"><span>다음</span></a>
+			</div>
+			<ul class="gray_box dot mt40">
+				<li>구매 시 적용한 쿠폰은 자동 복구 됩니다.</li>
+				<li>신용카드로 결제하신 건은 &lsquo;수강취소&rsquo; 후 자동으로 카드결제 승인 취소 처리됩니다.</li>
+				<li>카드사의 사정에 따라 승인 취소일로부터 4~5일(토, 공휴일 제외)후에 승인완료 내역이 확인될 수 있습니다.</li>
+				<li>체크카드로 결제하신 경우 &lsquo;주문취소&rsquo; 혹은 즉시 취소내역을 확인하실 수 있습니다.</li>
+			</ul>
+		</div>
+		<!-- //contents e -->
+		<hr />
+
+		<!-- footer s -->
+		<div id="footer">
+			<div class="footerCon">
+				<ul class="fNavi">
+					<li class="n1"><a href="#">eby edu 소개</a></li>
+					<li class="n2"><a href="#">이용약관</a></li>
+					<li class="n3"><a href="#">개인정보취급방침</a></li>
+					<li class="n4"><a href="http://adcenter.auction.co.kr/Default.aspx" target="_blank" title="새창">판매광고센터</a></li>
+					<li class="n5"><a href="http://www.about.co.kr" target="_blank" title="새창">어바웃</a></li>
+					<li class="n6"><a href="http://securitycenter.auction.co.kr/index.html" target="_blank" title="새창">안전거래 센터</a></li>
+				</ul>
+				<ul class="info">
+					<li class="tel">tel:1588-0184</li>
+					<li class="fax">Fax:02-589-8829</li>
+					<li class="mail">Mail.Infomatiln@corp.quction.co.kr</li>
+					<li class="add">주소:경기도 부천시 원미구 부일로 223(상동)투나빌딩 6층</li>
+					<li class="center">상담가능시간:오전 9시~오후6시 (토요일 및 공휴일 휴무)</li>
+				</ul>
+				<p class="copyright">COPYRIGHT(C) 1998-2012 ebay.Inc. ALL RIGHT RESERVED.</p>
+				<p class="flogo1"><a href="http://www.auction.co.kr/?frm=headertab&amp;redirect=1" target="_blank" title="새창"><img src="../../img/common/f_logo_auction.gif" width="57" height="23" alt="auction" /></a></p>
+				<p class="flogo2"><a href="http://www.gmarket.co.kr" target="_blank" title="새창"><img src="../../img/common/f_logo_gmarket.gif" width="71" height="23" alt="gmarket" /></a></p>
+			</div>
+		</div>
+		<!-- //footer e -->
+		
+	</div>
+</body>
+</html>
